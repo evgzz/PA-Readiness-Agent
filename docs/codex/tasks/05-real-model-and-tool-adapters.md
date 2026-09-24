@@ -19,9 +19,15 @@ Collect the actual real-agent synthetic baseline needed by V1-A. Retain failed
 requests, usage gaps and complete trace links. Return observed development traces
 to Task 04 for human error analysis; do not delay review until a dashboard exists.
 
-## Jev provider integration
-Add the separately metered evaluation-plane adapter specified in docs/JEV_JUDGE.md.
-Pin a compatible typesafe-sdk version, verify the explicit model and response,
+## Swappable judge provider integration
+Add independently metered HF dedicated endpoint, supported closed API, optional HF
+router and Jev adapters specified in docs/LLM_JUDGE.md. Jev is one option; pin
+typesafe-sdk only when selected. Verify model/deployment identity and capabilities,
 bound retries and budgets, and retain every attempt's usage/error evidence.
 Missing configuration must make zero network calls. Live synthetic integration
 proves transport only; return to Task 04 for independent human calibration.
+
+For HF, bind Hub commit, serving engine/image, served-model ID and deployment
+configuration. Verify schema support, cold-start/unavailability and time-based
+compute billing. For closed APIs, use an explicit native/compatible protocol and
+record hosted identity limits. HF Providers is a distinct pinned routing option.

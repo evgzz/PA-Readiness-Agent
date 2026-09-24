@@ -1,5 +1,5 @@
 {
-  "template_version": "1.0",
+  "template_version": "1.1",
   "status": "SPECIFIED_NOT_IMPLEMENTED",
   "enabled": false,
   "entrypoint": null,
@@ -104,5 +104,15 @@
   "owner": null,
   "missing_configuration_behavior": "NOT_CONFIGURED_NO_NETWORK",
   "unaccepted_judge_verdict": "UNRESOLVED",
-  "silent_fallback_allowed": false
+  "silent_fallback_allowed": false,
+  "profile_id": "jev_option",
+  "adapter_kind": "TYPESAFE_JEV",
+  "is_default": false,
+  "common_spec": "docs/LLM_JUDGE.md",
+  "automatic_fallback": "NONE",
+  "prompt_template_digest": null,
+  "response_schema_digest": null,
+  "decision_policy_version": null,
+  "capability_evidence_ref": null,
+  "tools_enabled": false
 }

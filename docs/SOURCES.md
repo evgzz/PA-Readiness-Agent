@@ -49,3 +49,20 @@ in docs/JEV_JUDGE.md; no vendor experiment is imported as repository evidence.
 | [API](https://docs.typesafe.ai/api) and [Python SDK](https://docs.typesafe.ai/sdk/python) | Proposed transport boundary and response fields |
 | [Models](https://docs.typesafe.ai/models) | Versioned candidate, moving aliases, input limits; reverify before integration |
 | [Jev 1.13 limitations](https://docs.typesafe.ai/model-jaggedness/jev-1.13) | Targeted failure slices and keeping exact computations in code |
+
+## Swappable judges and HF integration sources
+Inspected 2026-09-24. The primary design is now docs/LLM_JUDGE.md; Jev is an option.
+No commercial endpoint was deployed and no provider capability was live-tested.
+
+| Source | Narrow capability / design use |
+|---|---|
+| [HF dedicated chat tutorial](https://huggingface.co/docs/inference-endpoints/tutorials/chat_bot) | Compatible chat endpoint, base URL, served-model identifier and token |
+| [HF endpoint configuration](https://huggingface.co/docs/inference-endpoints/guides/configuration) | Hub commit revision and deployment/access settings |
+| [HF custom container](https://huggingface.co/docs/inference-endpoints/guides/custom_container) | Supplied serving images and model artifacts; no general closed-model hosting claim |
+| [HF Providers chat API](https://huggingface.co/docs/inference-providers/tasks/chat-completion) | Separate routed inference service; verify current model/provider support |
+| [HF structured outputs](https://huggingface.co/docs/inference-providers/guides/structured-output) | Schema support is checked for the selected model/provider combination |
+| [HF dedicated billing](https://huggingface.co/docs/inference-endpoints/pricing) | Compute-time billing informs allocation, not per-token-only costing |
+
+Routing API-only closed models to their supported service, profile freeze, swap
+calibration and no silent fallback are PA design requirements, not claims that HF
+hosts every proprietary model. Exact model/SDK/engine selections remain unset.

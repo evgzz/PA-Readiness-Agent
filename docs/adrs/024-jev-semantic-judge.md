@@ -1,40 +1,51 @@
-# ADR 024: Add Jev behind the independent semantic judge port
+# ADR 024: Use swappable semantic judge adapters; retain Jev as an option
 
 Status: PROPOSED | Date: 2026-09-24 | Implementation evidence: NOT_RUN
 Accountable decision owner: UNASSIGNED.
+Revision 1.1 amends this proposed decision from Jev-first to provider-neutral
+selection. The filename is retained for existing links; no implemented behavior
+or previously accepted calibration is superseded.
 
 ## Context
-PA semantic grading needs atomic criteria, multi-turn evidence and measured human
-alignment. A final-answer score alone cannot establish trajectory safety.
+PA semantic grading needs atomic criteria, trajectory evidence and human alignment.
+Model and hosting choices must be replaceable without changing the PA rubric or
+transferring trust from one judge to another.
 
 ## Proposed decision
-Add Jev as the planned typed semantic judge, using a narrow TypeSafe SDK adapter
-in the evaluation plane. Keep deterministic checks authoritative, human labels
-independent, and calibration mandatory before relying on semantic verdicts.
-Evaluate frozen prefixes and full trajectories through controller-owned evidence
-projections. Keep provider probabilities separate from accepted verdicts.
+Use JudgePort with explicit profiles for HF dedicated endpoints, supported closed
+model APIs, optional HF Inference Providers and Jev. No default judge is selected.
+Prefer HF dedicated hosting for deployable weights with verified rights and serving
+compatibility. API-only closed models use a supported service route. Keep Jev as
+an optional typed decision model through TypeSafe; do not assume HF hosting.
+Freeze each effective profile per evaluation run and calibrate independently.
+Keep deterministic checks authoritative and human labels independent.
 
 ## Alternatives considered
-Direct SDK is preferred for a small integration boundary. langchain-typesafe and
-LangSmith remain optional experiment adapters. A generative LLM may be a calibrated
-challenger or separately identified adjudication aid. Deterministic-only grading
-cannot cover all semantic quality; human-only grading remains the fallback when
-automated judgments are unresolved. See the detailed option table in the spec.
+| Option | Disposition / trade-off |
+|---|---|
+| Jev-only grading | Rejected as the exclusive architecture; retained as an option |
+| HF dedicated hosting | Preferred for deployable weights; adds engine, deployment and compute-cost ownership |
+| Closed vendor API | Supported option; less artifact visibility and provider-specific behavior |
+| HF Inference Providers | Optional supported pair; routing identity must be pinned |
+| Automatic best-score fallback | Rejected; creates selection bias and obscures failures |
+| Preregistered calibrated fallback chain | Future optional composite policy; default NONE |
+| Deterministic and human checks | Required foundations; semantic automation remains independently audited |
 
 ## Consequences and limitations
-No new agent loop, authority, platform migration or runtime dependency is enabled.
-Jev cannot supply generated explanations. Hosted version limitations, context
-selection, egress, errors, abstention and judge costs require explicit records.
-The linked weather experiment does not qualify PA behavior.
+Multiple adapters need conformance tests, native billing and profile-level
+calibration. Typed Jev probabilities, generative labels and ordinal scores retain
+their own semantics. No API call, endpoint deployment, new runtime loop or platform
+migration is enabled by the specification.
 
 ## Acceptance evidence required
-Implement the provider-neutral port and schemas, validate the SDK/model pin,
-exercise failure boundaries, run live synthetic calls, audit against independent
-human labels, and reconcile dashboard aggregates to private evidence. All pending.
+Common contracts and parsers; adapter capability and identity checks; HF cold-start
+and compute-cost accounting; supported closed API calls; no unplanned fallback;
+profile-specific human audits; trajectory evidence; reproducible report projections.
+All live integration and calibration remain pending.
 
 ## Revisit trigger
-Revisit on failed calibration, model/service drift, materially changed rubrics,
-context policy or use scope. Invalidate affected calibration and regrade explicitly.
+Revisit on model/deployment drift, changed rubric/context/decision policy, failed
+calibration or changed scope. Regrade with new lineage and preserve old results.
 
-References: [Jev specification](../JEV_JUDGE.md), [sources](../SOURCES.md),
-[ADR 010](010-evaluation-authority.md), [ADR 012](012-langchain-deferral.md).
+References: [common specification](../LLM_JUDGE.md), [Jev option](../JEV_JUDGE.md),
+[sources](../SOURCES.md), [ADR 010](010-evaluation-authority.md).

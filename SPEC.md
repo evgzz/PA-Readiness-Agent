@@ -117,10 +117,12 @@ Detailed state, failure, and acceptance requirements: [harness](docs/HARNESS.md)
   with harness fixed; compare harnesses with model fixed; declare joint changes.
 - E-08: Freeze selected configuration and criteria before qualification. Do not
   retune against opened held-out results and then call the same set independent.
-- E-09: Add Jev behind an independent JudgePort for atomic semantic criteria.
-  Grade decision-time prefixes and complete trajectories; preserve earlier failures.
-  Calibrate against independent human references, retain abstentions and errors,
-  and track judge overhead separately. See [Jev specification](docs/JEV_JUDGE.md).
+- E-09: Support swappable judges behind JudgePort: HF Inference Endpoints for
+  deployable models, supported closed APIs, and optional Jev. Freeze the selected
+  profile per run and calibrate each effective configuration independently. Grade
+  decision-time prefixes and full trajectories; preserve earlier failures,
+  abstentions and errors. Track judge overhead separately. See
+  [judge specification](docs/LLM_JUDGE.md).
 
 See [evaluation specification](docs/EVALUATIONS.md) and the draft
 [catalog](program/eval-catalog.json).

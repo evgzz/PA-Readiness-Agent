@@ -36,5 +36,12 @@
   "jev_judge_adapter": "NOT_IMPLEMENTED",
   "jev_judge_provider": "NOT_CONFIGURED",
   "jev_judge_calibration": "NOT_RUN",
-  "trajectory_evaluator": "NOT_IMPLEMENTED"
+  "trajectory_evaluator": "NOT_IMPLEMENTED",
+  "judge_specification_revision": "1.1",
+  "judge_selection": "NOT_CONFIGURED",
+  "judge_adapters": "NOT_IMPLEMENTED",
+  "hf_endpoint_judge": "NOT_IMPLEMENTED",
+  "closed_api_judge": "NOT_IMPLEMENTED",
+  "hf_providers_judge": "NOT_IMPLEMENTED",
+  "judge_swapping": "SPECIFIED_NOT_IMPLEMENTED"
 }

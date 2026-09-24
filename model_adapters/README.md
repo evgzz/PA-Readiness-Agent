@@ -16,8 +16,10 @@ Acceptance:
 
 Follow AGENTS.md here and the root build sequence.
 
-## Jev evaluation adapter plan
+## Swappable evaluation adapter plan
 Planned jev.py translates TypeSafe typed questions and responses behind JudgePort;
 apps/ injects it into the evaluation plane, separate from runtime model calls.
-See docs/JEV_JUDGE.md. The disabled recipe has no selected SDK version or budget.
+Planned hf_endpoint.py, hf_providers.py and closed_api.py support other profiles.
+See docs/LLM_JUDGE.md and the Jev appendix docs/JEV_JUDGE.md. No profile is selected;
+disabled templates have no completed SDK pins or budgets.
 The adapter, usage integration, credential preflight and live calls are pending.

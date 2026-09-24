@@ -56,7 +56,10 @@
         "openai_compatible.py",
         "local_serving.py",
         "usage.py",
-        "jev.py"
+        "jev.py",
+        "hf_endpoint.py",
+        "hf_providers.py",
+        "closed_api.py"
       ]
     },
     {
@@ -145,6 +148,7 @@
     "docs/EXPERIMENTS.md",
     "docs/MONITORING.md",
     "docs/WORKED_EXAMPLE.md",
-    "docs/JEV_JUDGE.md"
+    "docs/JEV_JUDGE.md",
+    "docs/LLM_JUDGE.md"
   ]
 }

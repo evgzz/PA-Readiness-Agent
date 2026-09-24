@@ -23,10 +23,14 @@ Task 05 supplies actual real-agent development traces. No fixture may be present
 as observed real-agent failure. Verify duplicate review handling, sampling labels,
 class-specific judge errors and untouched calibration-audit separation.
 
-## Jev and trajectories
-Implement docs/JEV_JUDGE.md: provider-neutral JudgePort and validated records,
+## Swappable judges and trajectories
+Implement docs/LLM_JUDGE.md and the Jev option in docs/JEV_JUDGE.md: provider-neutral JudgePort and validated records,
 atomic J01–J07 rubrics, causal prefix/full-trajectory views, threshold mapping,
 shadow calibration and human audit. Add schemas before emitting new fields/events.
 Verify anti-hindsight, correction/recovery, valid alternative paths, missing context,
 invalid responses, abstention, label isolation and deterministic-failure precedence.
 Keep status NOT_IMPLEMENTED until this work executes; this revision specifies it.
+
+Verify shared-rubric rendering for typed and generative judges, categorical output
+without fabricated confidence, configuration freeze, rejected uncalibrated swaps,
+regrade lineage and disabled fallback. Compare judge profiles on identical evidence.

@@ -70,8 +70,9 @@ The three retained public cases are interface examples, not a qualified dataset.
 - OpenTelemetry-compatible observability; Langfuse is the proposed trace platform.
 - Durable application PostgreSQL when persistence is implemented. A self-hosted
   Langfuse deployment has its own platform services and data stores.
-- Jev is the planned semantic judge; typed criteria, trajectory grading and human
-  calibration are specified in [Jev judge](docs/JEV_JUDGE.md). Integration is disabled.
+- Swappable semantic judges: open-weight or licensed models on HF Inference
+  Endpoints, supported closed model APIs, and optional Jev. No default judge is
+  selected. See [judge specification](docs/LLM_JUDGE.md); integrations are disabled.
 - Nemotron remains an unconfigured candidate: checkpoint, serving backend,
   tokenizer, license, and capability checks are not selected.
 

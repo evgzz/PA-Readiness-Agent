@@ -140,10 +140,10 @@ capture metered usage. Pricing is versioned separately. Missing provider usage i
 explicitly unknown, not a zero token/cost event. Eval/judge calls and review effort
 have separate cost categories so runtime efficiency remains interpretable.
 
-## Jev capture plan
-The [Jev specification](JEV_JUDGE.md) adds planned private judge request, attempt,
+## Judge adapter capture plan
+The [common judge specification](LLM_JUDGE.md) adds planned private judge request, attempt,
 result and trajectory-projection records. pa_evals.trajectories persists the frozen
-prefix/trajectory digest; pa_models.jev captures each provider attempt and usage;
+prefix/trajectory digest; the selected pa_models adapter captures each provider attempt and native usage;
 pa_evals.judges persists raw typed outputs and normalized assertions;
 pa_evals.calibration persists human alignment and repeatability results.
 
@@ -161,3 +161,10 @@ results only through fields allowed by their current schema. Do not add unknown
 attributes or publish unregistered judge events. Raw traces/labels stay private;
 reporting receives authorized aggregate projections. Never export credentials or
 provider response bodies to general telemetry.
+
+Capture effective profile/route/deployment digests, requested and observed provider,
+capability evidence, swap/regrade lineage, and fallback disposition. HF endpoint
+lifecycle/replica-time records are separate from request token usage; capture cold
+starts, queues, idle allocation and billed compute windows without double counting.
+No profile change takes effect mid-run. Credentials and private provider bodies
+never become general trace attributes. New records still require versioned schemas.

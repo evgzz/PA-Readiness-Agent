@@ -65,7 +65,15 @@ authenticated rubric review, and calibration.finalized after the audit result is
 persisted. Both are EVALUATOR_PRIVATE. Q03 publishes permitted aggregate reliability
 and calibration status; it does not expose private audit examples or answer keys.
 
-## Jev profile
+## Swappable judge profiles
+
+Every effective profile in [judge specification](LLM_JUDGE.md) needs independent
+acceptance. HF hosting or API compatibility does not transfer another model's
+calibration. Categorical-only models need label/coverage calibration; probability
+metrics are N/A unless the profile supplies validated probability semantics.
+
+### Jev option
+
 Use [Jev requirements](JEV_JUDGE.md) for typed question semantics and verdict
 mapping. Audit Choice probabilities and confidence thresholds separately; Noul
 has no separate confidence field. Probability calibration, selective coverage and

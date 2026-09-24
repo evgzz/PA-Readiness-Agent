@@ -1,0 +1,21 @@
+{
+  "template_version": "1.1",
+  "status": "SPECIFIED_NOT_IMPLEMENTED",
+  "enabled": false,
+  "entrypoint": null,
+  "selected_profile_id": null,
+  "mode": "SHADOW_CALIBRATION",
+  "selection_scope": "FROZEN_PER_EVALUATION_RUN",
+  "profiles": {
+    "jev_option": "recipes/jev-judge.template.json",
+    "hf_dedicated_option": "recipes/hf-endpoint-judge.template.json",
+    "closed_api_option": "recipes/closed-api-judge.template.json",
+    "hf_providers_option": "recipes/hf-providers-judge.template.json"
+  },
+  "automatic_fallback": "NONE",
+  "fallback_chain": [],
+  "effective_profile_digest": null,
+  "calibration_record_ref": null,
+  "qualified_use_requires_accepted_calibration": true,
+  "missing_configuration_behavior": "NOT_CONFIGURED_NO_NETWORK"
+}

@@ -29,4 +29,4 @@ Owner roles are unassigned. Adopt/reject/supersede each decision with rationale 
 | [021](021-human-error-analysis.md) | Human review precedes automated failure metrics | PROPOSED |
 | [022](022-preregistered-improvement.md) | Preregister comparisons and account for full workload cost | PROPOSED |
 | [023](023-monitoring-feedback.md) | Stage monitoring through synthetic exercises before operational use | PROPOSED |
-| [024](024-jev-semantic-judge.md) | Add Jev as an independently calibrated typed semantic judge | PROPOSED |
+| [024](024-jev-semantic-judge.md) | Use swappable HF/closed API judge adapters with Jev as an option | PROPOSED |

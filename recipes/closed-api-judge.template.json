@@ -1,0 +1,62 @@
+{
+  "template_version": "1.1",
+  "status": "SPECIFIED_NOT_IMPLEMENTED",
+  "enabled": false,
+  "entrypoint": null,
+  "judge_kind": "GENERATIVE_LLM",
+  "data_profile": "SYNTHETIC_ONLY",
+  "approved_egress_profile": null,
+  "qualification_export_enabled": false,
+  "langsmith_export_enabled": false,
+  "mode": "SHADOW_CALIBRATION",
+  "rubric_ref": "docs/LLM_JUDGE.md#common-pa-rubric-and-response-interpretation",
+  "rubric_version": null,
+  "prompt_template_digest": null,
+  "response_schema_digest": null,
+  "parsing_policy_version": null,
+  "decision_policy_version": null,
+  "generation_parameters": null,
+  "capability_evidence_ref": null,
+  "calibration_status": "NOT_RUN",
+  "calibration_record_ref": null,
+  "calibration_acceptance_criteria": null,
+  "context_policy": {
+    "version": null,
+    "max_input_tokens": null,
+    "max_output_tokens": null,
+    "silent_truncation_allowed": false
+  },
+  "budgets": {
+    "max_requests": null,
+    "max_attempts_per_request": null,
+    "timeout_seconds": null,
+    "max_total_tokens": null,
+    "max_cost_usd": null,
+    "max_concurrency": null
+  },
+  "probability_semantics": "NOT_AVAILABLE",
+  "tools_enabled": false,
+  "automatic_fallback": "NONE",
+  "missing_configuration_behavior": "NOT_CONFIGURED_NO_NETWORK",
+  "unaccepted_judge_verdict": "UNRESOLVED",
+  "owner": null,
+  "profile_id": "closed_api_option",
+  "adapter_kind": "CLOSED_MODEL_API",
+  "model": {
+    "provider": null,
+    "model_id": null,
+    "version": null,
+    "immutability_limitations": null
+  },
+  "transport": {
+    "protocol": null,
+    "base_url": null,
+    "credential_env": null,
+    "sdk_package": null,
+    "sdk_version": null
+  },
+  "billing": {
+    "basis": null,
+    "pricing_snapshot_ref": null
+  }
+}

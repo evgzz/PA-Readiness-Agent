@@ -1,0 +1,20 @@
+{
+  "date": "2026-09-24",
+  "scope": "SWAPPABLE_JUDGE_SPECIFICATION_ONLY",
+  "baseline_commit": "aace48d54012658f49cd89b36177d64b487968e7",
+  "checks": {
+    "command": "python3 scripts/check_scaffold.py",
+    "status": "PASS",
+    "checks": 384
+  },
+  "contract_tests": {
+    "command": "python3 scripts/run_contract_tests.py",
+    "status": "PASS",
+    "test_methods": 25
+  },
+  "live_provider_calls": "NOT_RUN",
+  "endpoint_deployment": "NOT_RUN",
+  "judge_calibration": "NOT_RUN",
+  "new_runtime_dependencies": [],
+  "limitations": "Specification and disabled design templates; no provider adapter or executable selection configuration is implemented."
+}
