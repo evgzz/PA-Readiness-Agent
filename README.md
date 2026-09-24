@@ -5,11 +5,12 @@ Repository: [evgzz/PA-Readiness-Agent](https://github.com/evgzz/PA-Readiness-Age
 A reproducible foundation for assessing prior-authorization packet readiness and
 managing the safety evidence for each application release.
 
-**Specification version: 1.0 — 2026-09-24. Status: SCAFFOLD_ONLY.**
+**Specification version: 1.0 — 2026-09-24. Status: CONTRACTS_READY.**
 This revision supplies specifications, proposed ADRs, contracts, templates, and
 Codex build instructions. Agent execution, harness enforcement, evaluation,
 telemetry export, dashboards, and release gates remain **NOT_IMPLEMENTED**.
-Only the repository's static scaffold checker is executable verification.
+Task 00 implements installable contracts, authenticated ingress validation and
+25 standard-library boundary tests. The agent loop remains unimplemented.
 
 ## Responsibilities
 
@@ -84,15 +85,20 @@ Start with [SPEC](SPEC.md), [architecture](docs/ARCHITECTURE.md),
 [dashboards/reports](docs/DASHBOARDS_REPORTS.md).
 Follow [build sequence](docs/codex/BUILD_SEQUENCE.md) and scoped `AGENTS.md` files.
 
-The implemented check uses Python 3.10+ and the standard library:
+The contract package requires Python 3.12+. Run:
 
 ```bash
+python3 -m pip install --no-deps .
+pa-contracts runtime-config recipes/runtime-config.example.json
+python3 scripts/run_contract_tests.py
 python3 scripts/check_scaffold.py
 ```
 
-It checks structure, parseability, and selected static invariants. It does not
-execute JSON Schema validation, run an agent, attest to security, or qualify a
-release. Runtime commands and dependency locks are implementation tasks.
+The scaffold checker checks structure and selected import invariants. Contract
+tests exercise executable validators for the owned schema vocabulary; they are
+not full JSON Schema conformance tests or agent qualification. Packaging has no
+runtime dependencies; its selected build dependency is pinned. Runtime commands
+and model integration remain future tasks.
 
 ## Dashboard contract
 
@@ -141,3 +147,9 @@ New procedures: [human review](docs/ERROR_ANALYSIS.md),
 [monitoring](docs/MONITORING.md). Draft record templates are in contracts/v1/.
 No runtime command, selected provider, executed experiment or performance gain is
 implied. All workflow implementation and real-agent evaluation remain pending.
+
+## Implementation checkpoint
+
+Task 00 is complete for the contracts layer. See [handoff](docs/TASK00_HANDOFF.md)
+for APIs, migration rules, executed checks and deferred integrations. Task 01
+(synthetic tools, requirements and reviewed case families) is next.

@@ -59,7 +59,7 @@ def main() -> int:
         return report(0, 0)
 
     for path in sorted(ROOT.rglob("*.json")):
-        if ".git" in path.parts:
+        if any(part in {".git", "build", "dist", "__pycache__"} or part.endswith(".egg-info") for part in path.parts):
             continue
         try:
             json.loads(path.read_text(encoding="utf-8"))
@@ -79,7 +79,7 @@ def main() -> int:
     package_names = {component["python_package"] for component in components}
     syntax_count = 0
     for path in sorted(ROOT.rglob("*.py")):
-        if ".git" in path.parts or ".venv" in path.parts:
+        if any(part in {".git", ".venv", "build", "dist", "__pycache__"} for part in path.parts):
             continue
         try:
             ast.parse(path.read_text(encoding="utf-8"), filename=str(path))
@@ -137,7 +137,8 @@ def main() -> int:
         check(row["status"] == "DRAFT_PUBLIC_DEV_ONLY", "Unexpected public oracle claim")
 
     status = read_json("docs/BUILD_STATUS.json")
-    check(status["status"] == "SCAFFOLD_ONLY", "Revise scaffold checks when implementation starts")
+    check(status["status"] == "CONTRACTS_READY", "Unexpected implementation stage")
+    check(status["contracts"] == "IMPLEMENTED", "Contracts implementation missing")
     for name in ["agent", "runtime", "eval_runner"]:
         check(status[name] == "NOT_IMPLEMENTED", f"Draft incorrectly claims {name} implementation")
     recipe = read_json("recipes/mock-readonly.json")
@@ -184,7 +185,7 @@ def main() -> int:
 def report(syntax_count: int, case_count: int) -> int:
     print(json.dumps({
         "status": "FAIL" if ERRORS else "PASS",
-        "scope": "SCAFFOLD_STATIC_CHECKS_ONLY",
+        "scope": "STRUCTURE_AND_IMPORT_CHECKS_ONLY",
         "checks": CHECKS,
         "python_files_parsed": syntax_count,
         "public_interface_examples": case_count,

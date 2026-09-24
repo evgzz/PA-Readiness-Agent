@@ -1,0 +1,257 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "status": {
+      "const": "RECORDED"
+    },
+    "record_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "actor_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_class": {
+      "enum": [
+        "REFERENCE_CONTROL",
+        "SCRIPTED_DEMO",
+        "REAL_AGENT_SYNTHETIC",
+        "REAL_AGENT_PRODUCTION"
+      ]
+    },
+    "candidate_config_digest": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "evaluation_config_digest": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "monitoring_plan_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "profile": {
+      "const": "SYNTHETIC_SIMULATION_ONLY"
+    },
+    "production_enabled": {
+      "const": false
+    },
+    "deployment_id": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "cohort_definition": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "scope_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "candidate_config_digest": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "scope_ref",
+        "candidate_config_digest"
+      ]
+    },
+    "admission_source_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reference_window": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "start": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "end": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "start",
+        "end"
+      ]
+    },
+    "current_window_rule": {
+      "type": "string",
+      "minLength": 1
+    },
+    "timezone": {
+      "const": "UTC"
+    },
+    "minimum_data": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "late_arrival_grace": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "refresh_cadence": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "source_freshness_limit": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "review_sampling_policy": {
+      "type": "string",
+      "minLength": 1
+    },
+    "label_delay_policy": {
+      "type": "string",
+      "minLength": 1
+    },
+    "signal_methods": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "alert_thresholds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "metric_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "operator": {
+            "enum": [
+              "<=",
+              ">=",
+              "=="
+            ]
+          },
+          "threshold": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "metric_id",
+          "operator",
+          "threshold"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "repeated_testing_policy": {
+      "type": "string",
+      "minLength": 1
+    },
+    "triage_owner_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "acknowledgement_deadline": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "data_access_policy_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "retention_policy_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "automatic_candidate_promotion": {
+      "const": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "status",
+    "record_id",
+    "record_version",
+    "created_at",
+    "actor_id",
+    "evidence_class",
+    "candidate_config_digest",
+    "evaluation_config_digest",
+    "evidence_refs",
+    "monitoring_plan_id",
+    "profile",
+    "production_enabled",
+    "deployment_id",
+    "cohort_definition",
+    "admission_source_ref",
+    "reference_window",
+    "current_window_rule",
+    "timezone",
+    "minimum_data",
+    "late_arrival_grace",
+    "refresh_cadence",
+    "source_freshness_limit",
+    "review_sampling_policy",
+    "label_delay_policy",
+    "signal_methods",
+    "alert_thresholds",
+    "repeated_testing_policy",
+    "triage_owner_id",
+    "acknowledgement_deadline",
+    "data_access_policy_ref",
+    "retention_policy_ref",
+    "automatic_candidate_promotion"
+  ]
+}

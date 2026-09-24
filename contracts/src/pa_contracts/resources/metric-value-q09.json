@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "reference_snapshot_digest",
+    "current_snapshot_digest",
+    "signal_type",
+    "signal_status",
+    "reference_count",
+    "current_count",
+    "label_pending_count",
+    "method"
+  ],
+  "properties": {
+    "reference_snapshot_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "current_snapshot_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "signal_type": {
+      "enum": [
+        "CONFIRMED_QUALITY",
+        "PROXY_SHIFT",
+        "EVIDENCE_FAILURE"
+      ]
+    },
+    "signal_status": {
+      "enum": [
+        "DETECTED",
+        "NOT_DETECTED",
+        "INSUFFICIENT_DATA",
+        "STALE"
+      ]
+    },
+    "reference_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "current_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "label_pending_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "method": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

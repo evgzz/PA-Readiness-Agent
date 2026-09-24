@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "scheduled_trials": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "completed_trials": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "missing_trials": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "finalization_status": {
+      "enum": [
+        "COMPLETE",
+        "INCOMPLETE",
+        "ERROR"
+      ]
+    },
+    "manifest_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "manifest_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  },
+  "required": [
+    "schema_version",
+    "scheduled_trials",
+    "completed_trials",
+    "missing_trials",
+    "finalization_status",
+    "manifest_ref",
+    "manifest_digest"
+  ]
+}

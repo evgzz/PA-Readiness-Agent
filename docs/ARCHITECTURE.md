@@ -1,6 +1,7 @@
 # Architecture and trust boundaries
 
-Version 1.0. All runtime components below are planned.
+Version 1.0. Task 00 contracts and ingress validation are implemented. Agent
+execution and all runtime integrations below remain planned.
 
 ```mermaid
 flowchart TD
@@ -29,7 +30,7 @@ proposed OpenAI Agents SDK implementation. The SDK adapter translates the pure
 agent policy into its configuration and registers only gateway-backed callbacks.
 It must route model calls through the metered model boundary. The original
 `AgentPort.build_request/propose` signatures are draft interfaces for the manual
-mock path; Task 00 must finalize the runtime adapter contract without forcing a
+mock path; runtime_ports.RuntimePort defines the selected-loop adapter without forcing a
 second loop around the SDK. No SDK integration is claimed by these interfaces.
 
 Concrete wiring lives only in `apps/`. Runtime adapters receive policy and gateway

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "scope_manifest_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "required_slices": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "complete_slices": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "incomplete_slices": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "snapshot_ref": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "scope_manifest_digest",
+    "required_slices",
+    "complete_slices",
+    "incomplete_slices",
+    "snapshot_ref"
+  ]
+}

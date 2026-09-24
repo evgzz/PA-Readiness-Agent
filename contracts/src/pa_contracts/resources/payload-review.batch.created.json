@@ -1,0 +1,233 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "status": {
+      "const": "RECORDED"
+    },
+    "record_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "actor_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_class": {
+      "enum": [
+        "REFERENCE_CONTROL",
+        "SCRIPTED_DEMO",
+        "REAL_AGENT_SYNTHETIC",
+        "REAL_AGENT_PRODUCTION"
+      ]
+    },
+    "candidate_config_digest": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "evaluation_config_digest": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "review_batch_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "population_manifest_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "population_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "eligible_trial_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "sampling_method": {
+      "enum": [
+        "RANDOM",
+        "STRATIFIED",
+        "TARGETED"
+      ]
+    },
+    "sampling_seed": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "selection_algorithm_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "strata": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "stratum_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "population_count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "selected_count": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "stratum_id",
+          "population_count",
+          "selected_count"
+        ]
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "inclusion_probabilities_ref": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "selected_trial_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "exclusions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "item_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "item_id",
+          "reason"
+        ]
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "taxonomy_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reviewer_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "double_review_rule": {
+      "type": "string",
+      "minLength": 1
+    },
+    "selected_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "completed_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "unreviewable_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "adjudication_pending_count": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "required": [
+    "schema_version",
+    "status",
+    "record_id",
+    "record_version",
+    "created_at",
+    "actor_id",
+    "evidence_class",
+    "candidate_config_digest",
+    "evaluation_config_digest",
+    "evidence_refs",
+    "review_batch_id",
+    "population_manifest_ref",
+    "population_digest",
+    "eligible_trial_count",
+    "sampling_method",
+    "sampling_seed",
+    "selection_algorithm_version",
+    "strata",
+    "inclusion_probabilities_ref",
+    "selected_trial_ids",
+    "exclusions",
+    "taxonomy_version",
+    "reviewer_ids",
+    "double_review_rule",
+    "selected_count",
+    "completed_count",
+    "unreviewable_count",
+    "adjudication_pending_count"
+  ]
+}

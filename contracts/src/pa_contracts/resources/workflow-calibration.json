@@ -1,0 +1,364 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "status": {
+      "const": "RECORDED"
+    },
+    "record_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "actor_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_class": {
+      "enum": [
+        "REFERENCE_CONTROL",
+        "SCRIPTED_DEMO",
+        "REAL_AGENT_SYNTHETIC",
+        "REAL_AGENT_PRODUCTION"
+      ]
+    },
+    "candidate_config_digest": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "evaluation_config_digest": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "calibration_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "failure_to_grader_mapping": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "failure_category_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "assertion_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "rubric_ref": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "failure_category_id",
+          "assertion_id",
+          "rubric_ref"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "rubric_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rubric_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "reference_set_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reference_label_provenance_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reference_set_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "split_family_manifest_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "development_set_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "audit_set_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "judge_config_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "independent_review_records_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "adjudication_ref": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "domain_owner_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evaluation_owner_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rubric_review_disposition": {
+      "enum": [
+        "ACCEPTED",
+        "REJECTED",
+        "INCONCLUSIVE"
+      ]
+    },
+    "rubric_reviewed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "minimum_class_counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "pass_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "fail_count": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "pass_count",
+        "fail_count"
+      ]
+    },
+    "accepted_error_bounds": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "max_fpr": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "max_fnr": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "max_fpr",
+        "max_fnr"
+      ]
+    },
+    "uncertainty_method": {
+      "type": "string",
+      "minLength": 1
+    },
+    "audit_class_counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "pass_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "fail_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "pass_count",
+        "fail_count"
+      ]
+    },
+    "confusion_matrix": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "tp": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "fp": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "tn": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "fn": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "tp",
+        "fp",
+        "tn",
+        "fn"
+      ]
+    },
+    "abstentions": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "parse_errors": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "unresolved_reference_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "disagreement_statistics": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "overlap_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "disagreement_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "overlap_count",
+        "disagreement_count"
+      ]
+    },
+    "applicability": {
+      "type": "string",
+      "minLength": 1
+    },
+    "calibration_disposition": {
+      "enum": [
+        "ACCEPTED",
+        "REJECTED",
+        "INCONCLUSIVE",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "invalidated_by": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "minimum_judge_coverage": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "maximum_abstention_rate": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "status",
+    "record_id",
+    "record_version",
+    "created_at",
+    "actor_id",
+    "evidence_class",
+    "candidate_config_digest",
+    "evaluation_config_digest",
+    "evidence_refs",
+    "calibration_id",
+    "failure_to_grader_mapping",
+    "rubric_ref",
+    "rubric_digest",
+    "reference_set_ref",
+    "reference_label_provenance_ref",
+    "reference_set_digest",
+    "split_family_manifest_ref",
+    "development_set_digest",
+    "audit_set_digest",
+    "judge_config_digest",
+    "independent_review_records_ref",
+    "adjudication_ref",
+    "domain_owner_id",
+    "evaluation_owner_id",
+    "rubric_review_disposition",
+    "rubric_reviewed_at",
+    "minimum_class_counts",
+    "accepted_error_bounds",
+    "uncertainty_method",
+    "audit_class_counts",
+    "confusion_matrix",
+    "abstentions",
+    "parse_errors",
+    "unresolved_reference_count",
+    "disagreement_statistics",
+    "applicability",
+    "calibration_disposition",
+    "invalidated_by",
+    "minimum_judge_coverage",
+    "maximum_abstention_rate"
+  ]
+}

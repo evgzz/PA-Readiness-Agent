@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "actor_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "alert_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "window_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "signal_type": {
+      "enum": [
+        "CONFIRMED_QUALITY",
+        "PROXY_SHIFT",
+        "EVIDENCE_FAILURE"
+      ]
+    },
+    "owner_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "state": {
+      "enum": [
+        "INVESTIGATING",
+        "CONFIRMED_ISSUE",
+        "BENIGN_SHIFT",
+        "MEASUREMENT_FAILURE",
+        "INSUFFICIENT_EVIDENCE"
+      ]
+    },
+    "due_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "finding_ref": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "actor_id",
+    "alert_id",
+    "window_ref",
+    "signal_type",
+    "owner_id",
+    "state",
+    "due_at",
+    "finding_ref"
+  ]
+}

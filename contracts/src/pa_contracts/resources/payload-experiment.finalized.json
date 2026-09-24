@@ -1,0 +1,382 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "status": {
+      "const": "RECORDED"
+    },
+    "record_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "actor_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_class": {
+      "enum": [
+        "REFERENCE_CONTROL",
+        "SCRIPTED_DEMO",
+        "REAL_AGENT_SYNTHETIC",
+        "REAL_AGENT_PRODUCTION"
+      ]
+    },
+    "candidate_config_digest": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "evaluation_config_digest": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "experiment_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "plan_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "baseline_run_manifest_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "candidate_run_manifest_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "metric_snapshot_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "analysis_code_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "scheduled_pairs": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "complete_pairs": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "missing_pairs": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "exclusions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "item_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "item_id",
+          "reason"
+        ]
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "primary_result": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sample_size": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unresolved_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "value",
+        "sample_size",
+        "unresolved_count"
+      ]
+    },
+    "uncertainty": {
+      "anyOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "method": {
+              "type": "string",
+              "minLength": 1
+            },
+            "lower": {
+              "type": "number"
+            },
+            "upper": {
+              "type": "number"
+            },
+            "confidence": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "exclusiveMaximum": 1
+            }
+          },
+          "required": [
+            "method",
+            "lower",
+            "upper",
+            "confidence"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "guardrail_results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "metric_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "outcome": {
+            "enum": [
+              "PASS",
+              "FAIL",
+              "UNRESOLVED"
+            ]
+          },
+          "evidence_ref": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "metric_id",
+          "outcome",
+          "evidence_ref"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "cost_complete": {
+      "type": "boolean"
+    },
+    "uncosted_calls": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "runtime_cost": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "currency": {
+          "type": "string",
+          "minLength": 1
+        },
+        "known_amount": {
+          "type": "number",
+          "minimum": 0
+        },
+        "uncosted_calls": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "complete": {
+          "type": "boolean"
+        },
+        "pricing_snapshot_ref": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "currency",
+        "known_amount",
+        "uncosted_calls",
+        "complete",
+        "pricing_snapshot_ref"
+      ]
+    },
+    "evaluation_cost": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "currency": {
+          "type": "string",
+          "minLength": 1
+        },
+        "known_amount": {
+          "type": "number",
+          "minimum": 0
+        },
+        "uncosted_calls": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "complete": {
+          "type": "boolean"
+        },
+        "pricing_snapshot_ref": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "currency",
+        "known_amount",
+        "uncosted_calls",
+        "complete",
+        "pricing_snapshot_ref"
+      ]
+    },
+    "human_review_cost_assumptions": {
+      "type": "string",
+      "minLength": 1
+    },
+    "regressions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "decision": {
+      "enum": [
+        "ADOPT_FOR_QUALIFICATION",
+        "REJECT",
+        "NO_DETECTABLE_DIFFERENCE",
+        "INCONCLUSIVE"
+      ]
+    },
+    "reviewer_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decision_reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "qualification_candidate_digest": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "status",
+    "record_id",
+    "record_version",
+    "created_at",
+    "actor_id",
+    "evidence_class",
+    "candidate_config_digest",
+    "evaluation_config_digest",
+    "evidence_refs",
+    "experiment_id",
+    "plan_digest",
+    "baseline_run_manifest_refs",
+    "candidate_run_manifest_refs",
+    "metric_snapshot_refs",
+    "analysis_code_digest",
+    "scheduled_pairs",
+    "complete_pairs",
+    "missing_pairs",
+    "exclusions",
+    "primary_result",
+    "uncertainty",
+    "guardrail_results",
+    "cost_complete",
+    "uncosted_calls",
+    "runtime_cost",
+    "evaluation_cost",
+    "human_review_cost_assumptions",
+    "regressions",
+    "decision",
+    "reviewer_id",
+    "decision_reason",
+    "qualification_candidate_digest"
+  ]
+}

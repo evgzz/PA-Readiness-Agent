@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "p50_ms",
+    "p95_ms",
+    "terminal_count",
+    "missing_duration_count",
+    "censored_count",
+    "boundary"
+  ],
+  "properties": {
+    "p50_ms": {
+      "type": "number",
+      "minimum": 0
+    },
+    "p95_ms": {
+      "type": "number",
+      "minimum": 0
+    },
+    "terminal_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "missing_duration_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "censored_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "boundary": {
+      "const": "ADMISSION_TO_TERMINAL"
+    }
+  }
+}

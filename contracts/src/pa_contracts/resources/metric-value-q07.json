@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "plan_digest",
+    "baseline_config_digest",
+    "candidate_config_digest",
+    "primary_metric_id",
+    "delta",
+    "uncertainty_method",
+    "interval_lower",
+    "interval_upper",
+    "complete_pairs",
+    "missing_pairs",
+    "decision"
+  ],
+  "properties": {
+    "plan_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "baseline_config_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "candidate_config_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "primary_metric_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "delta": {
+      "type": "number"
+    },
+    "uncertainty_method": {
+      "type": "string",
+      "minLength": 1
+    },
+    "interval_lower": {
+      "type": "number"
+    },
+    "interval_upper": {
+      "type": "number"
+    },
+    "complete_pairs": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "missing_pairs": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "decision": {
+      "enum": [
+        "ADOPT_FOR_QUALIFICATION",
+        "REJECT",
+        "NO_DETECTABLE_DIFFERENCE",
+        "INCONCLUSIVE"
+      ]
+    }
+  }
+}

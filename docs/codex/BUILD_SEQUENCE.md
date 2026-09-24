@@ -1,12 +1,12 @@
 # Revised Codex build sequence
 
-Eight implementation tasks; all PLANNED. Numerical order establishes the main
+Eight implementation tasks; Task 00 contracts complete, Tasks 01–07 PLANNED. Numerical order establishes the main
 dependencies. Read-only report rendering can start after Task 04 and governance
 fixtures in Task 06 without waiting for real-model access. No parallel agents are required.
 
 | Task | Build | Status |
 |---|---|---|
-| 00 | [Contracts, packaging and configuration](tasks/00-contracts-and-packaging.md) | PLANNED |
+| 00 | [Contracts, packaging and configuration](tasks/00-contracts-and-packaging.md) | CONTRACTS_COMPLETE |
 | 01 | [Synthetic world, requirements and grouped data](tasks/01-synthetic-tools-and-data.md) | PLANNED |
 | 02 | [Agent policy and deterministic model](tasks/02-agent-and-mock-model.md) | PLANNED |
 | 03 | [Harness and single mock loop](tasks/03-runtime-harness.md) | PLANNED |

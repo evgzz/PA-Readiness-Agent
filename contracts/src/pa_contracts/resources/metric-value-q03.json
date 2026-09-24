@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "calibration_ref",
+    "disposition",
+    "pass_count",
+    "fail_count",
+    "tp",
+    "fp",
+    "tn",
+    "fn",
+    "abstentions",
+    "unresolved_reference_count"
+  ],
+  "properties": {
+    "calibration_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "disposition": {
+      "enum": [
+        "ACCEPTED",
+        "REJECTED",
+        "INCONCLUSIVE",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "pass_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "fail_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "tp": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "fp": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "tn": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "fn": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "abstentions": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "unresolved_reference_count": {
+      "type": "integer",
+      "minimum": 0
+    }
+  }
+}

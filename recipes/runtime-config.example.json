@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "profile": "local-mock-readonly",
+  "runtime_adapter": "mock_loop",
+  "evidence_class": "REFERENCE_CONTROL",
+  "external_effects_allowed": false,
+  "telemetry_export_enabled": false,
+  "budgets": {
+    "max_steps": 8,
+    "max_model_calls": 8,
+    "max_tool_calls": 8,
+    "max_retries": 1,
+    "max_tokens": 4096,
+    "timeout_seconds": 30
+  }
+}

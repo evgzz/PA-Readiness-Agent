@@ -1,0 +1,311 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "status": {
+      "const": "RECORDED"
+    },
+    "record_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "record_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "actor_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_class": {
+      "enum": [
+        "REFERENCE_CONTROL",
+        "SCRIPTED_DEMO",
+        "REAL_AGENT_SYNTHETIC",
+        "REAL_AGENT_PRODUCTION"
+      ]
+    },
+    "candidate_config_digest": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "evaluation_config_digest": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "experiment_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "plan_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "registered_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "finding_id": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "failure_category_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "hypothesis": {
+      "type": "string",
+      "minLength": 1
+    },
+    "changed_factors": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "baseline_config_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "proposed_candidate_config_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "dataset_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "family_split_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "trial_schedule_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "repetitions": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "reset_policy": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ordering_policy": {
+      "type": "string",
+      "minLength": 1
+    },
+    "cache_policy": {
+      "type": "string",
+      "minLength": 1
+    },
+    "concurrency": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "warmup_policy": {
+      "type": "string",
+      "minLength": 1
+    },
+    "primary_metric_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "minimum_meaningful_change": {
+      "type": "number"
+    },
+    "safety_constraints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "metric_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "operator": {
+            "enum": [
+              "<=",
+              ">=",
+              "=="
+            ]
+          },
+          "threshold": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "metric_id",
+          "operator",
+          "threshold"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "non_inferiority_margins": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "metric_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "operator": {
+            "enum": [
+              "<=",
+              ">=",
+              "=="
+            ]
+          },
+          "threshold": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "metric_id",
+          "operator",
+          "threshold"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "uncertainty_method": {
+      "type": "string",
+      "minLength": 1
+    },
+    "incomplete_pair_policy": {
+      "type": "string",
+      "minLength": 1
+    },
+    "multiple_comparison_policy": {
+      "type": "string",
+      "minLength": 1
+    },
+    "stopping_rule": {
+      "type": "string",
+      "minLength": 1
+    },
+    "budget": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "max_trials": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_tokens": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_runtime_cost": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "currency": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "max_trials",
+        "max_tokens",
+        "max_runtime_cost",
+        "currency"
+      ]
+    },
+    "pricing_snapshot_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "qualified_for_execution": {
+      "const": true
+    }
+  },
+  "required": [
+    "schema_version",
+    "status",
+    "record_id",
+    "record_version",
+    "created_at",
+    "actor_id",
+    "evidence_class",
+    "candidate_config_digest",
+    "evaluation_config_digest",
+    "evidence_refs",
+    "experiment_id",
+    "plan_digest",
+    "registered_at",
+    "finding_id",
+    "failure_category_id",
+    "hypothesis",
+    "changed_factors",
+    "baseline_config_digest",
+    "proposed_candidate_config_digest",
+    "dataset_digest",
+    "family_split_digest",
+    "trial_schedule_ref",
+    "repetitions",
+    "reset_policy",
+    "ordering_policy",
+    "cache_policy",
+    "concurrency",
+    "warmup_policy",
+    "primary_metric_id",
+    "minimum_meaningful_change",
+    "safety_constraints",
+    "non_inferiority_margins",
+    "uncertainty_method",
+    "incomplete_pair_policy",
+    "multiple_comparison_policy",
+    "stopping_rule",
+    "budget",
+    "pricing_snapshot_ref",
+    "qualified_for_execution"
+  ]
+}

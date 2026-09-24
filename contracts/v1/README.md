@@ -1,9 +1,11 @@
 # V1 workflow field contracts
 
 Status: DRAFT_TEMPLATES_ONLY. These files describe required record fields. They
-are not runtime validators, accepted labels, executed plans or computed results.
+are not accepted labels, executed plans or computed results. Executable record
+validators now live in pa_contracts.workflows and packaged workflow-*.json schemas.
 Null means unassigned/unknown; empty lists are placeholders, not evidence of zero
-failures. Finalize types, required fields and state transitions in Task 00/04/06.
+failures. Completed records require status RECORDED and populated typed fields; the unchanged
+draft templates intentionally fail validation. Workflow execution remains Tasks 04/06.
 
 | Template | Use |
 |---|---|

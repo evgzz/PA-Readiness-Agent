@@ -1,0 +1,10 @@
+{
+  "lock_scope": "Task 00 packaging and standard-library contracts only",
+  "build_dependencies": [{"name": "setuptools", "version": "84.0.0"}],
+  "runtime_dependencies": [],
+  "test_dependencies": [],
+  "python_requirement": ">=3.12",
+  "model_sdk": null,
+  "selected_model": null,
+  "note": "Provider/framework locks will be added only when an integration is selected. This is a version inventory, not a hash-locked transitive resolver output."
+}

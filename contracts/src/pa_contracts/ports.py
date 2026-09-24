@@ -1,4 +1,8 @@
-"""Draft interfaces. Runtime validation/authentication are not implemented here."""
+"""Component protocols. Constructing a value never authenticates or authorizes it.
+
+Use runtime_ports/configuration validators at input boundaries and an authenticated
+ingress for event evidence. These dataclasses are not wire parsers or capabilities.
+"""
 from dataclasses import dataclass
 from enum import Enum
 from typing import Mapping, Protocol, Sequence
@@ -42,6 +46,7 @@ class AnswerProposal:
     evidence_refs: Sequence[str]
     unresolved_checks: Sequence[str]
     explanation: str
+    blockers: Sequence[str] = ()
 
 
 @dataclass(frozen=True)

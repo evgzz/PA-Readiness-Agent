@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "action_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "attempt_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "observation": {
+      "enum": [
+        "CONFIRMED_EFFECT",
+        "CONFIRMED_NO_EFFECT",
+        "UNRESOLVED"
+      ]
+    },
+    "effect_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "receipt_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "schema_version",
+    "action_id",
+    "attempt_id",
+    "observation",
+    "effect_type",
+    "receipt_refs"
+  ]
+}

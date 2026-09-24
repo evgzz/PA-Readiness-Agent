@@ -72,12 +72,17 @@
     {
       "path": "contracts",
       "python_package": "pa_contracts",
-      "implementation": "PLANNED",
-      "planned_files": [
+      "implementation": "IMPLEMENTED_CONTRACT_LAYER",
+      "planned_files": [],
+      "implemented_files": [
+        "ports.py",
         "validation.py",
         "serialization.py",
         "runtime_ports.py",
-        "evidence_ports.py"
+        "evidence_ports.py",
+        "configuration.py",
+        "workflows.py",
+        "cli.py"
       ]
     },
     {
@@ -92,12 +97,15 @@
     {
       "path": "telemetry",
       "python_package": "pa_telemetry",
-      "implementation": "PLANNED",
+      "implementation": "INGRESS_CONTRACT_ONLY",
       "planned_files": [
         "envelope.py",
         "redaction.py",
         "export.py",
         "delivery.py"
+      ],
+      "implemented_files": [
+        "ingress.py"
       ]
     },
     {

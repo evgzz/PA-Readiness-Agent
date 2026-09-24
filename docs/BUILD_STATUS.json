@@ -1,5 +1,5 @@
 {
-  "status": "SCAFFOLD_ONLY",
+  "status": "CONTRACTS_READY",
   "runtime": "NOT_IMPLEMENTED",
   "agent": "NOT_IMPLEMENTED",
   "eval_runner": "NOT_IMPLEMENTED",
@@ -24,5 +24,12 @@
   "learning_scorecard": "NOT_IMPLEMENTED",
   "monitoring_simulation": "NOT_IMPLEMENTED",
   "production_monitoring": "NOT_SCOPED",
-  "v1_worked_example": "NOT_RUN"
+  "v1_worked_example": "NOT_RUN",
+  "contracts": "IMPLEMENTED",
+  "packaging": "IMPLEMENTED",
+  "ingress_validation": "IMPLEMENTED_CONTRACT_ONLY",
+  "transport_authenticator": "NOT_CONFIGURED",
+  "workflow_record_validation": "IMPLEMENTED",
+  "metric_record_validation": "IMPLEMENTED",
+  "task_00": "COMPLETE_FOR_CONTRACT_LAYER"
 }

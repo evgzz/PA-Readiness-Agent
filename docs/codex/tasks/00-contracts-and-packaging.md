@@ -1,6 +1,6 @@
 # Contracts, packaging and configuration
 
-Status: PLANNED. Read root/scoped AGENTS.md, SPEC.md and relevant ADRs.
+Status: COMPLETE_FOR_CONTRACT_LAYER. Read root/scoped AGENTS.md, SPEC.md and relevant ADRs.
 
 ## Build
 Finalize package configuration and dependency lock only for selected integrations. Preserve pure contracts and independent component imports. Specify RuntimePort, metered model/tool gateways, evidence writer, evaluator result, metric snapshot and gate interfaces. Implement event-specific payload schemas, authentication checks at ingress, and version negotiation; draft envelope validation alone is insufficient.
@@ -19,3 +19,9 @@ Finalize v1 review/annotation/taxonomy/calibration/experiment/monitoring field
 contracts and payload validators; support the versioned v1 event envelope while
 preserving historical v0.2 evidence. Validate required values before a template
 can become an executable plan. Implement Q metric result fields and N/A rules.
+
+## Execution evidence
+
+See docs/TASK00_HANDOFF.md and artifacts/TASK00_VALIDATION.json. Runtime credential
+verification adapters and durable ingestion wiring remain integration work; the
+required verifier interface and fail-closed ingress checks are implemented.

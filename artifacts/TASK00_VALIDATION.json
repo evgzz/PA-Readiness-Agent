@@ -1,0 +1,37 @@
+{
+  "task": "00",
+  "status": "PASS_CONTRACT_LAYER_ONLY",
+  "date": "2026-09-24",
+  "python": "3.12.14",
+  "contract_tests": {
+    "command": "python3 scripts/run_contract_tests.py",
+    "tests": 25,
+    "result": "PASS",
+    "evidence_class": "REFERENCE_CONTROL"
+  },
+  "structure_checks": {
+    "status": "PASS",
+    "scope": "STRUCTURE_AND_IMPORT_CHECKS_ONLY",
+    "checks": 371,
+    "python_files_parsed": 21,
+    "public_interface_examples": 3,
+    "runtime_qualification": "NOT_RUN",
+    "errors": []
+  },
+  "packaging": {
+    "build_and_install": "PASS",
+    "build_dependency": "setuptools==84.0.0",
+    "runtime_dependencies": [],
+    "installed_cli": "VALID_CONTRACT 352aaebc94ee2afa1153a7f63b25cbf6e6f435f4306671e3fa358fbae8385fd0",
+    "installed_resources": "installed_resources_and_namespaces: PASS"
+  },
+  "markdown_links": {
+    "checked": 127,
+    "broken": 0
+  },
+  "catalog_and_envelope_resource_sync": "PASS",
+  "full_json_schema_conformance": "NOT_ASSERTED_OWNED_VOCABULARY_ONLY",
+  "transport_credential_verifier": "NOT_CONFIGURED",
+  "real_agent_trials": "NOT_RUN",
+  "runtime_security_qualification": "NOT_RUN"
+}

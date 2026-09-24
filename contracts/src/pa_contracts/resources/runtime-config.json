@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "profile": {
+      "const": "local-mock-readonly"
+    },
+    "runtime_adapter": {
+      "const": "mock_loop"
+    },
+    "evidence_class": {
+      "const": "REFERENCE_CONTROL"
+    },
+    "external_effects_allowed": {
+      "const": false
+    },
+    "telemetry_export_enabled": {
+      "const": false
+    },
+    "budgets": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "max_steps": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_model_calls": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_tool_calls": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_retries": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "max_tokens": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "timeout_seconds": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "max_steps",
+        "max_model_calls",
+        "max_tool_calls",
+        "max_retries",
+        "max_tokens",
+        "timeout_seconds"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "profile",
+    "runtime_adapter",
+    "evidence_class",
+    "external_effects_allowed",
+    "telemetry_export_enabled",
+    "budgets"
+  ]
+}

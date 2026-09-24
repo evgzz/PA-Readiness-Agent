@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "taxonomy_version",
+    "sampling_method",
+    "coded_trials",
+    "uncoded_trials",
+    "categories"
+  ],
+  "properties": {
+    "taxonomy_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sampling_method": {
+      "enum": [
+        "RANDOM",
+        "STRATIFIED",
+        "TARGETED"
+      ]
+    },
+    "coded_trials": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "uncoded_trials": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "category_id",
+          "trial_count"
+        ],
+        "properties": {
+          "category_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "trial_count": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    }
+  }
+}

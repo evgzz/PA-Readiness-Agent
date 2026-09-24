@@ -1,6 +1,7 @@
 # Instrumentation and evidence contracts
 
-Status: PLANNED. Paths below specify future modules; they are not implemented files.
+Status: producer/emitter integrations PLANNED. Task 00 implements contract validation
+and telemetry/src/pa_telemetry/ingress.py; capture/export modules below remain future work.
 The envelope schema and registries included in this revision are design contracts.
 
 ## Capture facts at the owning boundary
@@ -67,8 +68,9 @@ Current example events use SCRIPTED_DEMO and are not emitted run evidence.
 - Finding/approval: actor identity verified server-side, previous/new version,
   decision/reason, due-date history, retest evidence, expiry where applicable.
 
-Payload schemas and runtime validators must be implemented and fail closed under
-Task 00/06. A parseable envelope alone is insufficient for accepting an event.
+Task 00 implements event payload schemas and fail-closed authenticated ingress
+validation. Task 06 must wire a real credential verifier, durable writer and
+exporter. A parseable envelope alone is insufficient for accepting an event.
 
 ## Durable capture and delivery
 

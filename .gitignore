@@ -8,3 +8,7 @@ data/private/
 models/weights/
 artifacts/private/
 local-runs/
+
+build/
+dist/
+*.egg-info/

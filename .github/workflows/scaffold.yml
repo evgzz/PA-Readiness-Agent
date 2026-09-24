@@ -1,4 +1,4 @@
-name: Draft scaffold checks
+name: Contracts and scaffold checks
 
 on:
   push:
@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   scaffold:
-    name: Structure and metadata only
+    name: Contracts, packaging and structure
     runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
@@ -26,3 +26,10 @@ jobs:
           python-version: '3.12'
       - name: Check scaffold
         run: python3 scripts/check_scaffold.py
+      - name: Contract boundary tests
+        run: python3 scripts/run_contract_tests.py
+      - name: Install package
+        run: python3 -m pip install --no-deps .
+      - name: Validate installed configuration command
+        working-directory: /tmp
+        run: pa-contracts runtime-config "${{ github.workspace }}/recipes/runtime-config.example.json"

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "actor_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rubric_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "domain_owner_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evaluation_owner_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "review_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "disposition": {
+      "enum": [
+        "ACCEPTED",
+        "REJECTED",
+        "INCONCLUSIVE"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "actor_id",
+    "rubric_digest",
+    "domain_owner_id",
+    "evaluation_owner_id",
+    "review_ref",
+    "disposition"
+  ]
+}
