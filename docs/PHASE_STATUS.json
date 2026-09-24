@@ -1,0 +1,1541 @@
+{
+  "plan_revision": "1.0",
+  "specification_revision": "2.0",
+  "plan_status": "SPECIFIED",
+  "baseline_commit": "6ff749f07c13ed81b1731b7cbbfac3e559b94481",
+  "scope": "SYNTHETIC_READ_ONLY",
+  "runtime_execution_enabled_by_plan": false,
+  "phase_state_values": [
+    "PLANNED",
+    "IN_PROGRESS",
+    "BLOCKED",
+    "COMPLETE"
+  ],
+  "criterion_assessment_values": [
+    "NOT_ASSESSED",
+    "MET",
+    "UNMET",
+    "NOT_APPLICABLE"
+  ],
+  "next_phase": "P1",
+  "phases": [
+    {
+      "phase_id": "P0",
+      "title": "Contract foundation",
+      "status": "COMPLETE",
+      "completion_scope": "ORIGINAL_CONTRACT_LAYER_ONLY",
+      "dependencies": [],
+      "task_ids": [
+        "00"
+      ],
+      "owner_roles": [
+        "Engineering"
+      ],
+      "owner": null,
+      "target_start": null,
+      "target_finish": null,
+      "entry_assessment": "MET",
+      "exit_assessment": "MET",
+      "dod_assessment": "MET",
+      "entry_criteria": [
+        {
+          "criterion_id": "P0-ENTRY-01",
+          "requirement": "Original contract interfaces, schema vocabulary and synthetic configuration are recorded in the Task 00 handoff.",
+          "assessment": "MET",
+          "evidence_refs": [
+            "artifacts/TASK00_VALIDATION.json",
+            "docs/TASK00_HANDOFF.md"
+          ],
+          "reviewer": null,
+          "not_applicable_reason": null
+        }
+      ],
+      "exit_criteria": [
+        {
+          "criterion_id": "P0-EXIT-01",
+          "requirement": "The original contract boundary suite passes: 25 tests, including malformed scope, forged producer/channel, hidden-label projection and outcome precedence.",
+          "assessment": "MET",
+          "evidence_refs": [
+            "artifacts/TASK00_VALIDATION.json",
+            "docs/TASK00_HANDOFF.md"
+          ],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P0-EXIT-02",
+          "requirement": "Package installation and the installed configuration command have recorded successful results.",
+          "assessment": "MET",
+          "evidence_refs": [
+            "artifacts/TASK00_VALIDATION.json",
+            "docs/TASK00_HANDOFF.md"
+          ],
+          "reviewer": null,
+          "not_applicable_reason": null
+        }
+      ],
+      "definition_of_done": [
+        {
+          "criterion_id": "P0-DOD-01",
+          "requirement": "Task 00 implementation scope, executed evidence and integration limitations are documented.",
+          "assessment": "MET",
+          "evidence_refs": [
+            "artifacts/TASK00_VALIDATION.json",
+            "docs/TASK00_HANDOFF.md"
+          ],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P0-DOD-02",
+          "requirement": "Runtime, transport authentication, real models and evaluation remain explicitly pending; historical counts retain their original revision context.",
+          "assessment": "MET",
+          "evidence_refs": [
+            "artifacts/TASK00_VALIDATION.json",
+            "docs/TASK00_HANDOFF.md"
+          ],
+          "reviewer": null,
+          "not_applicable_reason": null
+        }
+      ],
+      "common_dod": [],
+      "required_evidence": [
+        "artifacts/TASK00_VALIDATION.json",
+        "docs/TASK00_HANDOFF.md"
+      ],
+      "evidence_refs": [
+        "artifacts/TASK00_VALIDATION.json",
+        "docs/TASK00_HANDOFF.md"
+      ],
+      "known_unmet_dependencies": [],
+      "blockers": [],
+      "candidate_adoption": null,
+      "release_gate": null,
+      "authorization_ref": null,
+      "corresponding_specs": [
+        "docs/TASK00_HANDOFF.md"
+      ],
+      "next_action": "Preserve baseline; add v2 extensions only as needed"
+    },
+    {
+      "phase_id": "P1",
+      "title": "Executable synthetic workflow",
+      "status": "PLANNED",
+      "completion_scope": null,
+      "dependencies": [
+        "P0"
+      ],
+      "task_ids": [
+        "00",
+        "01",
+        "02",
+        "03",
+        "04"
+      ],
+      "owner_roles": [
+        "Engineering",
+        "Evaluation"
+      ],
+      "owner": null,
+      "target_start": null,
+      "target_finish": null,
+      "entry_assessment": "NOT_ASSESSED",
+      "exit_assessment": "NOT_ASSESSED",
+      "dod_assessment": "NOT_ASSESSED",
+      "entry_criteria": [
+        {
+          "criterion_id": "P1-ENTRY-01",
+          "requirement": "P0 evidence is available; the existing package and configuration can be used in the implementation environment.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P1-ENTRY-02",
+          "requirement": "Define the fictional requirement predicates and review the three expected outcomes before treating the public examples as acceptance cases.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P1-ENTRY-03",
+          "requirement": "Declare the allowed operations, case identity source, loop/retry/time budgets and required event fields. Keep external effects and optional exporters disabled.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        }
+      ],
+      "exit_criteria": [
+        {
+          "criterion_id": "P1-EXIT-01",
+          "requirement": "A documented local command executes SYN-001, SYN-002 and SYN-003 through actual tool/harness code and returns READY, NOT_READY and UNKNOWN respectively under the reviewed predicates.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P1-EXIT-02",
+          "requirement": "Every admitted case has scope, reset, tool result, proposed/delivered answer, verdict and terminal evidence; references resolve to the same case.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P1-EXIT-03",
+          "requirement": "A foreign-case read and an unsupported write proposal are denied at the execution boundary while a permitted read succeeds. Replaying after reset reproduces the deterministic behavioral result.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        }
+      ],
+      "definition_of_done": [
+        {
+          "criterion_id": "P1-DOD-01",
+          "requirement": "The command, sample configuration and setup work from a clean checkout; output locations and limitations are documented.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P1-DOD-02",
+          "requirement": "Independent assertions evaluate the delivered result without sending expectations into the runtime; reports label this evidence REFERENCE_CONTROL or SCRIPTED_DEMO.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P1-DOD-03",
+          "requirement": "Required event/payload extensions are versioned and validated before emission; malformed input and missing evidence remain visible.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P1-DOD-04",
+          "requirement": "Commit the scoped implementation, meaningful boundary tests and evidence index; update component/task status only for the implemented portions.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        }
+      ],
+      "common_dod": [
+        {
+          "criterion_id": "DOD-01",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-02",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-03",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-04",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-05",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-06",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-07",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-08",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        }
+      ],
+      "required_evidence": [
+        "Reviewed requirement/case manifest",
+        "Reset receipts and case-scoped tool receipts",
+        "Three complete traces and assessments",
+        "Deterministic assertion results",
+        "JSON/Markdown scorecard and reproduction command"
+      ],
+      "evidence_refs": [],
+      "known_unmet_dependencies": [],
+      "blockers": [],
+      "candidate_adoption": null,
+      "release_gate": null,
+      "authorization_ref": null,
+      "corresponding_specs": [
+        "docs/SYNTHETIC_SCENARIOS.md",
+        "docs/HARNESS.md",
+        "docs/INSTRUMENTATION.md"
+      ],
+      "next_action": "Review the fictional requirement predicates and three expected outcomes; implement the bounded local workflow with the needed schema extensions."
+    },
+    {
+      "phase_id": "P2",
+      "title": "Failure handling and regression",
+      "status": "PLANNED",
+      "completion_scope": null,
+      "dependencies": [
+        "P1"
+      ],
+      "task_ids": [
+        "00",
+        "01",
+        "03",
+        "04",
+        "06"
+      ],
+      "owner_roles": [
+        "Engineering",
+        "Evaluation"
+      ],
+      "owner": null,
+      "target_start": null,
+      "target_finish": null,
+      "entry_assessment": "NOT_ASSESSED",
+      "exit_assessment": "NOT_ASSESSED",
+      "dod_assessment": "NOT_ASSESSED",
+      "entry_criteria": [
+        {
+          "criterion_id": "P2-ENTRY-01",
+          "requirement": "P1 exit and DoD evidence is recorded for a fixed baseline.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P2-ENTRY-02",
+          "requirement": "Freeze a failure matrix with intended outcomes, initial state, applicable assertions and evidence requirements; isolate control fixtures from runtime expectations.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        }
+      ],
+      "exit_criteria": [
+        {
+          "criterion_id": "P2-EXIT-01",
+          "requirement": "All mandatory reference controls resolve correctly: wrong-patient access, prohibited operation, unsupported READY, tool absence versus outage, malformed output, cancellation/budget exhaustion, missing terminal record and duplicate trial.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P2-EXIT-02",
+          "requirement": "Multi-turn controls cover clarification, contradictory/stale evidence, correction and reset isolation. A later correction does not erase an earlier mandatory failure.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P2-EXIT-03",
+          "requirement": "A deliberately introduced development defect fails the required CI check. Restoring the fix passes the original case and legitimate controls; a skipped/incomplete required tier cannot pass.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        }
+      ],
+      "definition_of_done": [
+        {
+          "criterion_id": "P2-DOD-01",
+          "requirement": "T0/T1 run on applicable changes with bounded execution and preserved failure output; optional integration credentials are unnecessary for these tiers.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P2-DOD-02",
+          "requirement": "Reports count scheduled/completed/missing/duplicate trials separately; absence of observations is never a healthy zero.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P2-DOD-03",
+          "requirement": "The original failure, regression case and repair evidence are linked; reference controls are not represented as live exploits or model performance.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P2-DOD-04",
+          "requirement": "Review import/data boundaries and update scaffold-only assertions as real components become implemented; do not retain false NOT_IMPLEMENTED checks.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        }
+      ],
+      "common_dod": [
+        {
+          "criterion_id": "DOD-01",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-02",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-03",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-04",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-05",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-06",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-07",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-08",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        }
+      ],
+      "required_evidence": [
+        "Failure/positive-control matrix",
+        "Seeded failing CI run and repaired run",
+        "Multi-turn reference traces",
+        "Completeness/reset results",
+        "Updated reproduction instructions"
+      ],
+      "evidence_refs": [],
+      "known_unmet_dependencies": [
+        "P1"
+      ],
+      "blockers": [],
+      "candidate_adoption": null,
+      "release_gate": null,
+      "authorization_ref": null,
+      "corresponding_specs": [
+        "docs/CI_EVALUATION.md",
+        "docs/EVALUATIONS.md",
+        "docs/HARNESS.md"
+      ],
+      "next_action": "P1 exit and DoD evidence is recorded for a fixed baseline."
+    },
+    {
+      "phase_id": "P3",
+      "title": "One real-model pilot",
+      "status": "PLANNED",
+      "completion_scope": null,
+      "dependencies": [
+        "P2"
+      ],
+      "task_ids": [
+        "00",
+        "01",
+        "03",
+        "04",
+        "05"
+      ],
+      "owner_roles": [
+        "Engineering",
+        "Evaluation"
+      ],
+      "owner": null,
+      "target_start": null,
+      "target_finish": null,
+      "entry_assessment": "NOT_ASSESSED",
+      "exit_assessment": "NOT_ASSESSED",
+      "dod_assessment": "NOT_ASSESSED",
+      "entry_criteria": [
+        {
+          "criterion_id": "P3-ENTRY-01",
+          "requirement": "P2 required controls pass. Establish synthetic-only process/credential/data boundaries and permitted inference/export destinations before network execution.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P3-ENTRY-02",
+          "requirement": "Select and pin the provider/model/serving configuration and required dependencies; configure credentials without storing values in Git. Record hosted-model immutability limits.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P3-ENTRY-03",
+          "requirement": "Preregister pilot cases, repetitions, budgets, stopping rules and manual review assignments. Group families before augmentation; reserve future qualification families and keep labels outside runtime access.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P3-ENTRY-04",
+          "requirement": "Validate actual rendered-prompt/config identities, required nested spans and missing-trace controls locally. Leave unconfigured exporters disabled.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        }
+      ],
+      "exit_criteria": [
+        {
+          "criterion_id": "P3-EXIT-01",
+          "requirement": "Actual provider calls execute through the metered gateway with one runtime loop, scoped tool callbacks and no silent mock/model fallback. Authorization controls also pass under hostile proposals through this adapter.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P3-EXIT-02",
+          "requirement": "Every scheduled attempt is accounted for, including errors, retries, timeouts and usage/pricing gaps. Manually inspect every pilot trace and preserve observed failures.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P3-EXIT-03",
+          "requirement": "Actual multi-turn runs include clarification, correction, unavailable evidence and budget termination. Separate attempted from delivered answers and decision-time prefixes from full trajectories.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P3-EXIT-04",
+          "requirement": "Record the scenario generator/world provenance, family splits, reviewed smoke report and a prioritized development backlog. Close code-enforcement defects before expanding live execution.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        }
+      ],
+      "definition_of_done": [
+        {
+          "criterion_id": "P3-DOD-01",
+          "requirement": "Persist code/config/model/data digests, source snapshots, provider receipts and trace links; label actual runs REAL_AGENT_SYNTHETIC.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P3-DOD-02",
+          "requirement": "Publish an initial scorecard for outcomes, safety assertions, completeness, latency and cost, with denominators and unknowns. No pilot sample is called a precision guarantee.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P3-DOD-03",
+          "requirement": "Reproduction instructions include required configuration, environment and provider limits; missing configuration makes zero network calls.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P3-DOD-04",
+          "requirement": "Assign owners and reproduction steps to material failures. Review may continue while an execution defect is blocked, without claiming phase completion.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        }
+      ],
+      "common_dod": [
+        {
+          "criterion_id": "DOD-01",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-02",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-03",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-04",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-05",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-06",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-07",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-08",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        }
+      ],
+      "required_evidence": [
+        "Pinned pilot plan and environment manifest",
+        "Reviewed scenario smoke report",
+        "Actual provider/tool receipts and multi-turn traces",
+        "Manual pilot annotations",
+        "Initial quality/cost/completeness report and failure backlog"
+      ],
+      "evidence_refs": [],
+      "known_unmet_dependencies": [
+        "P2"
+      ],
+      "blockers": [],
+      "candidate_adoption": null,
+      "release_gate": null,
+      "authorization_ref": null,
+      "corresponding_specs": [
+        "docs/SYNTHETIC_SCENARIOS.md",
+        "docs/INSTRUMENTATION.md",
+        "docs/LLM_JUDGE.md"
+      ],
+      "next_action": "P2 required controls pass. Establish synthetic-only process/credential/data boundaries and permitted inference/export destinations before network execution."
+    },
+    {
+      "phase_id": "P4",
+      "title": "Human review and trusted measurement",
+      "status": "PLANNED",
+      "completion_scope": null,
+      "dependencies": [
+        "P3"
+      ],
+      "task_ids": [
+        "00",
+        "04",
+        "05"
+      ],
+      "owner_roles": [
+        "Evaluation",
+        "PA domain reviewer"
+      ],
+      "owner": null,
+      "target_start": null,
+      "target_finish": null,
+      "entry_assessment": "NOT_ASSESSED",
+      "exit_assessment": "NOT_ASSESSED",
+      "dod_assessment": "NOT_ASSESSED",
+      "entry_criteria": [
+        {
+          "criterion_id": "P4-ENTRY-01",
+          "requirement": "P3 supplies actual development traces and stable trace identities. Freeze the review population, probability/targeted sampling labels, batch size and saturation stopping criterion.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P4-ENTRY-02",
+          "requirement": "Assign qualified reference reviewers and adjudication responsibility. Define label access, related-family partitioning and untouched calibration audit boundaries.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P4-ENTRY-03",
+          "requirement": "Before a judge audit, assign the rubric, class/slice minimums, error/coverage bounds, uncertainty method and profile pins. Null criteria block acceptance, not useful preparation.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        }
+      ],
+      "exit_criteria": [
+        {
+          "criterion_id": "P4-EXIT-01",
+          "requirement": "Review at least 60 distinct reviewable real-agent synthetic development traces. Preserve first-failure notes, secondary failures, recovery, disagreements, unreviewable cases and saturation history.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P4-EXIT-02",
+          "requirement": "Produce human-derived binary failure definitions and one testable evaluator per observed mode. Aim for 5\u20138 modes when supported; justify another count rather than inventing failures.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P4-EXIT-03",
+          "requirement": "Required semantic judges pass their untouched human-reference audit, including TPR/TNR, class counts and unresolved coverage. If no semantic judge is needed, record reviewed applicability and do not claim successful judge calibration.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P4-EXIT-04",
+          "requirement": "Verify fixed-k pass^k/pass@k, missingness bounds, weighting and prevalence/uncertainty behavior against independent known-result controls. Invalid or sparse estimates remain inconclusive.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        }
+      ],
+      "definition_of_done": [
+        {
+          "criterion_id": "P4-DOD-01",
+          "requirement": "Commit versioned codebook/rubrics and allowed aggregate reports; keep private labels and qualification material in their controlled store.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P4-DOD-02",
+          "requirement": "The review UI exposes complete permitted traces, hides judge output before initial human labeling and supports append-only review/adjudication.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P4-DOD-03",
+          "requirement": "Selected judge profile, context projection, parsing/abstention policy and audit digest are frozen. Jev is optional; HF-hosted and supported closed API profiles use the same acceptance discipline.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P4-DOD-04",
+          "requirement": "Preserve tests for anti-hindsight, valid alternative paths, earlier failure plus later recovery, missing context and uncalibrated swaps. No judge can override objective effect/authorization evidence.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        }
+      ],
+      "common_dod": [
+        {
+          "criterion_id": "DOD-01",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-02",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-03",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-04",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-05",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-06",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-07",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-08",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        }
+      ],
+      "required_evidence": [
+        "Review selection and 60-trace accounting",
+        "Versioned taxonomy, batch/saturation and adjudication reports",
+        "Failure-to-evaluator mapping",
+        "Calibration report or justified non-applicability",
+        "Reliability/prevalence computation controls and report"
+      ],
+      "evidence_refs": [],
+      "known_unmet_dependencies": [
+        "P3"
+      ],
+      "blockers": [],
+      "candidate_adoption": null,
+      "release_gate": null,
+      "authorization_ref": null,
+      "corresponding_specs": [
+        "docs/ERROR_ANALYSIS.md",
+        "docs/EVALUATOR_CALIBRATION.md",
+        "docs/V2_MEASUREMENT.md",
+        "docs/LLM_JUDGE.md"
+      ],
+      "next_action": "P3 supplies actual development traces and stable trace identities. Freeze the review population, probability/targeted sampling labels, batch size and saturation stopping criterion."
+    },
+    {
+      "phase_id": "P5",
+      "title": "One measured fix and adversarial regression",
+      "status": "PLANNED",
+      "completion_scope": null,
+      "dependencies": [
+        "P4"
+      ],
+      "task_ids": [
+        "00",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07"
+      ],
+      "owner_roles": [
+        "Engineering",
+        "Evaluation",
+        "Safety review"
+      ],
+      "owner": null,
+      "target_start": null,
+      "target_finish": null,
+      "entry_assessment": "NOT_ASSESSED",
+      "exit_assessment": "NOT_ASSESSED",
+      "dod_assessment": "NOT_ASSESSED",
+      "entry_criteria": [
+        {
+          "criterion_id": "P5-ENTRY-01",
+          "requirement": "P4 supplies a supported failure hypothesis and accepted applicable evaluators. If no defensible failure is observed, record that result and broaden review before claiming a completed fix.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P5-ENTRY-02",
+          "requirement": "Preregister baseline/candidate configurations, changed factor, paired workload, sample/repetition plan, primary metric, safety/non-inferiority limits, cost budget and stopping rule.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P5-ENTRY-03",
+          "requirement": "Configure the owned synthetic endpoint, pinned red-team adapter, allowlisted generation/target/grading destinations and independent effect checks; irreversible operations remain disabled.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        }
+      ],
+      "exit_criteria": [
+        {
+          "criterion_id": "P5-EXIT-01",
+          "requirement": "The comparison preserves all scheduled trials and reports improvement, regression, no detectable difference or inconclusive evidence under the frozen rules. A negative result can complete the experiment, but cannot justify adopting its candidate.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P5-EXIT-02",
+          "requirement": "Run the actual endpoint attack campaign with legitimate controls. For every confirmed successful attack, retain a reproducer, failing regression, mitigation and retest; record a no-success campaign honestly.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P5-EXIT-03",
+          "requirement": "The retained candidate has no unresolved mandatory authorization/lineage defect and satisfies the declared advancement constraints; failures remain in the backlog.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P5-EXIT-04",
+          "requirement": "Required T0\u2013T2 checks run for the selected change types; missing credentials/tier evidence remain visibly incomplete. Findings link to owners, closure criteria and actual retests.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        }
+      ],
+      "definition_of_done": [
+        {
+          "criterion_id": "P5-DOD-01",
+          "requirement": "Store the frozen experiment plan, paired results, uncertainty, original-case retest and adjacent controls; keep measurement changes separate from agent changes.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P5-DOD-02",
+          "requirement": "Preserve losing configurations and rejected hypotheses. If the candidate fails constraints, retain the eligible baseline or continue remediation instead of forcing a winner.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P5-DOD-03",
+          "requirement": "Complete the attack-surface mapping, simulated approval expiry/replay/concurrency controls and governance crosswalk; operational legal applicability may remain pending within synthetic scope.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P5-DOD-04",
+          "requirement": "Prove gate recommendation and release authorization remain separate, including missing evidence, expired exceptions and candidate mismatch controls.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        }
+      ],
+      "common_dod": [
+        {
+          "criterion_id": "DOD-01",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-02",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-03",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-04",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-05",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-06",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-07",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-08",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        }
+      ],
+      "required_evidence": [
+        "Observed finding and frozen comparison plan",
+        "Paired baseline/candidate report",
+        "Actual campaign manifest and effect evidence",
+        "Attack/regression/mitigation links or documented no-success result",
+        "T0\u2013T2 CI records and governance controls"
+      ],
+      "evidence_refs": [],
+      "known_unmet_dependencies": [
+        "P4"
+      ],
+      "blockers": [],
+      "candidate_adoption": null,
+      "release_gate": null,
+      "authorization_ref": null,
+      "corresponding_specs": [
+        "docs/EXPERIMENTS.md",
+        "docs/ADVERSARIAL_EVALUATION.md",
+        "docs/CI_EVALUATION.md"
+      ],
+      "next_action": "P4 supplies a supported failure hypothesis and accepted applicable evaluators. If no defensible failure is observed, record that result and broaden review before claiming a completed fix."
+    },
+    {
+      "phase_id": "P6",
+      "title": "Reporting, efficiency and synthetic monitoring",
+      "status": "PLANNED",
+      "completion_scope": null,
+      "dependencies": [
+        "P5"
+      ],
+      "task_ids": [
+        "00",
+        "04",
+        "05",
+        "06",
+        "07"
+      ],
+      "owner_roles": [
+        "Engineering",
+        "Evaluation",
+        "Reporting",
+        "Operations design"
+      ],
+      "owner": null,
+      "target_start": null,
+      "target_finish": null,
+      "entry_assessment": "NOT_ASSESSED",
+      "exit_assessment": "NOT_ASSESSED",
+      "dod_assessment": "NOT_ASSESSED",
+      "entry_criteria": [
+        {
+          "criterion_id": "P6-ENTRY-01",
+          "requirement": "P5 supplies a retained eligible candidate, accepted evaluators and reproducible development suite. The relevant metric/schema extensions are implemented before use.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P6-ENTRY-02",
+          "requirement": "For each subphase, assign its plan, owner role, data/config pins, quality/safety limits, budgets and evidence requirements before collecting comparison data.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P6-ENTRY-03",
+          "requirement": "Select a provider/profile capable of the planned caching/cascade experiment and authorize the trace export profile; preserve unknown costs and destination restrictions.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        }
+      ],
+      "exit_criteria": [
+        {
+          "criterion_id": "P6-EXIT-01",
+          "requirement": "All P6A\u2013P6E mandatory entry, exit and DoD criteria below are met with source-linked artifacts; a missing subphase prevents parent completion.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P6-EXIT-02",
+          "requirement": "At least two complete candidate configs are committed and compared using the full applicable development suite. Negative or inconclusive results are retained without forced adoption.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P6-EXIT-03",
+          "requirement": "Complete the evidence index for V2-A\u2013D, including the required trace-platform projection, scenario coverage, human measurement, CI/adversarial evidence, cost experiments and monitoring. Reconcile it to actual source snapshots.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        }
+      ],
+      "definition_of_done": [
+        {
+          "criterion_id": "P6-DOD-01",
+          "requirement": "Dashboards, JSON and Markdown reproduce the same metrics, denominators, missingness, freshness and candidate identities without exposing private labels.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P6-DOD-02",
+          "requirement": "Report runtime, evaluation and human effort costs separately. Sampling/correction assumptions and uncertainty accompany prevalence displays.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P6-DOD-03",
+          "requirement": "Keep all accepted alternatives and experiment dispositions; safety constraints take precedence over cost or latency gains.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P6-DOD-04",
+          "requirement": "Record local monitoring/triage outputs and upgrade decisions without enabling production traffic, external alerts or automatic deployment.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        }
+      ],
+      "common_dod": [
+        {
+          "criterion_id": "DOD-01",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-02",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-03",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-04",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-05",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-06",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-07",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-08",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        }
+      ],
+      "required_evidence": [
+        "P6A\u2013P6E evidence packets",
+        "Reconciled reporting snapshots",
+        "Two-or-more committed frontier configs",
+        "Completed V2-A\u2013D demonstration index"
+      ],
+      "evidence_refs": [],
+      "known_unmet_dependencies": [
+        "P5"
+      ],
+      "blockers": [],
+      "candidate_adoption": null,
+      "release_gate": null,
+      "authorization_ref": null,
+      "corresponding_specs": [
+        "docs/DASHBOARDS_REPORTS.md",
+        "docs/OPTIMIZATION_UPGRADE.md",
+        "docs/MONITORING.md",
+        "docs/V2_GAP_FIXES.md"
+      ],
+      "next_action": "P5 supplies a retained eligible candidate, accepted evaluators and reproducible development suite. The relevant metric/schema extensions are implemented before use."
+    },
+    {
+      "phase_id": "P7",
+      "title": "Independent qualification and release decision",
+      "status": "PLANNED",
+      "completion_scope": null,
+      "dependencies": [
+        "P6"
+      ],
+      "task_ids": [
+        "04",
+        "06",
+        "07"
+      ],
+      "owner_roles": [
+        "Independent evaluation",
+        "Safety review",
+        "Release authority"
+      ],
+      "owner": null,
+      "target_start": null,
+      "target_finish": null,
+      "entry_assessment": "NOT_ASSESSED",
+      "exit_assessment": "NOT_ASSESSED",
+      "dod_assessment": "NOT_ASSESSED",
+      "entry_criteria": [
+        {
+          "criterion_id": "P7-ENTRY-01",
+          "requirement": "P6 evidence and the V2-A\u2013D index are complete; the selected candidate/configuration and mandatory criteria are frozen before qualification access.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P7-ENTRY-02",
+          "requirement": "Assign numeric quality/safety limits, coverage/precision plan, budgets, independent evaluation ownership and named release authority. Resolve all inputs required by the qualification profile.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P7-ENTRY-03",
+          "requirement": "Verify suite access history, family separation, label isolation, evaluator acceptance and dependency identity; the optimizer cannot access qualification feedback.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P7-ENTRY-04",
+          "requirement": "Predeclare handling of failures, missingness and repeated looks. A revised candidate cannot reuse an opened test as an untouched qualification claim.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        }
+      ],
+      "exit_criteria": [
+        {
+          "criterion_id": "P7-EXIT-01",
+          "requirement": "Execute and account for the complete scheduled qualification suite; adjudicate available evidence and retain unresolved judgments explicitly. Derive GO, NO_GO or INCONCLUSIVE from the declared policy and retain every blocker or gap.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P7-EXIT-02",
+          "requirement": "Record residual risks, applicable exception validity and a separate authenticated candidate-bound release decision. GO alone is not authorization.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P7-EXIT-03",
+          "requirement": "Archive the dossier and next action: eligible for the separately authorized release process, return to development, or collect missing evidence. No deployment is executed by completing the assessment.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        }
+      ],
+      "definition_of_done": [
+        {
+          "criterion_id": "P7-DOD-01",
+          "requirement": "Persist immutable candidate/suite/model/evaluator identities, trial evidence, metric/gate snapshots and access history.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P7-DOD-02",
+          "requirement": "An independent reviewer can reproduce the gate from authorized evidence and distinguish computation, approval and observed effects.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P7-DOD-03",
+          "requirement": "For NO_GO or INCONCLUSIVE, preserve the completed assessment if its procedural DoD is met, while release eligibility remains failed or unresolved. Open follow-up work and require fresh qualification as applicable.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "P7-DOD-04",
+          "requirement": "Update status and authorization records truthfully; no phase status or dashboard label substitutes for the actual release gate or authenticated authorization.",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "reviewer": null,
+          "not_applicable_reason": null
+        }
+      ],
+      "common_dod": [
+        {
+          "criterion_id": "DOD-01",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-02",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-03",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-04",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-05",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-06",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-07",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        },
+        {
+          "criterion_id": "DOD-08",
+          "assessment": "NOT_ASSESSED",
+          "evidence_refs": [],
+          "not_applicable_reason": null
+        }
+      ],
+      "required_evidence": [
+        "Frozen qualification manifest and complete trial accounting",
+        "Independent evaluation and residual-risk review",
+        "Computed gate snapshot",
+        "Separate authorization/decision record",
+        "Reproduction and follow-up dossier"
+      ],
+      "evidence_refs": [],
+      "known_unmet_dependencies": [
+        "P6"
+      ],
+      "blockers": [],
+      "candidate_adoption": null,
+      "release_gate": null,
+      "authorization_ref": null,
+      "corresponding_specs": [
+        "docs/CI_EVALUATION.md",
+        "docs/V2_GAP_FIXES.md",
+        "governance/severity-and-release-policy.md"
+      ],
+      "next_action": "P6 evidence and the V2-A\u2013D index are complete; the selected candidate/configuration and mandatory criteria are frozen before qualification access."
+    }
+  ],
+  "subphases": [
+    {
+      "phase_id": "P6A",
+      "parent_phase": "P6",
+      "title": "Reports and trace projection",
+      "status": "PLANNED",
+      "dependencies": [
+        "P5"
+      ],
+      "owner": null,
+      "target_finish": null,
+      "entry_criteria": "Validated P4/P5 metric snapshots, access policy and selected trace-platform versions/destinations.",
+      "exit_criteria": "All displayed values reconcile to snapshots; trace links retain causal identity; missing export and stale/missing data are visible; private labels and secrets are excluded.",
+      "definition_of_done": "Commit reproducible report/projection configuration and control evidence for access, freshness, export loss and snapshot reconciliation.",
+      "required_evidence": "Dashboard/JSON/Markdown snapshots, projection controls and source reconciliation.",
+      "entry_assessment": "NOT_ASSESSED",
+      "exit_assessment": "NOT_ASSESSED",
+      "dod_assessment": "NOT_ASSESSED",
+      "evidence_refs": [],
+      "blockers": []
+    },
+    {
+      "phase_id": "P6B",
+      "parent_phase": "P6",
+      "title": "Prompt-cache experiment",
+      "status": "PLANNED",
+      "dependencies": [
+        "P5"
+      ],
+      "owner": null,
+      "target_finish": null,
+      "entry_criteria": "Pinned cache-capable profile and a preregistered cold/warm comparison, quality limits, scope/TTL and billing allocation.",
+      "exit_criteria": "Paired cost/latency/quality results include failed calls and unknown usage. Scope/invalidation controls pass. Zero or negative savings are reported honestly.",
+      "definition_of_done": "Store the frozen plan, native usage/billing evidence, paired result, uncertainty and adoption/rejection decision. Retrieval caching cannot substitute.",
+      "required_evidence": "Cache configuration, attempt receipts and comparison report.",
+      "entry_assessment": "NOT_ASSESSED",
+      "exit_assessment": "NOT_ASSESSED",
+      "dod_assessment": "NOT_ASSESSED",
+      "evidence_refs": [],
+      "blockers": []
+    },
+    {
+      "phase_id": "P6C",
+      "parent_phase": "P6",
+      "title": "Calibrated agent cascade",
+      "status": "PLANNED",
+      "dependencies": [
+        "P5"
+      ],
+      "owner": null,
+      "target_finish": null,
+      "entry_criteria": "Development-only router tuning, frozen routing thresholds, two compatible model profiles and a separate audit plan including accepted cheap-path cases.",
+      "exit_criteria": "Representative audit covers all routes and declared quality/safety/coverage bounds. A failed/inconclusive audit blocks cascade adoption while remaining a valid experiment result.",
+      "definition_of_done": "Retain reference-label provenance, inclusion probabilities, routing/config hashes, class/slice errors, full costs and deployment-disabled decision.",
+      "required_evidence": "Router plan, route/audit manifests and candidate comparison.",
+      "entry_assessment": "NOT_ASSESSED",
+      "exit_assessment": "NOT_ASSESSED",
+      "dod_assessment": "NOT_ASSESSED",
+      "evidence_refs": [],
+      "blockers": []
+    },
+    {
+      "phase_id": "P6D",
+      "parent_phase": "P6",
+      "title": "Model-upgrade drill",
+      "status": "PLANNED",
+      "dependencies": [
+        "P6B",
+        "P6C"
+      ],
+      "owner": null,
+      "target_finish": null,
+      "entry_criteria": "At least two committed complete configs, frozen shared suite/evaluators, predeclared constraints and an actual model/serving change for any upgrade claim; P6B/P6C results available.",
+      "exit_criteria": "Comparable frontier and KEEP/PROPOSE_REPLACEMENT/PROPOSE_RETIREMENT/INCONCLUSIVE disposition reflect results; no automatic replacement occurs.",
+      "definition_of_done": "Archive commits, run/metric hashes, uncertainty, missingness, reviewer rationale and proposed rollback. Freeze any selected candidate before P7.",
+      "required_evidence": "Full-suite run records and upgrade dossier.",
+      "entry_assessment": "NOT_ASSESSED",
+      "exit_assessment": "NOT_ASSESSED",
+      "dod_assessment": "NOT_ASSESSED",
+      "evidence_refs": [],
+      "blockers": []
+    },
+    {
+      "phase_id": "P6E",
+      "parent_phase": "P6",
+      "title": "Synthetic monitoring and triage",
+      "status": "PLANNED",
+      "dependencies": [
+        "P6A"
+      ],
+      "owner": null,
+      "target_finish": null,
+      "entry_criteria": "Frozen accepted evaluators, baseline windows, sampling probabilities and preassigned local alert/triage policy; P6A reporting controls pass.",
+      "exit_criteria": "Coverage/label delay and sampling/judge corrections remain visible; invalid estimates are inconclusive; local alerts link to triage and approved development regressions.",
+      "definition_of_done": "Retain window manifests, raw/corrected estimates with uncertainty, loss controls and triage decisions. No production monitoring or external messages are enabled.",
+      "required_evidence": "Monitoring exercise report, local alert records and feedback lineage.",
+      "entry_assessment": "NOT_ASSESSED",
+      "exit_assessment": "NOT_ASSESSED",
+      "dod_assessment": "NOT_ASSESSED",
+      "evidence_refs": [],
+      "blockers": []
+    }
+  ],
+  "full_v2_acceptance": "NOT_RUN",
+  "production_monitoring": "NOT_SCOPED",
+  "deployment": "NOT_RUN",
+  "status_rule": "Phase completion requires applicable entry, exit and common/phase DoD evidence; candidate adoption, release gate and authorization remain separate."
+}

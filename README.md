@@ -170,3 +170,12 @@ are pending and must be validated before use. V2-A–D and independent V2-Q evid
 are NOT_RUN; [acceptance template](docs/v2-acceptance.template.json) records that
 distinction. [Static validation](artifacts/V2_SPEC_VALIDATION.json) verifies the
 specification revision and existing contract checks, not agent performance.
+
+## Phased implementation
+
+Follow the [phased delivery plan](docs/PHASED_DELIVERY_PLAN.md) for entry criteria,
+exit gates, definitions of done, required evidence and task/spec mappings.
+[Phase status](docs/PHASE_STATUS.json): P0 original contracts COMPLETE; P1–P7
+PLANNED. P1 is next: one bounded local command for the three reviewed synthetic
+cases, scoped tool execution, trace evidence and an independent scorecard.
+Phase completion does not establish full v2 acceptance or release authorization.

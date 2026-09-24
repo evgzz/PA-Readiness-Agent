@@ -36,3 +36,14 @@ Complete 06–07 with tiered CI, adversarial regressions, reporting and measured
 manual-fix/caching/cascade/upgrade exercises. V2-A–D replace the demonstration
 checklist; V2-Q is separately frozen qualification. Every gate remains NOT_RUN.
 Do not implement every optional judge/backend before collecting the first traces.
+
+## Phased execution
+
+Use [PHASED_DELIVERY_PLAN](../PHASED_DELIVERY_PLAN.md) for the next executable
+increment and its entry/exit/DoD criteria. [PHASE_STATUS](../PHASE_STATUS.json)
+records P0 original contracts complete, P1–P7 planned and P1 next. Tasks 00–07
+remain component work packages; phase completion can cover only part of a task.
+P1 builds the smallest path across Tasks 01–04 with only the required Task 00
+extensions. P2 adds failure controls/CI; P3 adds one real model; P4 adds human
+measurement; P5 measures one fix and adversarial regressions; P6 completes
+reporting/cost/monitoring increments; P7 performs independent qualification.

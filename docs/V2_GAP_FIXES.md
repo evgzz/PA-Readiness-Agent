@@ -94,3 +94,13 @@ red-team report; manual-fix/caching/cascade comparisons; upgrade decision; monit
 exercise and pending/actual qualification state. JSON and Markdown render the
 same frozen facts. See the disabled [learning plan](../recipes/v2-learning-plan.template.json)
 and [acceptance template](v2-acceptance.template.json). Neither is an executed record.
+
+## Incremental delivery mapping
+
+[Phased delivery](PHASED_DELIVERY_PLAN.md) defines P0–P7 entry, exit and DoD
+criteria and maps them to the gates above. Early local/mock and real-model pilot
+milestones are partial evidence. The required trace-platform projection and other
+remaining artifacts must exist before claiming V2-A; P6 completes the V2-A–D
+demonstration index. P7 qualification and authorization remain separate.
+Current [phase status](PHASE_STATUS.json) records only P0 original contracts as
+complete; no runtime gate is satisfied by this plan.

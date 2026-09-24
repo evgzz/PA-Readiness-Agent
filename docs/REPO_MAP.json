@@ -160,6 +160,8 @@
     "docs/CI_EVALUATION.md",
     "docs/ADVERSARIAL_EVALUATION.md",
     "docs/OPTIMIZATION_UPGRADE.md",
-    "docs/REVISION_2_0.md"
+    "docs/REVISION_2_0.md",
+    "docs/PHASED_DELIVERY_PLAN.md",
+    "docs/PHASE_STATUS.json"
   ]
 }

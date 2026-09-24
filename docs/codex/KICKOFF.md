@@ -34,3 +34,10 @@ For v2 read docs/V2_GAP_FIXES.md and its corresponding-specs matrix. Complete
 V2-A–D through actual evidence, including 60-trace human review and cost/upgrade
 exercises. V2-Q is separate. Do not confuse the specification version with
 schema/package versions or mark new field contracts as implemented.
+
+For incremental implementation, read docs/PHASED_DELIVERY_PLAN.md and
+docs/PHASE_STATUS.json. Start P1 and implement only its bounded scope and necessary
+contract extensions. Record entry, exit and DoD evidence before phase completion;
+preserve partial task status. Do not require all future adapters or infrastructure
+before running the first synthetic workflow. This planning revision implements no
+new agent command and does not enable the disabled recipes.

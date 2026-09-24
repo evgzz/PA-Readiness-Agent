@@ -239,3 +239,14 @@ must implement validated extensions before new fields can become execution recor
 Jev remains one judge option; HF dedicated endpoints host supported deployable
 models, while API-only closed models use their supported APIs. Every selected
 profile requires calibration; no silent fallback or default judge is enabled.
+
+## 12. Incremental delivery and evidence status
+
+The [phased delivery plan](docs/PHASED_DELIVERY_PLAN.md) sequences implementation
+through small executable increments with explicit entry, exit and DoD criteria.
+It implements this specification without waiving v2 acceptance. The
+[phase tracker](docs/PHASE_STATUS.json) records delivery status separately from
+component implementation and the full v2 evidence index. P0 records only the
+completed original contract layer; P1–P7 remain planned. Implement validated
+contract extensions before the increment that first uses them. Independent
+qualification, candidate adoption and release authorization remain separate.

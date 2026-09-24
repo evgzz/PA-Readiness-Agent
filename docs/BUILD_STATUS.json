@@ -54,5 +54,8 @@
   "live_adversarial_evaluation": "NOT_RUN",
   "prompt_cache_experiment": "NOT_RUN",
   "cascade_audit": "NOT_RUN",
-  "upgrade_drill": "NOT_RUN"
+  "upgrade_drill": "NOT_RUN",
+  "phased_delivery_plan": "SPECIFIED",
+  "phase_status_path": "docs/PHASE_STATUS.json",
+  "next_delivery_phase": "P1"
 }

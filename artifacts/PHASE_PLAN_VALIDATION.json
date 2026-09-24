@@ -1,0 +1,46 @@
+{
+  "status": "PASS_PLAN_AND_STATUS_CONSISTENCY_ONLY",
+  "validated_at": "2026-09-24T23:24:43.731330+00:00",
+  "baseline_commit": "6ff749f07c13ed81b1731b7cbbfac3e559b94481",
+  "plan_revision": "1.0",
+  "specification_revision": "2.0",
+  "structure_checks": {
+    "command": "python3 scripts/check_scaffold.py",
+    "status": "PASS",
+    "checks": 403,
+    "python_files_parsed": 21,
+    "public_interface_examples": 3
+  },
+  "document_validation": {
+    "status": "PASS",
+    "relative_markdown_links_checked": 266,
+    "draft_template_consistency": "PASS",
+    "errors": []
+  },
+  "phase_tracker_validation": {
+    "status": "PASS",
+    "phases": 8,
+    "subphases": 5,
+    "phase_specific_criteria": 79,
+    "common_dod_per_future_phase": 8,
+    "dependency_graph": "ACYCLIC",
+    "document_tracker_alignment": "PASS",
+    "runtime_status_preserved": "PASS",
+    "draft_recipes_disabled": "PASS"
+  },
+  "current_text_reference_scan": {
+    "status": "PASS",
+    "matches": 0
+  },
+  "manual_review": [
+    "Phase gates map to existing v2 requirements without waivers",
+    "Original contract evidence is the only completed phase",
+    "Future entry/exit/DoD criteria remain unassessed",
+    "Negative experiments and qualification assessment are separate from candidate adoption and release eligibility",
+    "Private labels, disabled effects and provider configuration boundaries preserved"
+  ],
+  "new_runtime_implementation": false,
+  "new_agent_trials": "NOT_RUN",
+  "qualification": "NOT_RUN",
+  "ci_for_this_commit": "CHECK_GITHUB_ACTIONS_BY_COMMIT_SHA"
+}
