@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0",
+  "status": "NOT_COMPUTED",
+  "release_id": null,
+  "candidate_config_digest": null,
+  "evaluation_config_digest": null,
+  "evidence_class": null,
+  "metric_registry_version": "1.0-proposed",
+  "input_snapshot_digest": null,
+  "as_of": null,
+  "computed_at": null,
+  "source_freshness": "UNKNOWN",
+  "metrics": [
+    {
+      "metric_id": "M01",
+      "value": null,
+      "numerator": null,
+      "denominator": null,
+      "eligible_count": null,
+      "unresolved_count": null,
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "metric_id": "M02",
+      "value": null,
+      "numerator": null,
+      "denominator": null,
+      "eligible_count": null,
+      "unresolved_count": null,
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "metric_id": "M03",
+      "value": null,
+      "numerator": null,
+      "denominator": null,
+      "eligible_count": null,
+      "unresolved_count": null,
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "metric_id": "M04",
+      "value": null,
+      "numerator": null,
+      "denominator": null,
+      "eligible_count": null,
+      "unresolved_count": null,
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "metric_id": "M05",
+      "value": null,
+      "numerator": null,
+      "denominator": null,
+      "eligible_count": null,
+      "unresolved_count": null,
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "metric_id": "M06",
+      "value": null,
+      "numerator": null,
+      "denominator": null,
+      "eligible_count": null,
+      "unresolved_count": null,
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    }
+  ],
+  "learning_metrics": [
+    {
+      "metric_id": "Q01",
+      "value": null,
+      "numerator": null,
+      "denominator": null,
+      "eligible_count": null,
+      "unresolved_count": null,
+      "missing_count": null,
+      "source_snapshot_digest": null,
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "metric_id": "Q02",
+      "value": null,
+      "numerator": null,
+      "denominator": null,
+      "eligible_count": null,
+      "unresolved_count": null,
+      "missing_count": null,
+      "source_snapshot_digest": null,
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "metric_id": "Q03",
+      "value": null,
+      "numerator": null,
+      "denominator": null,
+      "eligible_count": null,
+      "unresolved_count": null,
+      "missing_count": null,
+      "source_snapshot_digest": null,
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "metric_id": "Q04",
+      "value": null,
+      "numerator": null,
+      "denominator": null,
+      "eligible_count": null,
+      "unresolved_count": null,
+      "missing_count": null,
+      "source_snapshot_digest": null,
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "metric_id": "Q05",
+      "value": null,
+      "numerator": null,
+      "denominator": null,
+      "eligible_count": null,
+      "unresolved_count": null,
+      "missing_count": null,
+      "source_snapshot_digest": null,
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "metric_id": "Q06",
+      "value": null,
+      "numerator": null,
+      "denominator": null,
+      "eligible_count": null,
+      "unresolved_count": null,
+      "missing_count": null,
+      "source_snapshot_digest": null,
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "metric_id": "Q07",
+      "value": null,
+      "numerator": null,
+      "denominator": null,
+      "eligible_count": null,
+      "unresolved_count": null,
+      "missing_count": null,
+      "source_snapshot_digest": null,
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "metric_id": "Q08",
+      "value": null,
+      "numerator": null,
+      "denominator": null,
+      "eligible_count": null,
+      "unresolved_count": null,
+      "missing_count": null,
+      "source_snapshot_digest": null,
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    },
+    {
+      "metric_id": "Q09",
+      "value": null,
+      "numerator": null,
+      "denominator": null,
+      "eligible_count": null,
+      "unresolved_count": null,
+      "missing_count": null,
+      "source_snapshot_digest": null,
+      "status": "NOT_RUN",
+      "evidence_refs": []
+    }
+  ]
+}

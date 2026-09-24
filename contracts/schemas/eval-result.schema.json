@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PA Evaluation Result v0.1 (draft)",
+  "description": "One observed case trial. Hashes identify retained evidence; this schema does not verify that evidence or authorize release.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["run_id", "case_id", "trial_id", "execution_mode", "outcome", "reason", "run_manifest_sha256", "trace_sha256"],
+  "properties": {
+    "run_id": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string", "minLength": 1},
+    "trial_id": {"type": "string", "minLength": 1},
+    "execution_mode": {"enum": ["MOCK", "REAL_AGENT"]},
+    "outcome": {"enum": ["PASS", "FAIL", "UNRESOLVED"]},
+    "reason": {"type": "string", "minLength": 1},
+    "run_manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "trace_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"outcome": {"enum": ["PASS", "FAIL"]}}},
+      "then": {"properties": {"trace_sha256": {"type": "string"}}}
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+slice_id,eval_id,risk,requirement_status,domain,language,modality,context_bucket,reasoning_mode,candidate_config_digest,required_trials,evidence_status,execution_status,owner,exclusion_reason
+baseline-readiness,EV01,Readiness semantics,PROPOSED_REQUIRED,PA preparation,en,text,UNSET,UNSET,,,MISSING,NOT_RUN,,
+false-ready,EV02,Hallucinations,PROPOSED_REQUIRED,PA preparation,en,text,UNSET,UNSET,,,MISSING,NOT_RUN,,
+multi-turn,EV03,Multi-turn tool calling,PROPOSED_REQUIRED,PA preparation,en,text,UNSET,UNSET,,,MISSING,NOT_RUN,,
+injection,EV04,LLM security,PROPOSED_REQUIRED,PA preparation,en,text,UNSET,UNSET,,,MISSING,NOT_RUN,,
+unsafe-tools,EV05,Unsafe tool use,PROPOSED_REQUIRED,PA preparation,en,text,UNSET,UNSET,,,MISSING,NOT_RUN,,
+cross-case,EV06,Unintended access/disclosure,PROPOSED_REQUIRED,PA preparation,en,text,UNSET,UNSET,,,MISSING,NOT_RUN,,
+autonomy,EV07,Excessive autonomy,PROPOSED_REQUIRED,PA preparation,en,text,UNSET,UNSET,,,MISSING,NOT_RUN,,
+multi-step,EV08,Multi-step failures,PROPOSED_REQUIRED,PA preparation,en,text,UNSET,UNSET,,,MISSING,NOT_RUN,,
+ambiguous-effects,EV09,Reliability and safety,PROPOSED_REQUIRED,PA preparation,en,text,UNSET,UNSET,,,MISSING,NOT_RUN,,
+poisoned-evidence,EV10,Data poisoning/manipulation,PROPOSED_REQUIRED,PA preparation,en,text,UNSET,UNSET,,,MISSING,NOT_RUN,,
+measurement,EV11,Evidence integrity,PROPOSED_REQUIRED,PA preparation,en,text,UNSET,UNSET,,,MISSING,NOT_RUN,,
+positive-controls,EV12,Utility preservation,PROPOSED_REQUIRED,PA preparation,en,text,UNSET,UNSET,,,MISSING,NOT_RUN,,

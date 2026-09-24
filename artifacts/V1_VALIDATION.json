@@ -1,0 +1,37 @@
+{
+  "revision": "1.0",
+  "date": "2026-09-24",
+  "scope": "DOCUMENTATION_AND_STATIC_SCAFFOLD_ONLY",
+  "static_checker": {
+    "status": "PASS",
+    "scope": "SCAFFOLD_STATIC_CHECKS_ONLY",
+    "checks": 256,
+    "python_files_parsed": 11,
+    "public_interface_examples": 3,
+    "runtime_qualification": "NOT_RUN",
+    "errors": []
+  },
+  "markdown_links": {
+    "checked": 128,
+    "broken": []
+  },
+  "v1_event_producer_channel_rules": {
+    "checked": 29,
+    "status": "PASS"
+  },
+  "metric_registry": {
+    "release_metrics": 6,
+    "learning_metrics": 9,
+    "source_and_event_references": "PASS"
+  },
+  "workflow_templates": {
+    "count": 8,
+    "execution_status": "DRAFT_TEMPLATE_NOT_EXECUTED"
+  },
+  "legacy_example_digest": "PASS",
+  "formal_json_schema_validation": "NOT_RUN_JSONSCHEMA_NOT_INSTALLED",
+  "real_agent_evaluation": "NOT_RUN",
+  "dashboard_execution": "NOT_RUN",
+  "github_actions": "NOT_RUN",
+  "production_monitoring": "NOT_SCOPED"
+}

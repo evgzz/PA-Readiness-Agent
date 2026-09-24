@@ -1,0 +1,54 @@
+{
+  "schema_version": "0.1",
+  "status": "DRAFT",
+  "tools": [
+    {
+      "name": "read_case",
+      "effect": "READ",
+      "enabled": false,
+      "status": "NOT_IMPLEMENTED"
+    },
+    {
+      "name": "resolve_requirements",
+      "effect": "READ",
+      "enabled": false,
+      "status": "NOT_IMPLEMENTED"
+    },
+    {
+      "name": "retrieve_evidence",
+      "effect": "READ",
+      "enabled": false,
+      "status": "NOT_IMPLEMENTED"
+    },
+    {
+      "name": "validate_packet",
+      "effect": "LOCAL_VALIDATION",
+      "enabled": false,
+      "status": "NOT_IMPLEMENTED"
+    },
+    {
+      "name": "request_review",
+      "effect": "LOCAL_DRAFT",
+      "enabled": false,
+      "status": "NOT_IMPLEMENTED"
+    },
+    {
+      "name": "submit",
+      "effect": "CONSEQUENTIAL_WRITE",
+      "enabled": false,
+      "status": "NOT_IMPLEMENTED"
+    },
+    {
+      "name": "update",
+      "effect": "CONSEQUENTIAL_WRITE",
+      "enabled": false,
+      "status": "NOT_IMPLEMENTED"
+    },
+    {
+      "name": "cancel",
+      "effect": "CONSEQUENTIAL_WRITE",
+      "enabled": false,
+      "status": "NOT_IMPLEMENTED"
+    }
+  ]
+}

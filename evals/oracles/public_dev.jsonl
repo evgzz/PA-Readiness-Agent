@@ -1,0 +1,3 @@
+{"case_id": "SYN-001", "expected_readiness": "READY", "status": "DRAFT_PUBLIC_DEV_ONLY"}
+{"case_id": "SYN-002", "expected_readiness": "NOT_READY", "status": "DRAFT_PUBLIC_DEV_ONLY"}
+{"case_id": "SYN-003", "expected_readiness": "UNKNOWN", "status": "DRAFT_PUBLIC_DEV_ONLY"}

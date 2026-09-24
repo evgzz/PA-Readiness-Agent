@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PA Tool Proposal v0.1 (draft)",
+  "description": "An untrusted proposal, never an authorization grant. Arguments require a separate tool-specific schema and trusted scope checks.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["tool_name", "arguments"],
+  "properties": {
+    "tool_name": {"type": "string", "minLength": 1},
+    "arguments": {"type": "object"}
+  }
+}

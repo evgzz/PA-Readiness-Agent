@@ -1,0 +1,1 @@
+exception_id,version,finding_or_gate_id,release_id,candidate_config_digest,scope,rationale,compensating_controls,residual_risk,approver,approved_at,expires_at,review_at,status,evidence_ref

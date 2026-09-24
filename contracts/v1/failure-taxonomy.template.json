@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "status": "DRAFT_TEMPLATE_NOT_EXECUTED",
+  "record_id": null,
+  "record_version": null,
+  "created_at": null,
+  "actor_id": null,
+  "evidence_class": null,
+  "candidate_config_digest": null,
+  "evaluation_config_digest": null,
+  "evidence_refs": [],
+  "taxonomy_id": null,
+  "taxonomy_version": null,
+  "review_disposition": null,
+  "reviewer_ids": [],
+  "categories": [],
+  "suggested_dimensions": [
+    "readiness_correctness",
+    "retrieval_lineage",
+    "unsupported_claim",
+    "tool_selection",
+    "authorization_scope",
+    "excessive_refusal",
+    "budget_retry",
+    "measurement_error"
+  ],
+  "category_required_fields": [
+    "category_id",
+    "definition",
+    "inclusion_rules",
+    "exclusion_rules",
+    "positive_example_refs",
+    "counterexample_refs",
+    "introduced_version"
+  ],
+  "observed_findings_count": null
+}

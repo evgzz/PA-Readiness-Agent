@@ -1,0 +1,17 @@
+{
+  "recipe_id": "mock-readonly",
+  "status": "PLANNED",
+  "execution_mode": "MOCK",
+  "agent": "pa_agent",
+  "harness": "pa_harness",
+  "model": "mock-deterministic",
+  "tools": "synthetic",
+  "dataset": "data/public/synthetic/pa_cases.jsonl",
+  "oracle": "evals/oracles/public_dev.jsonl",
+  "authority": "READ_ONLY",
+  "external_effects_allowed": false,
+  "component_digests": {},
+  "entrypoint": null,
+  "runtime_adapter": "mock_loop",
+  "evidence_class": "REFERENCE_CONTROL"
+}

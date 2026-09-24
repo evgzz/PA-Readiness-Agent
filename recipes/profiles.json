@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.2",
+  "status": "PROPOSED_NOT_CONFIGURED",
+  "profiles": [
+    {
+      "id": "local-mock-readonly",
+      "runtime_adapter": "mock_loop",
+      "evidence_class": "REFERENCE_CONTROL",
+      "effects": "READ_AND_LOCAL_DRAFT_ONLY",
+      "ledger": "local_finalized_artifacts",
+      "trace_export": "DISABLED_UNTIL_CONFIGURED"
+    },
+    {
+      "id": "real-agent-synthetic-readonly",
+      "runtime_adapter": "openai_agents",
+      "evidence_class": "REAL_AGENT_SYNTHETIC",
+      "model_revision": null,
+      "effects": "READ_AND_LOCAL_DRAFT_ONLY",
+      "ledger": "REQUIRED",
+      "trace_export": "EXPLICIT_ALLOWLIST_REQUIRED"
+    },
+    {
+      "id": "durable-case-workflow",
+      "runtime_adapter": null,
+      "status": "DEFERRED",
+      "effects": "REQUIRES_SEPARATE_SCOPE_AND_QUALIFICATION",
+      "ledger": "application_postgresql_with_outbox",
+      "trace_export": "EXPLICIT_ALLOWLIST_REQUIRED"
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "schema_version": "1.0",
+  "status": "DRAFT_NOT_IMPLEMENTED",
+  "events": [
+    {
+      "event_type": "run.started",
+      "producer": "pa_harness",
+      "channel": "OPERATIONAL",
+      "payload_schema_status": "TO_IMPLEMENT",
+      "delivery": "at_least_once_with_idempotent_ingestion"
+    },
+    {
+      "event_type": "run.completed",
+      "producer": "pa_harness",
+      "channel": "OPERATIONAL",
+      "payload_schema_status": "TO_IMPLEMENT",
+      "delivery": "at_least_once_with_idempotent_ingestion"
+    },
+    {
+      "event_type": "model.call.completed",
+      "producer": "pa_models",
+      "channel": "OPERATIONAL",
+      "payload_schema_status": "TO_IMPLEMENT",
+      "delivery": "at_least_once_with_idempotent_ingestion"
+    },
+    {
+      "event_type": "action.proposed",
+      "producer": "pa_harness",
+      "channel": "OPERATIONAL",
+      "payload_schema_status": "TO_IMPLEMENT",
+      "delivery": "at_least_once_with_idempotent_ingestion"
+    },
+    {
+      "event_type": "authorization.decided",
+      "producer": "pa_harness",
+      "channel": "OPERATIONAL",
+      "payload_schema_status": "TO_IMPLEMENT",
+      "delivery": "at_least_once_with_idempotent_ingestion"
+    },
+    {
+      "event_type": "action.dispatched",
+      "producer": "pa_tools",
+      "channel": "OPERATIONAL",
+      "payload_schema_status": "TO_IMPLEMENT",
+      "delivery": "at_least_once_with_idempotent_ingestion"
+    },
+    {
+      "event_type": "effect.observed",
+      "producer": "pa_tools",
+      "channel": "OPERATIONAL",
+      "payload_schema_status": "TO_IMPLEMENT",
+      "delivery": "at_least_once_with_idempotent_ingestion"
+    },
+    {
+      "event_type": "effect.reconciled",
+      "producer": "pa_tools",
+      "channel": "OPERATIONAL",
+      "payload_schema_status": "TO_IMPLEMENT",
+      "delivery": "at_least_once_with_idempotent_ingestion"
+    },
+    {
+      "event_type": "assessment.validated",
+      "producer": "pa_harness",
+      "channel": "OPERATIONAL",
+      "payload_schema_status": "TO_IMPLEMENT",
+      "delivery": "at_least_once_with_idempotent_ingestion"
+    },
+    {
+      "event_type": "trial.graded",
+      "producer": "pa_evals",
+      "channel": "EVALUATOR_PRIVATE",
+      "payload_schema_status": "TO_IMPLEMENT",
+      "delivery": "at_least_once_with_idempotent_ingestion"
+    },
+    {
+      "event_type": "run.finalized",
+      "producer": "pa_evals",
+      "channel": "EVALUATOR_PRIVATE",
+      "payload_schema_status": "TO_IMPLEMENT",
+      "delivery": "at_least_once_with_idempotent_ingestion"
+    },
+    {
+      "event_type": "coverage.updated",
+      "producer": "pa_evals",
+      "channel": "EVALUATOR_PRIVATE",
+      "payload_schema_status": "TO_IMPLEMENT",
+      "delivery": "at_least_once_with_idempotent_ingestion"
+    },
+    {
+      "event_type": "finding.updated",
+      "producer": "pa_governance",
+      "channel": "PROGRAM",
+      "payload_schema_status": "TO_IMPLEMENT",
+      "delivery": "at_least_once_with_idempotent_ingestion"
+    },
+    {
+      "event_type": "finding.closed",
+      "producer": "pa_governance",
+      "channel": "PROGRAM",
+      "payload_schema_status": "TO_IMPLEMENT",
+      "delivery": "at_least_once_with_idempotent_ingestion"
+    },
+    {
+      "event_type": "finding.reopened",
+      "producer": "pa_governance",
+      "channel": "PROGRAM",
+      "payload_schema_status": "TO_IMPLEMENT",
+      "delivery": "at_least_once_with_idempotent_ingestion"
+    },
+    {
+      "event_type": "program_metrics.updated",
+      "producer": "pa_governance",
+      "channel": "PROGRAM",
+      "payload_schema_status": "TO_IMPLEMENT",
+      "delivery": "at_least_once_with_idempotent_ingestion"
+    },
+    {
+      "event_type": "release_gate.evaluated",
+      "producer": "pa_governance",
+      "channel": "PROGRAM",
+      "payload_schema_status": "TO_IMPLEMENT",
+      "delivery": "at_least_once_with_idempotent_ingestion"
+    },
+    {
+      "event_type": "release_authorization.recorded",
+      "producer": "pa_governance",
+      "channel": "PROGRAM",
+      "payload_schema_status": "TO_IMPLEMENT",
+      "delivery": "at_least_once_with_idempotent_ingestion"
+    },
+    {
+      "event_type": "telemetry.export_status",
+      "producer": "pa_telemetry",
+      "channel": "PROGRAM",
+      "payload_schema_status": "TO_IMPLEMENT",
+      "delivery": "at_least_once_with_idempotent_ingestion"
+    },
+    {
+      "event_type": "review.batch.created",
+      "producer": "pa_evals",
+      "channel": "EVALUATOR_PRIVATE",
+      "payload_schema_status": "TO_IMPLEMENT",
+      "delivery": "at_least_once_with_idempotent_ingestion"
+    },
+    {
+      "event_type": "review.annotation.recorded",
+      "producer": "pa_evals",
+      "channel": "EVALUATOR_PRIVATE",
+      "payload_schema_status": "TO_IMPLEMENT",
+      "delivery": "at_least_once_with_idempotent_ingestion"
+    },
+    {
+      "event_type": "review.adjudicated",
+      "producer": "pa_evals",
+      "channel": "EVALUATOR_PRIVATE",
+      "payload_schema_status": "TO_IMPLEMENT",
+      "delivery": "at_least_once_with_idempotent_ingestion"
+    },
+    {
+      "event_type": "taxonomy.versioned",
+      "producer": "pa_evals",
+      "channel": "EVALUATOR_PRIVATE",
+      "payload_schema_status": "TO_IMPLEMENT",
+      "delivery": "at_least_once_with_idempotent_ingestion"
+    },
+    {
+      "event_type": "rubric.reviewed",
+      "producer": "pa_evals",
+      "channel": "EVALUATOR_PRIVATE",
+      "payload_schema_status": "TO_IMPLEMENT",
+      "delivery": "at_least_once_with_idempotent_ingestion"
+    },
+    {
+      "event_type": "calibration.finalized",
+      "producer": "pa_evals",
+      "channel": "EVALUATOR_PRIVATE",
+      "payload_schema_status": "TO_IMPLEMENT",
+      "delivery": "at_least_once_with_idempotent_ingestion"
+    },
+    {
+      "event_type": "experiment.registered",
+      "producer": "pa_evals",
+      "channel": "EVALUATOR_PRIVATE",
+      "payload_schema_status": "TO_IMPLEMENT",
+      "delivery": "at_least_once_with_idempotent_ingestion"
+    },
+    {
+      "event_type": "experiment.finalized",
+      "producer": "pa_evals",
+      "channel": "EVALUATOR_PRIVATE",
+      "payload_schema_status": "TO_IMPLEMENT",
+      "delivery": "at_least_once_with_idempotent_ingestion"
+    },
+    {
+      "event_type": "monitoring.window.finalized",
+      "producer": "pa_evals",
+      "channel": "EVALUATOR_PRIVATE",
+      "payload_schema_status": "TO_IMPLEMENT",
+      "delivery": "at_least_once_with_idempotent_ingestion"
+    },
+    {
+      "event_type": "monitoring.alert.updated",
+      "producer": "pa_governance",
+      "channel": "PROGRAM",
+      "payload_schema_status": "TO_IMPLEMENT",
+      "delivery": "at_least_once_with_idempotent_ingestion"
+    }
+  ],
+  "producers_are_authenticated": "REQUIRED_AT_INGEST_NOT_ENFORCED_BY_SCHEMA",
+  "envelope_schema": "contracts/schemas/event-envelope-v1.schema.json",
+  "legacy_envelope_schema": "contracts/schemas/event-envelope.schema.json"
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.1",
+  "models": [
+    {
+      "id": "mock-deterministic",
+      "kind": "MOCK",
+      "artifact": null,
+      "revision": null,
+      "runtime_status": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "nemotron-candidate",
+      "kind": "OPEN_MODEL_CANDIDATE",
+      "family_source": "https://developer.nvidia.com/nemotron",
+      "checkpoint": null,
+      "revision": null,
+      "weights_sha256": null,
+      "license_ref": null,
+      "serving_backend": null,
+      "capability_validation": "NOT_RUN",
+      "runtime_status": "NOT_CONFIGURED"
+    }
+  ]
+}

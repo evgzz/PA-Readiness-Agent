@@ -1,0 +1,15 @@
+{
+  "schema_version": "0.2",
+  "status": "TEMPLATE_NOT_COMPUTED",
+  "release_id": null,
+  "candidate_config_digest": null,
+  "evaluation_config_digest": null,
+  "gate_policy_digest": null,
+  "input_snapshot_digest": null,
+  "outcome": null,
+  "blockers": [],
+  "missing_evidence": [],
+  "applicable_exceptions": [],
+  "computed_at": null,
+  "computed_by": null
+}

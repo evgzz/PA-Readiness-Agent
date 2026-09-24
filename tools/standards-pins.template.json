@@ -1,0 +1,11 @@
+{
+  "fhir_version": null,
+  "crd_package": null,
+  "dtr_package": null,
+  "pas_package": null,
+  "terminology_bundle": null,
+  "validator_artifact": null,
+  "ruleset_sha256": null,
+  "endpoint_contract_sha256": null,
+  "status": "NOT_CONFIGURED"
+}

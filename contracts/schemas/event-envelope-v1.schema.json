@@ -1,0 +1,772 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PA evidence event envelope v1.0 draft",
+  "description": "Structure only: authentication, payload validation, digest verification and event completeness require executable controls.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_type": {
+      "enum": [
+        "run.started",
+        "run.completed",
+        "model.call.completed",
+        "action.proposed",
+        "authorization.decided",
+        "action.dispatched",
+        "effect.observed",
+        "effect.reconciled",
+        "assessment.validated",
+        "trial.graded",
+        "run.finalized",
+        "coverage.updated",
+        "finding.updated",
+        "finding.closed",
+        "finding.reopened",
+        "program_metrics.updated",
+        "release_gate.evaluated",
+        "release_authorization.recorded",
+        "telemetry.export_status",
+        "review.batch.created",
+        "review.annotation.recorded",
+        "review.adjudicated",
+        "taxonomy.versioned",
+        "rubric.reviewed",
+        "calibration.finalized",
+        "experiment.registered",
+        "experiment.finalized",
+        "monitoring.window.finalized",
+        "monitoring.alert.updated"
+      ]
+    },
+    "producer": {
+      "enum": [
+        "pa_evals",
+        "pa_governance",
+        "pa_harness",
+        "pa_models",
+        "pa_telemetry",
+        "pa_tools"
+      ]
+    },
+    "producer_instance": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sequence": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "occurred_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ingested_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "channel": {
+      "enum": [
+        "OPERATIONAL",
+        "EVALUATOR_PRIVATE",
+        "PROGRAM"
+      ]
+    },
+    "evidence_class": {
+      "enum": [
+        "REFERENCE_CONTROL",
+        "SCRIPTED_DEMO",
+        "REAL_AGENT_SYNTHETIC",
+        "REAL_AGENT_PRODUCTION"
+      ]
+    },
+    "candidate_config_digest": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "evaluation_config_digest": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "payload_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "payload_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "release_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "run_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "trial_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "case_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "slice_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "action_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "attempt_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "trace_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "span_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "finding_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "causation_event_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "event_id",
+    "event_type",
+    "producer",
+    "producer_instance",
+    "sequence",
+    "occurred_at",
+    "ingested_at",
+    "channel",
+    "evidence_class",
+    "candidate_config_digest",
+    "evaluation_config_digest",
+    "payload_ref",
+    "payload_sha256",
+    "release_id",
+    "run_id",
+    "trial_id",
+    "case_id",
+    "slice_id",
+    "action_id",
+    "attempt_id",
+    "trace_id",
+    "span_id",
+    "finding_id",
+    "causation_event_id"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "run.started"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "producer": {
+            "const": "pa_harness"
+          },
+          "channel": {
+            "const": "OPERATIONAL"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "run.completed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "producer": {
+            "const": "pa_harness"
+          },
+          "channel": {
+            "const": "OPERATIONAL"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "model.call.completed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "producer": {
+            "const": "pa_models"
+          },
+          "channel": {
+            "const": "OPERATIONAL"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "action.proposed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "producer": {
+            "const": "pa_harness"
+          },
+          "channel": {
+            "const": "OPERATIONAL"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "authorization.decided"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "producer": {
+            "const": "pa_harness"
+          },
+          "channel": {
+            "const": "OPERATIONAL"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "action.dispatched"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "producer": {
+            "const": "pa_tools"
+          },
+          "channel": {
+            "const": "OPERATIONAL"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "effect.observed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "producer": {
+            "const": "pa_tools"
+          },
+          "channel": {
+            "const": "OPERATIONAL"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "effect.reconciled"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "producer": {
+            "const": "pa_tools"
+          },
+          "channel": {
+            "const": "OPERATIONAL"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "assessment.validated"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "producer": {
+            "const": "pa_harness"
+          },
+          "channel": {
+            "const": "OPERATIONAL"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "trial.graded"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "producer": {
+            "const": "pa_evals"
+          },
+          "channel": {
+            "const": "EVALUATOR_PRIVATE"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "run.finalized"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "producer": {
+            "const": "pa_evals"
+          },
+          "channel": {
+            "const": "EVALUATOR_PRIVATE"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "coverage.updated"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "producer": {
+            "const": "pa_evals"
+          },
+          "channel": {
+            "const": "EVALUATOR_PRIVATE"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "finding.updated"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "producer": {
+            "const": "pa_governance"
+          },
+          "channel": {
+            "const": "PROGRAM"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "finding.closed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "producer": {
+            "const": "pa_governance"
+          },
+          "channel": {
+            "const": "PROGRAM"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "finding.reopened"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "producer": {
+            "const": "pa_governance"
+          },
+          "channel": {
+            "const": "PROGRAM"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "program_metrics.updated"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "producer": {
+            "const": "pa_governance"
+          },
+          "channel": {
+            "const": "PROGRAM"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "release_gate.evaluated"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "producer": {
+            "const": "pa_governance"
+          },
+          "channel": {
+            "const": "PROGRAM"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "release_authorization.recorded"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "producer": {
+            "const": "pa_governance"
+          },
+          "channel": {
+            "const": "PROGRAM"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "telemetry.export_status"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "producer": {
+            "const": "pa_telemetry"
+          },
+          "channel": {
+            "const": "PROGRAM"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "review.batch.created"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "producer": {
+            "const": "pa_evals"
+          },
+          "channel": {
+            "const": "EVALUATOR_PRIVATE"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "review.annotation.recorded"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "producer": {
+            "const": "pa_evals"
+          },
+          "channel": {
+            "const": "EVALUATOR_PRIVATE"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "review.adjudicated"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "producer": {
+            "const": "pa_evals"
+          },
+          "channel": {
+            "const": "EVALUATOR_PRIVATE"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "taxonomy.versioned"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "producer": {
+            "const": "pa_evals"
+          },
+          "channel": {
+            "const": "EVALUATOR_PRIVATE"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "rubric.reviewed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "producer": {
+            "const": "pa_evals"
+          },
+          "channel": {
+            "const": "EVALUATOR_PRIVATE"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "calibration.finalized"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "producer": {
+            "const": "pa_evals"
+          },
+          "channel": {
+            "const": "EVALUATOR_PRIVATE"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "experiment.registered"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "producer": {
+            "const": "pa_evals"
+          },
+          "channel": {
+            "const": "EVALUATOR_PRIVATE"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "experiment.finalized"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "producer": {
+            "const": "pa_evals"
+          },
+          "channel": {
+            "const": "EVALUATOR_PRIVATE"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "monitoring.window.finalized"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "producer": {
+            "const": "pa_evals"
+          },
+          "channel": {
+            "const": "EVALUATOR_PRIVATE"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "monitoring.alert.updated"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "producer": {
+            "const": "pa_governance"
+          },
+          "channel": {
+            "const": "PROGRAM"
+          }
+        }
+      }
+    }
+  ]
+}

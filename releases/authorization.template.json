@@ -1,0 +1,13 @@
+{
+  "schema_version": "0.2",
+  "status": "PENDING",
+  "release_id": null,
+  "candidate_config_digest": null,
+  "gate_snapshot_digest": null,
+  "scope": null,
+  "approver": null,
+  "approved_at": null,
+  "expires_at": null,
+  "rationale": null,
+  "authentication_evidence_ref": null
+}

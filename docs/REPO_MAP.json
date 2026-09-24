@@ -1,0 +1,136 @@
+{
+  "status": "DRAFT_STRUCTURE",
+  "components": [
+    {
+      "path": "agent",
+      "python_package": "pa_agent",
+      "implementation": "PLANNED",
+      "planned_files": [
+        "workflow.py",
+        "prompt_builder.py",
+        "proposal_parser.py"
+      ]
+    },
+    {
+      "path": "harness",
+      "python_package": "pa_harness",
+      "implementation": "PLANNED",
+      "planned_files": [
+        "runner.py",
+        "intake.py",
+        "policy.py",
+        "model_gateway.py",
+        "state.py",
+        "approvals.py",
+        "budgets.py",
+        "output_validation.py",
+        "reconciliation.py"
+      ]
+    },
+    {
+      "path": "evals",
+      "python_package": "pa_evals",
+      "implementation": "PLANNED",
+      "planned_files": [
+        "runner.py",
+        "splits.py",
+        "graders.py",
+        "calibration.py",
+        "completeness.py",
+        "metrics.py",
+        "analysis.py",
+        "review.py",
+        "experiments.py",
+        "comparisons.py",
+        "monitoring.py"
+      ]
+    },
+    {
+      "path": "model_adapters",
+      "python_package": "pa_models",
+      "implementation": "PLANNED",
+      "planned_files": [
+        "mock.py",
+        "openai_compatible.py",
+        "local_serving.py",
+        "usage.py"
+      ]
+    },
+    {
+      "path": "tool_adapters",
+      "python_package": "pa_tools",
+      "implementation": "PLANNED",
+      "planned_files": [
+        "synthetic.py",
+        "fhir_read.py",
+        "requirements.py",
+        "validator.py",
+        "review_draft.py",
+        "receipts.py"
+      ]
+    },
+    {
+      "path": "contracts",
+      "python_package": "pa_contracts",
+      "implementation": "PLANNED",
+      "planned_files": [
+        "validation.py",
+        "serialization.py",
+        "runtime_ports.py",
+        "evidence_ports.py"
+      ]
+    },
+    {
+      "path": "runtime_adapters",
+      "python_package": "pa_runtimes",
+      "implementation": "PLANNED",
+      "planned_files": [
+        "mock_loop.py",
+        "openai_agents.py"
+      ]
+    },
+    {
+      "path": "telemetry",
+      "python_package": "pa_telemetry",
+      "implementation": "PLANNED",
+      "planned_files": [
+        "envelope.py",
+        "redaction.py",
+        "export.py",
+        "delivery.py"
+      ]
+    },
+    {
+      "path": "governance",
+      "python_package": "pa_governance",
+      "implementation": "PLANNED",
+      "planned_files": [
+        "findings.py",
+        "program_metrics.py",
+        "release_gate.py",
+        "approvals.py",
+        "monitoring_alerts.py"
+      ]
+    }
+  ],
+  "runtime_dependency_rule": "Shared contracts and injected ports; SDK/framework code in owning adapters; concrete wiring only in apps; one runtime loop per run",
+  "hidden_evaluation_storage": "OUTSIDE_REPO_AND_AGENT_RUNTIME",
+  "root_documents": [
+    "README.md",
+    "SPEC.md",
+    "AGENTS.md",
+    "docs/ARCHITECTURE.md",
+    "docs/HARNESS.md",
+    "docs/EVALUATIONS.md",
+    "docs/INSTRUMENTATION.md",
+    "docs/DASHBOARDS_REPORTS.md",
+    "docs/adrs/README.md",
+    "docs/codex/BUILD_SEQUENCE.md",
+    "docs/V1_GAP_FIXES.md",
+    "docs/ERROR_ANALYSIS.md",
+    "docs/EVALUATOR_CALIBRATION.md",
+    "docs/EXPERIMENTS.md",
+    "docs/MONITORING.md",
+    "docs/WORKED_EXAMPLE.md"
+  ]
+}

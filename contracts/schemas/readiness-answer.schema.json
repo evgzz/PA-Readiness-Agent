@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PA Readiness Answer v0.1 (draft)",
+  "description": "Shape only. Evidence support, completeness, and permissible outcomes require independent semantic checks.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["readiness", "evidence_refs", "unresolved_checks", "explanation"],
+  "properties": {
+    "readiness": {"enum": ["READY", "NOT_READY", "UNKNOWN"]},
+    "evidence_refs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "unresolved_checks": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "explanation": {"type": "string", "minLength": 1}
+  }
+}

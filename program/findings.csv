@@ -1,0 +1,1 @@
+finding_id,version,release_id,candidate_config_digest,risk,severity,status,owner,opened_at,original_due_at,committed_due_at,deadline_change_reason,release_impact,original_run_id,mitigation_ref,closure_criteria,retest_run_ids,regression_ref,positive_control_ref,reviewer,closed_at,residual_risk,evidence_ref

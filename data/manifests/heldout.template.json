@@ -1,0 +1,13 @@
+{
+  "dataset_id": null,
+  "version": null,
+  "role": "heldout_qualification",
+  "controlled_location": null,
+  "manifest_sha256": null,
+  "case_count": null,
+  "owner": null,
+  "agent_access": "DENIED",
+  "optimizer_access": "DENIED",
+  "adjudication_status": "PENDING",
+  "test_access_status": "NOT_OPENED"
+}

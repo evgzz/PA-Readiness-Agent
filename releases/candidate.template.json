@@ -1,0 +1,15 @@
+{
+  "schema_version": "0.2",
+  "status": "NOT_CONFIGURED",
+  "release_id": null,
+  "intended_use": "synthetic-readonly-PA-preparation",
+  "candidate_config_digest": null,
+  "evaluation_config_digest": null,
+  "model_revision": null,
+  "run_manifests": [],
+  "metric_snapshot_ref": null,
+  "finding_snapshot_ref": null,
+  "gate_snapshot_ref": null,
+  "authorization_ref": null,
+  "rollback_plan_ref": null
+}

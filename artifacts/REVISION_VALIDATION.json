@@ -1,0 +1,19 @@
+{
+  "revision": "0.2",
+  "scope": "STATIC_DOCUMENTATION_AND_SCAFFOLD_ONLY",
+  "scaffold": {
+    "status": "PASS",
+    "scope": "SCAFFOLD_STATIC_CHECKS_ONLY",
+    "checks": 218,
+    "python_files_parsed": 11,
+    "public_interface_examples": 3,
+    "runtime_qualification": "NOT_RUN",
+    "errors": []
+  },
+  "local_markdown_links_checked": 93,
+  "local_markdown_link_errors": [],
+  "event_example_registry_and_payload_digest": "PASS",
+  "json_schema_runtime_validation": "NOT_RUN_VALIDATOR_NOT_INSTALLED",
+  "runtime_execution": "NOT_RUN",
+  "github_actions_execution": "NOT_RUN"
+}
