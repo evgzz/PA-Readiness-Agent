@@ -1,11 +1,12 @@
-# PA Readiness — v1 system specification
+# PA Readiness — v2 system specification
 
-Version 1.0 | 2026-09-24 | DRAFT_FOR_IMPLEMENTATION
+Version 2.0 | 2026-09-24 | DRAFT_FOR_IMPLEMENTATION
 
 This specification consolidates the agent, harness, evaluation, instrumentation,
 program-governance, and reporting requirements. It revises a scaffold; it does not
-assert that these capabilities have been implemented. All ADRs remain PROPOSED. V1 adds human error analysis, evaluator calibration,
-controlled improvement experiments and a synthetic monitoring exercise.
+assert that these capabilities have been implemented. All ADRs remain PROPOSED. V2 makes course-aligned human review, measurement,
+agent CI, adversarial evaluation, cost experiments and upgrade evidence explicit.
+The implemented contracts layer does not establish execution of these workflows.
 
 ## 1. Purpose and scope
 
@@ -201,8 +202,40 @@ follows from these application-level milestones.
 - V1-REP: Implement Q01–Q09 alongside M01–M06, with declared denominators, uncertainty,
   missingness, source lineage and owning instrumentation points.
 
-[V1 gap closure and acceptance](docs/V1_GAP_FIXES.md) is normative for v1. Read
+[V1 gap closure and acceptance](docs/V1_GAP_FIXES.md) is the inherited baseline.
+The v2 requirements below govern additions and any explicitly revised criteria. Read
 [error analysis](docs/ERROR_ANALYSIS.md), [calibration](docs/EVALUATOR_CALIBRATION.md),
 [experiments](docs/EXPERIMENTS.md), [monitoring](docs/MONITORING.md) and the
 [worked-example contract](docs/WORKED_EXAMPLE.md). These supplement the existing
 safety gates and do not replace the independent qualification requirement.
+
+## 11. V2 gap fixes and acceptance
+
+[V2 requirements and course alignment](docs/V2_GAP_FIXES.md) is a normative
+addendum to this specification. It maps each lesson to the corresponding specs,
+completion evidence and build tasks. Apply it with the existing A/H/E/I/G rules.
+
+| Requirement | V2 completion condition | Corresponding specs |
+|---|---|---|
+| V2-01: Agent and authority | Working bounded real-agent synthetic baseline, operation risk tiers and code-enforced permissions | [Harness](docs/HARNESS.md), [architecture](docs/ARCHITECTURE.md) |
+| V2-02: Evaluability | Nested trace spans, model/tool calls, denial records and prompt hashes before admitted agent traffic | [Instrumentation](docs/INSTRUMENTATION.md), [dashboards](docs/DASHBOARDS_REPORTS.md) |
+| V2-03: Scenario world | Deterministic fictional facts, reproducible generator, family splits and reviewed smoke report | [Synthetic scenarios](docs/SYNTHETIC_SCENARIOS.md) |
+| V2-04: Human error analysis | Review interface, at least 60 distinct reviewable agent traces, first-failure notes, binary codebook and saturation assessment | [Error analysis](docs/ERROR_ANALYSIS.md) |
+| V2-05: Evaluators | Binary checks for observed modes; independently audited semantic judges where necessary; TPR/TNR and uncertainty | [Calibration](docs/EVALUATOR_CALIBRATION.md), [measurement](docs/V2_MEASUREMENT.md), [judge options](docs/LLM_JUDGE.md) |
+| V2-06: Regression and monitoring | Tiered CI, fixed-k reset/replay, pass^k/pass@k, synthetic monitoring and defensible prevalence | [CI](docs/CI_EVALUATION.md), [monitoring](docs/MONITORING.md) |
+| V2-07: Security and governance | OWASP surface map, real endpoint red team, attack regressions, guarded effects and governance crosswalk | [Adversarial evaluation](docs/ADVERSARIAL_EVALUATION.md) |
+| V2-08: Accuracy improvement | Human-owned failure backlog, manual fix, controlled frontier and independently frozen selection | [Experiments](docs/EXPERIMENTS.md), [optimization](docs/OPTIMIZATION_UPGRADE.md) |
+| V2-09: Cost and upgrades | Token attribution, prompt-cache experiment, audited cascade, full-suite upgrade drill across at least two committed configs | [Optimization](docs/OPTIMIZATION_UPGRADE.md), [dashboard mapping](docs/DASHBOARDS_REPORTS.md) |
+
+V2-A–D are demonstration evidence gates; V2-Q is independent release qualification.
+All are NOT_RUN. Completion of an experiment includes a documented negative result;
+adoption still requires passing its preregistered quality and safety constraints.
+See [acceptance dossier](docs/v2-acceptance.template.json) and the disabled
+[learning plan](recipes/v2-learning-plan.template.json).
+
+This is specification version 2.0, not a runtime schema or package-major release.
+Existing event schemas and M01–M06/Q01–Q09 definitions retain their versions. Task 00
+must implement validated extensions before new fields can become execution records.
+Jev remains one judge option; HF dedicated endpoints host supported deployable
+models, while API-only closed models use their supported APIs. Every selected
+profile requires calibration; no silent fallback or default judge is enabled.

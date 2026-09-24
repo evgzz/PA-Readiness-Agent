@@ -81,3 +81,22 @@ fixed-trace repeatability complement class-specific errors. Keep raw shadow
 predictions out of qualified trial verdicts until acceptance. A new model, rubric,
 threshold, context projection or material service behavior requires a fresh audit.
 The template in recipes/jev-judge.template.json is disabled and has null limits.
+
+## V2 binary measurement extension
+
+Use one independently testable binary evaluator per observed failure mode: code
+for objective facts, a calibrated semantic judge only for interpretive judgments.
+This does not require a model judge where all observed modes are mechanically
+checkable. J01–J07 are candidate rubric dimensions, not an observed taxonomy;
+ordinal diagnostics do not replace binary failure predicates.
+
+[V2 measurement](V2_MEASUREMENT.md) defines TPR, TNR, class denominators,
+abstention coverage, bootstrap intervals, prevalence correction and subsystem
+checks. Report TP/(TP+FN) and TN/(TN+FP) alongside existing error measures; a
+zero denominator is N/A. Class-specific unresolved decisions remain visible.
+Keep rubric development, judge selection/tuning, untouched calibration audit and
+agent qualification access distinct with family grouping. Freeze before reading
+an audit; changing the judge consumes it and requires a fresh independent audit.
+
+Extend versioned Q03 report fields and record schemas before implementation.
+Current validators are not evidence that v2 statistics or live calibration exist.

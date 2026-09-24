@@ -44,7 +44,11 @@
         "comparisons.py",
         "monitoring.py",
         "judges.py",
-        "trajectories.py"
+        "trajectories.py",
+        "reliability.py",
+        "prevalence.py",
+        "redteam.py",
+        "upgrade.py"
       ]
     },
     {
@@ -149,6 +153,13 @@
     "docs/MONITORING.md",
     "docs/WORKED_EXAMPLE.md",
     "docs/JEV_JUDGE.md",
-    "docs/LLM_JUDGE.md"
+    "docs/LLM_JUDGE.md",
+    "docs/V2_GAP_FIXES.md",
+    "docs/SYNTHETIC_SCENARIOS.md",
+    "docs/V2_MEASUREMENT.md",
+    "docs/CI_EVALUATION.md",
+    "docs/ADVERSARIAL_EVALUATION.md",
+    "docs/OPTIMIZATION_UPGRADE.md",
+    "docs/REVISION_2_0.md"
   ]
 }

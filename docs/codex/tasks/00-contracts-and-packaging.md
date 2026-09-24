@@ -25,3 +25,14 @@ can become an executable plan. Implement Q metric result fields and N/A rules.
 See docs/TASK00_HANDOFF.md and artifacts/TASK00_VALIDATION.json. Runtime credential
 verification adapters and durable ingestion wiring remain integration work; the
 required verifier interface and fail-closed ingress checks are implemented.
+
+## V2 completion requirements
+
+Existing Task 00 execution remains complete for its original contract scope.
+V2 extensions are NOT_IMPLEMENTED: versioned nested-span/usage fields, review
+saturation, confusion/coverage detail, fixed-k results/missingness bounds,
+prevalence method/results, CI tier and adversarial lineage, caching/cascade and
+upgrade records. Specify required values and validators before execution; keep
+the draft v2 learning/acceptance templates disabled. Do not change active M/Q
+formulas or accept unknown event fields implicitly. See docs/V2_MEASUREMENT.md
+and docs/INSTRUMENTATION.md.

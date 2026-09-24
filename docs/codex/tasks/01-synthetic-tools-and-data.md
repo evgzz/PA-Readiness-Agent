@@ -19,3 +19,11 @@ Create a reviewed scenario matrix, with intended behavior and evidence states,
 positive controls and ambiguous cases. Declare grouped development, calibration
 and qualification partitions; synthetic generator provenance and human label review
 are required. Three retained interface examples do not satisfy coverage.
+
+## V2 completion requirements
+
+Implement docs/SYNTHETIC_SCENARIOS.md: deterministic fictional facts, controlled
+generator instructions and provenance, reviewed coverage matrix and smoke report.
+Group families before split/augmentation; enforce hidden-fact isolation, ambiguous
+cases, negative/positive controls and reset receipts. Counts follow PA coverage
+and precision, not the commerce course's example workload sizes.

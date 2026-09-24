@@ -66,3 +66,20 @@ No commercial endpoint was deployed and no provider capability was live-tested.
 Routing API-only closed models to their supported service, profile freeze, swap
 calibration and no silent fallback are PA design requirements, not claims that HF
 hosts every proprietary model. Exact model/SDK/engine selections remain unset.
+
+## V2 alignment and governance sources
+
+The detailed L1–L9 syllabus supplied by the user is the alignment baseline,
+including the 60-trace coding exercise and caching/cascade/upgrade homework.
+PA-specific counts, adaptation, formulas and acceptance rules are project design
+decisions; they are not attributed as quotations from unavailable course material.
+The public course page supports the advertised evaluation lifecycle. Official
+resources below were retrieved 2026-09-24; pin tool versions before integration.
+
+| Source | Narrow use |
+|---|---|
+| [OWASP agentic Top 10, 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/) | ASI01–10 attack-surface crosswalk; project tests do not imply certification |
+| [NIST AI RMF core](https://airc.nist.gov/airmf-resources/airmf/5-sec-core/) | Govern, Map, Measure and Manage record organization |
+| [Promptfoo HTTP provider](https://www.promptfoo.dev/docs/providers/http/) | Proposed endpoint request/response adapter |
+| [Promptfoo red-team configuration](https://www.promptfoo.dev/docs/red-team/configuration/) | Separate generation, target and attack execution configuration |
+| [European Commission AI Act overview](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) | Basis for a future use/role/jurisdiction-specific applicability review; no PA legal classification or compliance claim |

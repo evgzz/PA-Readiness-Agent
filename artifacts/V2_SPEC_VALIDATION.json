@@ -1,0 +1,41 @@
+{
+  "specification_revision": "2.0",
+  "status": "PASS_SPECIFICATION_AND_EXISTING_CONTRACTS_ONLY",
+  "validated_at": "2026-09-24T22:42:25.504964+00:00",
+  "baseline_commit": "cc39bedbf4efad08955f78b894fb8ea083c651cb",
+  "python": "3.12.14",
+  "changes": "V2 requirements, corresponding-spec mapping, dashboard instrumentation, build tasks, proposed ADR and disabled planning templates. No runtime implementation.",
+  "structure_checks": {
+    "command": "python3 scripts/check_scaffold.py",
+    "status": "PASS",
+    "scope": "STRUCTURE_AND_IMPORT_CHECKS_ONLY",
+    "checks": 398,
+    "python_files_parsed": 21,
+    "public_interface_examples": 3,
+    "errors": []
+  },
+  "existing_contract_tests": {
+    "command": "python3 scripts/run_contract_tests.py",
+    "status": "PASS",
+    "tests": 25,
+    "evidence_class": "REFERENCE_CONTROL"
+  },
+  "document_validation": {
+    "status": "PASS",
+    "relative_markdown_links_checked": 228,
+    "draft_template_consistency": "PASS",
+    "errors": []
+  },
+  "manual_review": [
+    "Normative v2 precedence and preserved product/evaluation/gate semantics",
+    "Existing schema/package/M/Q versions unchanged; v2 extensions pending",
+    "Statistical missingness and calibration limits explicit",
+    "Jev optional; HF-hosted and supported closed API judges preserved",
+    "Historical execution artifacts unchanged"
+  ],
+  "real_agent_trials": "NOT_RUN",
+  "v2_acceptance": "NOT_RUN",
+  "runtime_qualification": "NOT_RUN",
+  "performance_or_cost_improvement": "NOT_ASSERTED",
+  "ci_for_this_commit": "CHECK_GITHUB_ACTIONS_BY_COMMIT_SHA"
+}

@@ -1,0 +1,111 @@
+{
+  "specification_revision": "2.0",
+  "status": "SPECIFIED_NOT_EXECUTED",
+  "record_schema_status": "NOT_IMPLEMENTED",
+  "candidate_digest": null,
+  "suite_digest": null,
+  "learning_plan_digest": null,
+  "evidence_class": null,
+  "requirements": [
+    {
+      "requirement_id": "V2-01",
+      "corresponding_spec": "docs/HARNESS.md",
+      "status": "NOT_RUN",
+      "evidence_refs": [],
+      "reviewer": null
+    },
+    {
+      "requirement_id": "V2-02",
+      "corresponding_spec": "docs/INSTRUMENTATION.md",
+      "status": "NOT_RUN",
+      "evidence_refs": [],
+      "reviewer": null
+    },
+    {
+      "requirement_id": "V2-03",
+      "corresponding_spec": "docs/SYNTHETIC_SCENARIOS.md",
+      "status": "NOT_RUN",
+      "evidence_refs": [],
+      "reviewer": null
+    },
+    {
+      "requirement_id": "V2-04",
+      "corresponding_spec": "docs/ERROR_ANALYSIS.md",
+      "status": "NOT_RUN",
+      "evidence_refs": [],
+      "reviewer": null
+    },
+    {
+      "requirement_id": "V2-05",
+      "corresponding_spec": "docs/V2_MEASUREMENT.md",
+      "status": "NOT_RUN",
+      "evidence_refs": [],
+      "reviewer": null
+    },
+    {
+      "requirement_id": "V2-06",
+      "corresponding_spec": "docs/CI_EVALUATION.md",
+      "status": "NOT_RUN",
+      "evidence_refs": [],
+      "reviewer": null
+    },
+    {
+      "requirement_id": "V2-07",
+      "corresponding_spec": "docs/ADVERSARIAL_EVALUATION.md",
+      "status": "NOT_RUN",
+      "evidence_refs": [],
+      "reviewer": null
+    },
+    {
+      "requirement_id": "V2-08",
+      "corresponding_spec": "docs/EXPERIMENTS.md",
+      "status": "NOT_RUN",
+      "evidence_refs": [],
+      "reviewer": null
+    },
+    {
+      "requirement_id": "V2-09",
+      "corresponding_spec": "docs/OPTIMIZATION_UPGRADE.md",
+      "status": "NOT_RUN",
+      "evidence_refs": [],
+      "reviewer": null
+    }
+  ],
+  "gates": [
+    {
+      "gate_id": "V2-A",
+      "execution": "NOT_RUN",
+      "outcome": null,
+      "evidence_refs": []
+    },
+    {
+      "gate_id": "V2-B",
+      "execution": "NOT_RUN",
+      "outcome": null,
+      "evidence_refs": []
+    },
+    {
+      "gate_id": "V2-C",
+      "execution": "NOT_RUN",
+      "outcome": null,
+      "evidence_refs": []
+    },
+    {
+      "gate_id": "V2-D",
+      "execution": "NOT_RUN",
+      "outcome": null,
+      "evidence_refs": []
+    },
+    {
+      "gate_id": "V2-Q",
+      "execution": "NOT_RUN",
+      "outcome": null,
+      "evidence_refs": []
+    }
+  ],
+  "release_authorization": "PENDING",
+  "limitations": [
+    "The completed Task 00 contract layer does not satisfy runtime evidence gates.",
+    "Demonstration completion is separate from qualification and deployment authorization."
+  ]
+}

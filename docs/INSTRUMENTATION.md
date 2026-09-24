@@ -168,3 +168,35 @@ lifecycle/replica-time records are separate from request token usage; capture co
 starts, queues, idle allocation and billed compute windows without double counting.
 No profile change takes effect mid-run. Credentials and private provider bodies
 never become general trace attributes. New records still require versioned schemas.
+
+## V2 trace and measurement capture
+
+These are proposed schema extensions, not currently accepted event fields.
+Version the event/payload catalog and validators before emitting them. Preserve
+current channel rules and authoritative writers; diagnostic spans cannot replace
+the complete evaluation/action ledger.
+
+| Capture | How and where to instrument | Required fields / evidence |
+|---|---|---|
+| Trace hierarchy | Harness admission and the single runtime loop; model/tool gateway child spans | trace_id, span_id, parent_span_id, run/trial/trajectory/turn/step IDs, causal links, timestamps, attempt/retry number and terminal status |
+| Prompt and configuration identity | Model gateway immediately before dispatch; hash the actual rendered request and approved templates/tool catalog | Rendered-prompt, template, tool-schema and config digests; model identity and prompt version. Digests do not replace protected replay evidence |
+| Permissions and guards | Harness authorization/output validation and scoped tool adapter before any effect | Proposal, authenticated scope, policy decision/denial reason, dispatch, receipt and reconciliation references; never model-reported authority |
+| Token/cost profile | Model gateway for every success, retry and failure; pa_models usage translation | Provider token categories and pricing revision; history/retrieval/tool-schema attribution method; cached/uncached usage and unknown categories without double counting |
+| Prompt cache and cascade | Approved model gateway/cache boundary and router; evaluation controller binds experiment | Cache policy/key digest, cold/warm/hit/miss, route/threshold version, cheap answer, escalation and end-to-end usage; preserve bypass audit sampling |
+| Reset and reliability | pa_evals runner before each trial and completeness finalization | Initial-state/reset receipt, scheduled repetition index, k, outcomes and absent/duplicate/errored trials |
+| Human coding and calibration | pa_evals review and calibration after durable private records are accepted | Selection probability/stratum, first failure, taxonomy version, saturation batch, confusion counts, unresolved classes and audit/config digest |
+| Monitoring and upgrade | pa_evals monitoring/comparisons; governance consumes finalized summaries | Window/cohort/inclusion probability, label delay, frozen judge, candidate-config commit, suite/run refs and decision rationale |
+
+Use span attributes for high-cardinality IDs and digests, not unbounded metric
+labels. Hashes can still be sensitive and do not anonymize small input spaces.
+Keep raw prompts/evidence private by default and export only allowed projections.
+Verify denied tool proposals have no dispatch/effect and that failed exports,
+orphaned spans and missing terminal records are detectable. Prompt hashes must
+reflect model-visible changes while excluding hidden labels from runtime input.
+
+Before admitted agent traffic, demonstrate a complete synthetic trace and an
+incomplete-trace control. The proposed self-hosted Langfuse projection must preserve
+causal links, version pins and data policy; provision/verify its selected platform
+dependencies separately. ClickHouse serves analytical projections, never approval
+or action-state authority. [V2 reporting](DASHBOARDS_REPORTS.md#v2-tracking-and-instrumentation)
+specifies the consumer views and evidence denominators.

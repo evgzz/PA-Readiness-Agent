@@ -60,7 +60,7 @@ Selection may use a quality/cost frontier after mandatory safety and quality
 constraints pass. Set non-inferiority and minimum meaningful improvement before
 execution. A failed or inconclusive constraint disqualifies the claimed win.
 
-## Options to evaluate, not preselected solutions
+## Candidate interventions
 
 | Option | Hypothesis | Required control / known risk |
 |---|---|---|
@@ -91,3 +91,19 @@ Proposed modules: evals/src/pa_evals/experiments.py and comparisons.py. Emit
 experiment.registered when the plan is locked; experiment.finalized after complete
 result persistence. Both are EVALUATOR_PRIVATE. Q07 renders the signed-off paired
 comparison, primary/guardrail results and uncertainty from the frozen snapshots.
+
+## V2 required experiment evidence
+
+[Optimization and upgrade](OPTIMIZATION_UPGRADE.md) adds mandatory v2 exercises:
+an observed-failure manual fix; token attribution; a measured prompt-caching
+change; a calibrated/audited agent cascade; and a full-suite upgrade drill across
+at least two committed frontier configurations. Reuse the preregistered comparison
+contract above. Retrieval caching in the option table is a separate candidate and
+does not satisfy the prompt-cache exercise. No proposed optimization must win.
+
+Select the cheapest effective intervention layer supported by evidence: prompt,
+tool design, harness, then model/weights. Authorization defects always require
+code enforcement. Try a manual loop before considering GEPA or a bounded automated
+optimizer, which remain deferred scope. Preserve safety constraints and hold-out
+isolation; weights training is not required for v2. Candidate selection and any
+later deployment continue to require distinct decisions.

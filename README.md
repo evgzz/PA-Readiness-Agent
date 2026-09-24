@@ -5,7 +5,7 @@ Repository: [evgzz/PA-Readiness-Agent](https://github.com/evgzz/PA-Readiness-Age
 A reproducible foundation for assessing prior-authorization packet readiness and
 managing the safety evidence for each application release.
 
-**Specification version: 1.0 — 2026-09-24. Status: CONTRACTS_READY.**
+**Specification version: 2.0 — 2026-09-24. Status: CONTRACTS_READY.**
 This revision supplies specifications, proposed ADRs, contracts, templates, and
 Codex build instructions. Agent execution, harness enforcement, evaluation,
 telemetry export, dashboards, and release gates remain **NOT_IMPLEMENTED**.
@@ -55,8 +55,8 @@ The three retained public cases are interface examples, not a qualified dataset.
 | `recipes/` | Explicit run profiles and configuration templates |
 | `apps/reporting/` | Dashboard/report specification; no running application |
 | `releases/` | Candidate evidence index and gate/authorization templates |
-| `docs/adrs/` | Twenty-four proposed architecture decisions and alternatives |
-| `docs/codex/` | Eight implementation tasks with v1 completion requirements |
+| `docs/adrs/` | Twenty-five proposed architecture decisions and alternatives |
+| `docs/codex/` | Eight implementation tasks with v2 completion requirements |
 | `scripts/`, `.github/workflows/` | Static scaffold validation |
 | `artifacts/` | Reviewed static-check evidence; no live performance claims |
 
@@ -122,11 +122,12 @@ new license and bundles no model weights. See [open assets](docs/OPEN_ASSETS.md)
 Do not copy prior course-module counts into this repository's results. Read
 [migration](docs/COURSE_MIGRATION.md) before porting code. Keep protected evidence
 and secrets outside Git. See [status](docs/BUILD_STATUS.json),
-[v1 revision notes](docs/REVISION_1_0.md), and [Git handoff](docs/GIT_HANDOFF.md).
+[v2 revision notes](docs/REVISION_2_0.md), and [Git handoff](docs/GIT_HANDOFF.md).
 
-## V1 learning workflow
+## V2 learning workflow
 
-Read [v1 requirements](docs/V1_GAP_FIXES.md) and the
+Read the [v2 course-to-spec mapping](docs/V2_GAP_FIXES.md), inherited
+[v1 requirements](docs/V1_GAP_FIXES.md), and the
 [worked example](docs/WORKED_EXAMPLE.md). The example is an execution contract,
 not a completed case study. Its missing evidence is explicit.
 
@@ -156,3 +157,16 @@ implied. All workflow implementation and real-agent evaluation remain pending.
 Task 00 is complete for the contracts layer. See [handoff](docs/TASK00_HANDOFF.md)
 for APIs, migration rules, executed checks and deferred integrations. Task 01
 (synthetic tools, requirements and reviewed case families) is next.
+
+V2 adds explicit [scenario coverage](docs/SYNTHETIC_SCENARIOS.md), a 60-trace
+review exercise with saturation records, [reliability and prevalence methods](docs/V2_MEASUREMENT.md),
+[agent CI tiers](docs/CI_EVALUATION.md), [adversarial evaluation](docs/ADVERSARIAL_EVALUATION.md),
+and [caching, cascade and upgrade evidence](docs/OPTIMIZATION_UPGRADE.md).
+The [dashboard table](docs/DASHBOARDS_REPORTS.md#v2-tracking-and-instrumentation)
+includes how to track each measure and where to instrument it.
+
+Task 00's completed contract work remains valid. New v2 record/metric extensions
+are pending and must be validated before use. V2-A–D and independent V2-Q evidence
+are NOT_RUN; [acceptance template](docs/v2-acceptance.template.json) records that
+distinction. [Static validation](artifacts/V2_SPEC_VALIDATION.json) verifies the
+specification revision and existing contract checks, not agent performance.

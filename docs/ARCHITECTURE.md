@@ -1,6 +1,6 @@
 # Architecture and trust boundaries
 
-Version 1.0. Task 00 contracts and ingress validation are implemented. Agent
+Specification version 2.0. Task 00 contracts and ingress validation are implemented. Agent
 execution and all runtime integrations below remain planned.
 
 ```mermaid
@@ -85,3 +85,13 @@ plane: HF dedicated endpoints, supported closed APIs, optional HF routing and Je
 apps/ injects its provider-neutral JudgePort; pa_evals owns rubrics and aggregation,
 pa_models owns provider translation, and a separate evaluation gateway meters
 calls. No judge dependency, label or credential enters the agent-facing runtime.
+
+## V2 evaluation evidence
+
+The existing evaluation plane additionally owns scenario generation controls,
+human review/saturation, fixed-k reliability, prevalence analysis, adversarial
+test orchestration and upgrade comparisons. [V2 requirements](V2_GAP_FIXES.md)
+add evidence gates without adding a second runtime loop or evaluator authority
+to the agent. Reporting consumes frozen aggregates. Prompt caching and agent
+cascades are metered runtime options selected by preregistered experiments;
+judge routing remains an independent evaluation configuration.

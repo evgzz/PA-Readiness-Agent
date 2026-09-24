@@ -46,6 +46,10 @@ def main() -> int:
         "docs/HARNESS.md", "docs/EVALUATIONS.md", "docs/INSTRUMENTATION.md",
         "docs/DASHBOARDS_REPORTS.md", "docs/REVISION_0_2.md", "docs/SOURCES.md",
         "docs/adrs/README.md", "docs/JEV_JUDGE.md", "docs/LLM_JUDGE.md",
+        "docs/V2_GAP_FIXES.md", "docs/V2_MEASUREMENT.md", "docs/SYNTHETIC_SCENARIOS.md",
+        "docs/CI_EVALUATION.md", "docs/ADVERSARIAL_EVALUATION.md",
+        "docs/OPTIMIZATION_UPGRADE.md", "docs/REVISION_2_0.md",
+        "docs/v2-acceptance.template.json", "recipes/v2-learning-plan.template.json",
         "recipes/judge-selection.template.json", "recipes/jev-judge.template.json",
         "contracts/schemas/event-envelope.schema.json",
         "contracts/metric-definitions.json", "contracts/event-catalog.json",
@@ -170,10 +174,10 @@ def main() -> int:
     check(set(v1_envelope["properties"]["event_type"]["enum"]) == event_ids, "V1 event schema/catalog mismatch")
     snapshot = read_json("contracts/metric-snapshot.template.json")
     check({m["metric_id"] for m in snapshot["learning_metrics"]} == {m["metric_id"] for m in learning_metrics}, "Learning snapshot/registry mismatch")
-    check(status["specification_revision"] == "1.0", "Expected specification v1.0")
-    check(status["production_monitoring"] == "NOT_SCOPED", "V1 does not enable production monitoring")
+    check(status["specification_revision"] == "2.0", "Expected specification v2.0")
+    check(status["production_monitoring"] == "NOT_SCOPED", "V2 does not enable production monitoring")
     adr_files = sorted((ROOT / "docs/adrs").glob("[0-9][0-9][0-9]-*.md"))
-    check(len(adr_files) == 24, "Expected twenty-four ADRs")
+    check(len(adr_files) == 25, "Expected twenty-five ADRs")
     for number, adr in enumerate(adr_files, start=1):
         check(adr.name.startswith(f"{number:03d}-"), f"ADR ordering error: {adr.name}")
         check("Status: PROPOSED" in adr.read_text(encoding="utf-8"), f"Unexpected ADR status: {adr.name}")

@@ -12,3 +12,11 @@ Forced violations denied, authorized reads succeed, proposed false READY blocked
 Record changed files, exact commands, actual results, evidence locations and
 remaining inputs in component documentation and docs/BUILD_STATUS.json. Keep
 evidence classes separate. Never invent test counts, model pins, owners or dates.
+
+## V2 completion requirements
+
+Enforce R0/R1 scope and disabled R2/R3 operations from docs/V2_GAP_FIXES.md.
+Capture nested spans, rendered prompt/tool hashes, denials and complete terminal
+evidence before admitted traffic. Reset all scenario/action/cache state according
+to the declared trial policy. Exercise future approval expiry/replay/concurrency
+only in a simulator; preserve receipts and uncertainty without enabling effects.

@@ -85,3 +85,16 @@ export must not remove the independent action ledger.
    revoked approval, changed packet, and ambiguous service effects are reconciled.
 
 These are acceptance requirements, all NOT_RUN in this repository.
+
+## V2 operation risk tiers
+
+[V2 scope](V2_GAP_FIXES.md) defines R0 case-scoped reads, R1 local packet/assessment
+drafts, R2 future consequential operations (disabled), and R3 prohibited behavior.
+These are operation authorization tiers, separate from incident severity S0–S3
+and any legal risk classification. Enforce each tier in trusted policy code even
+when the model is compromised; user/tool text cannot upgrade its authority.
+
+V2 tests future R2 approval binding, expiry, replay, concurrent consumption and
+ambiguous receipts only in an isolated simulator. This does not enable submission,
+external handoff or real clinical effects. Input/output guards complement
+scope enforcement and cannot substitute for it. See [adversarial acceptance](ADVERSARIAL_EVALUATION.md).

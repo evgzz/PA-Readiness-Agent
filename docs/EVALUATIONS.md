@@ -120,3 +120,19 @@ Status: specified, not implemented or calibrated.
 Each judge profile is selected explicitly and frozen per evaluation run. Jev is
 one option. Model/provider/deployment or rubric changes require profile-specific
 calibration; regrades preserve original evidence and receive a new grading identity.
+
+## V2 execution and measurement acceptance
+
+Implement [scenario generation](SYNTHETIC_SCENARIOS.md), [human coding](ERROR_ANALYSIS.md),
+[binary measurement](V2_MEASUREMENT.md), [CI tiers](CI_EVALUATION.md) and
+[adversarial evaluation](ADVERSARIAL_EVALUATION.md). Reset-and-replay repeats the
+agent from declared initial state; replaying a saved trace through a judge only
+measures the judge. Report fixed-k pass^k (all attempts succeed) separately from
+pass@k (at least one succeeds), with unresolved/missing bounds and family-level
+uncertainty. Neither metric permits cherry-picking a delivered answer.
+
+Retrieval, claim grounding and local handoff completeness have separate known-gold
+requirements and applicability denominators. Preserve whole-trajectory failures
+and decision-time prefix views in [judge evaluation](LLM_JUDGE.md). A final success
+cannot cancel an earlier mandatory failure. The [v2 acceptance dossier](v2-acceptance.template.json)
+links each required artifact to its candidate, suite and source snapshot.

@@ -25,3 +25,14 @@ for human review/calibration → Tasks 06–07 for CI, experiment and learning r
 The eight files remain the work breakdown; numerical order is not a reason to
 skip returning to measurement after real execution. Monitoring follows baseline
 snapshots and is simulated in v1. Apply V1-A–F in docs/V1_GAP_FIXES.md; all are pending.
+
+## V2 dependency loop and evidence gates
+
+Read docs/V2_GAP_FIXES.md and docs/REVISION_2_0.md. Task 00's original contract
+milestone is complete; implement its v2 schema extensions before emitting new
+records. Task 01 is the next baseline build. Continue Tasks 02–03, minimal 04,
+then 05 for actual synthetic traces, returning to 04 for review/calibration.
+Complete 06–07 with tiered CI, adversarial regressions, reporting and measured
+manual-fix/caching/cascade/upgrade exercises. V2-A–D replace the demonstration
+checklist; V2-Q is separately frozen qualification. Every gate remains NOT_RUN.
+Do not implement every optional judge/backend before collecting the first traces.

@@ -1,6 +1,9 @@
 # V1 implementation requirements and course alignment
 
-Specification version: 1.0 | 2026-09-24 | DRAFT_FOR_IMPLEMENTATION
+Inherited specification baseline: 1.0 | 2026-09-24 | DRAFT_FOR_IMPLEMENTATION
+
+[V2 requirements](V2_GAP_FIXES.md) governs the current additions and revised
+acceptance criteria. This document preserves the original learning workflow.
 
 V1 adds normative requirements to the existing agent, harness, evaluation and
 governance design. It closes gaps in specification coverage; completion requires
@@ -71,9 +74,11 @@ iteration requires a fresh independent set or an explicitly weaker claim.
 | Feedback and monitoring | [Monitoring](MONITORING.md); contracts/v1/monitoring-plan.template.json; monitoring-window.template.json | Cohort/window → signal → human triage → finding or dismissal → approved development case |
 | Worked example dossier | [Worked example](WORKED_EXAMPLE.md) | One complete chain; illustrative expectations remain distinct from observed results |
 
-Templates are draft field contracts, not implemented validators. Values marked
-null are unresolved requirements, not default permission to proceed. Authenticated
-writer identity, access control and digest verification need implementation.
+Task 00 implements validators for the existing workflow-record schemas. Their
+empty templates are not executed workflows. New v2 fields and records still need
+versioned schemas and validators. Null values remain unresolved requirements.
+Authenticated ingress has a fail-closed contract implementation; production
+authentication, durable storage, access control and runtime wiring remain pending.
 
 ## 5. Reporting requirements
 

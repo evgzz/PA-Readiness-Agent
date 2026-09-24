@@ -20,3 +20,13 @@ Run deterministic checks on changes; define the real-model CI tier and mark a
 required skipped tier incomplete. Add governance alert records and the synthetic
 monitoring exercise: unchanged window, behavior change, mix shift, source loss,
 late labels and sparse data. No operational deployment is implied.
+
+## V2 completion requirements
+
+Implement docs/CI_EVALUATION.md and docs/ADVERSARIAL_EVALUATION.md. Add T0–T3
+with explicit required-tier policy, secret isolation, reset/replay and complete
+evidence. Map ASI01–10 and governance records; run actual attacks on the isolated
+endpoint and turn confirmed successes into reproductions/failing regressions,
+then mitigation/retest. Preserve no-success outcomes honestly. Demonstrate code
+checks on all admitted synthetic traffic and sampled frozen judges, correction
+limits, alert triage and missing-data controls; production remains NOT_SCOPED.

@@ -31,3 +31,13 @@ For HF, bind Hub commit, serving engine/image, served-model ID and deployment
 configuration. Verify schema support, cold-start/unavailability and time-based
 compute billing. For closed APIs, use an explicit native/compatible protocol and
 record hosted identity limits. HF Providers is a distinct pinned routing option.
+
+## V2 completion requirements
+
+Choose one supported runtime/model and one necessary judge path, independently.
+Use docs/LLM_JUDGE.md; Jev is optional, HF Endpoints require deployable/licensed
+artifacts, and API-only closed models use supported APIs. Preserve configuration
+freeze, no silent fallback and recalibration on swaps. Provide an isolated running
+synthetic endpoint for promptfoo, with pinned request/response/identity adapters.
+Meter native usage, caching and router calls; verify provider capabilities before
+the preregistered caching/cascade experiment. No external effects are enabled.

@@ -1,0 +1,53 @@
+{
+  "specification_revision": "2.0",
+  "status": "DRAFT_DISABLED",
+  "enabled": false,
+  "entrypoint": null,
+  "record_schema_status": "NOT_IMPLEMENTED",
+  "scope": "SYNTHETIC_READ_ONLY",
+  "external_effects_allowed": false,
+  "required_demonstration_gates": [
+    "V2-A",
+    "V2-B",
+    "V2-C",
+    "V2-D"
+  ],
+  "qualification_gate": "V2-Q",
+  "auto_qualification": false,
+  "auto_deploy": false,
+  "minimum_distinct_reviewable_agent_traces": 60,
+  "taxonomy_mode_target": [
+    5,
+    8
+  ],
+  "taxonomy_target_is_hard_count": false,
+  "minimum_committed_frontier_configs": 2,
+  "owner": null,
+  "candidate_configs": [],
+  "dataset_manifest": null,
+  "coverage_and_precision_plan": null,
+  "sampling_plan": null,
+  "saturation_batch_size": null,
+  "saturation_stopping_rule": null,
+  "fixed_repetitions_k": null,
+  "judge_profile": null,
+  "calibration_criteria": null,
+  "bootstrap": {
+    "confidence_level": null,
+    "replicates": null,
+    "seed": null,
+    "resampling_unit": null,
+    "minimum_class_counts": null
+  },
+  "prevalence_method": null,
+  "ci_required_tiers": null,
+  "promptfoo_version": null,
+  "endpoint_adapter": null,
+  "prompt_cache_plan": null,
+  "cascade_audit_plan": null,
+  "upgrade_suite_manifest": null,
+  "quality_and_safety_limits": null,
+  "cost_budget": null,
+  "monitoring_alert_policy": null,
+  "instructions": "Template only. Assign, version, validate and preregister required fields before execution. No qualification labels enter tuning."
+}

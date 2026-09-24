@@ -1,6 +1,6 @@
 # Architecture decision register
 
-**All 24 decisions are PROPOSED; implementation acceptance is NOT_RUN.**
+**All 25 decisions are PROPOSED; implementation acceptance is NOT_RUN.**
 They record the revised baseline and alternatives, not an approved production stack.
 Owner roles are unassigned. Adopt/reject/supersede each decision with rationale and evidence during implementation.
 
@@ -30,3 +30,4 @@ Owner roles are unassigned. Adopt/reject/supersede each decision with rationale 
 | [022](022-preregistered-improvement.md) | Preregister comparisons and account for full workload cost | PROPOSED |
 | [023](023-monitoring-feedback.md) | Stage monitoring through synthetic exercises before operational use | PROPOSED |
 | [024](024-jev-semantic-judge.md) | Use swappable HF/closed API judge adapters with Jev as an option | PROPOSED |
+| [025](025-v2-evidence-gates.md) | Require course-aligned v2 evidence gates without expanding PA authority | PROPOSED |

@@ -8,7 +8,7 @@
   "heldout_qualification": "NOT_RUN",
   "deployment": "NOT_RUN",
   "publication": "NOT_REQUESTED",
-  "specification_revision": "1.0",
+  "specification_revision": "2.0",
   "runtime_adapters": "NOT_IMPLEMENTED",
   "instrumentation": "NOT_IMPLEMENTED",
   "dashboards": "NOT_IMPLEMENTED",
@@ -43,5 +43,16 @@
   "hf_endpoint_judge": "NOT_IMPLEMENTED",
   "closed_api_judge": "NOT_IMPLEMENTED",
   "hf_providers_judge": "NOT_IMPLEMENTED",
-  "judge_swapping": "SPECIFIED_NOT_IMPLEMENTED"
+  "judge_swapping": "SPECIFIED_NOT_IMPLEMENTED",
+  "v2_specification": "SPECIFIED",
+  "v2_acceptance": "NOT_RUN",
+  "v2_contract_extensions": "NOT_IMPLEMENTED",
+  "scenario_generator": "NOT_IMPLEMENTED",
+  "saturation_assessment": "NOT_RUN",
+  "reliability_prevalence": "NOT_IMPLEMENTED",
+  "agent_ci_tiers": "NOT_IMPLEMENTED",
+  "live_adversarial_evaluation": "NOT_RUN",
+  "prompt_cache_experiment": "NOT_RUN",
+  "cascade_audit": "NOT_RUN",
+  "upgrade_drill": "NOT_RUN"
 }

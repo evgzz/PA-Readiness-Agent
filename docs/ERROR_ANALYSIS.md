@@ -77,3 +77,38 @@ An independent reviewer can reconstruct selection and category counts, inspect a
 disputed label and its resolution, and follow a confirmed failure to its test.
 Duplicate annotations, missing traces, mixed sampling methods and category changes
 must remain visible. A completed review is not automatically an agreed reference label.
+
+## V2 review interface, coding and saturation
+
+V2-04 requires at least **60 distinct reviewable real-agent synthetic development
+traces**. Track selected, available, reviewed, unreviewable and adjudicated counts
+separately; duplicate reviewers or repeat imports cannot inflate the floor. This
+is an exercise minimum, not a sample-size justification for rare-risk estimates.
+
+The review interface may start as a local application over frozen artifacts. It
+must display the complete permitted multi-turn trace, input/evidence versions,
+nested model/tool spans, denials, attempted versus delivered answers and receipts.
+Support trace navigation, plain-language notes, first observable failure with a
+causal step reference, secondary failures, uncertainty, save/resume, taxonomy
+version and dispute resolution. Hide judge predictions until the initial human
+label is saved; enforce evaluator-private access. No hidden reasoning is required.
+
+1. **Open coding:** read complete traces and note the first observable failure in
+   ordinary language, before imposing category names. Preserve subsequent failures
+   and recovery; a corrected final answer cannot erase an earlier unsafe action.
+2. **Axial coding:** group notes into binary failure modes. Give each mode a
+   definition, inclusion/exclusion boundaries, positive/negative/ambiguous examples,
+   applicability unit and links to traces. Aim for 5–8 observed modes, explaining
+   fewer/more; never invent failures to meet a count. Resolve overlap explicitly.
+3. **Saturation assessment:** preregister batch size, coverage requirements and a
+   stopping criterion before review. Log new modes, changed boundaries, unresolved
+   ambiguities and slice coverage after each batch. Sixty reviews alone cannot
+   prove saturation. Retain SATURATED / NOT_SATURATED / INCONCLUSIVE as proposed
+   review-report values, not existing gate enums; additional sampling may be needed.
+4. Compare published taxonomies only after creating the human-derived codebook.
+   Keep proposed security coverage separate from observed product failures.
+
+Proposed review/saturation reports bind the sampling manifest, batch history,
+taxonomy digest, reviewer/adjudication records and first-failure references.
+Task 00 must version and validate these extensions; Task 04 implements the UI
+and procedure. Export aggregate counts only to Q01/Q02 report detail.

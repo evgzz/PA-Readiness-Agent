@@ -69,3 +69,20 @@ Completion requires window records, Q08/Q09 snapshots, alert/triage history and 
 access-control check. Production activation additionally requires an approved
 deployment scope, data policy, retention/access configuration, operational owners,
 thresholds, incident procedure and measured integration evidence.
+
+## V2 sampled monitoring exercise
+
+On all admitted synthetic trials, run applicable deterministic checks and account
+for their execution coverage. Apply the frozen accepted judge to a preregistered
+probability sample, logging stratum/inclusion probability; keep targeted incident
+reviews separate. [V2 measurement](V2_MEASUREMENT.md) defines human prevalence,
+judge-error correction, bootstrap intervals and invalid-estimate behavior.
+Do not extrapolate resolved-only judgments across abstentions or assume an old
+calibration transfers after cohort drift. Delayed labels, unknown inclusion
+probabilities and unidentifiable correction yield missing/inconclusive evidence.
+
+Exercise unchanged control, changed cohort, telemetry loss and delayed reference
+labels with preassigned alert thresholds, destinations and triage ownership.
+The demonstration creates local alert records and authorized aggregate reports;
+production monitoring remains NOT_SCOPED. [CI tiers](CI_EVALUATION.md) describe
+how synthetic endpoint runs feed these windows without implying deployment.

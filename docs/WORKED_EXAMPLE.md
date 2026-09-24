@@ -36,3 +36,14 @@ actually observed development failure for the improvement demonstration. A seede
 script can test the evaluator but cannot substitute for real-agent failure evidence.
 Publish only reviewed synthetic summaries; private annotations and held-out
 examples remain in controlled evidence storage.
+
+## V2 completion extension
+
+The example remains illustrative and NOT_RUN. Expand the eventual dossier with
+the [v2 acceptance index](v2-acceptance.template.json): scenario smoke report;
+60 distinct reviewable real-agent development traces and saturation assessment;
+binary evaluator audit; fixed-k reliability and defensible prevalence; CI tiers
+and red-team regressions; manual-fix, prompt-cache and cascade comparisons; a
+two-configuration upgrade drill; synthetic monitoring; and separate qualification.
+One example trace cannot satisfy the review floor or population uncertainty plan.
+Keep simulated controls and actual endpoint/model trials clearly identified.

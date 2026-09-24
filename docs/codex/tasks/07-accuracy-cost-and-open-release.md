@@ -22,3 +22,13 @@ Implement Q08/Q09 for the monitoring simulation and retain triage history. Confi
 all report values reconcile to metric snapshots, including negative/inconclusive
 results. Complete V1-A–E demonstration criteria before claiming the learning loop;
 V1-F remains independent qualification and separate authorization.
+
+## V2 completion requirements
+
+Complete docs/OPTIMIZATION_UPGRADE.md and the v2 dashboard/report table. Start
+with the reviewed top failure and manual fix, then comparable frontier, history/
+retrieval/tool-schema cost attribution, prompt-cache experiment, audited cascade
+and full-suite upgrade drill across two or more committed configs. Preserve
+negative results, bypass failures and missing costs. V2-A–D supersede the v1
+demonstration checklist with stricter evidence; V2-Q remains independent and
+cannot authorize release automatically. Render JSON/Markdown from common snapshots.

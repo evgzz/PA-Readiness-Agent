@@ -12,3 +12,11 @@ READY supported, confirmed blockers NOT_READY, unavailable evidence UNKNOWN abse
 Record changed files, exact commands, actual results, evidence locations and
 remaining inputs in component documentation and docs/BUILD_STATUS.json. Keep
 evidence classes separate. Never invent test counts, model pins, owners or dates.
+
+## V2 completion requirements
+
+Preserve bounded multi-turn clarification, contradictory/stale evidence and
+correction/recovery scenarios. Agent consumes only permitted current observations;
+do not put expected labels, full world facts or evaluator controls in its context.
+Distinguish attempted and delivered answers and decisions at each prefix. The
+mock model supplies explicit controls, not real-agent review evidence.

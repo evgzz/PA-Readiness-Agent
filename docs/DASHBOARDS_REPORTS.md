@@ -176,3 +176,34 @@ artifact. New generic reports identify Jev, HF-hosted or closed API profiles wit
 equal provenance requirements. The judge-readiness card shows NOT_CONFIGURED or
 UNCALIBRATED when applicable. Missing mandatory judge evidence makes the gate
 INCONCLUSIVE unless a demonstrated blocker already establishes NO_GO.
+
+## V2 tracking and instrumentation
+
+The following extends report detail around M01–M06/Q01–Q09; it does not silently
+change the active metric registry. Task 00 must version definitions, snapshots
+and payload schemas before implementation. Each card binds candidate/suite,
+evidence class, method version, source snapshot, time window, denominator and
+missingness. JSON and Markdown reports must reconcile to the same frozen data.
+
+| Dashboard / report measure | How to track | How and where to instrument | Corresponding specs |
+|---|---|---|---|
+| Scenario coverage | Accepted/rejected/ambiguous cases by slice; family leakage and reset checks | pa_tools synthetic world and pa_evals splits/runner; generator manifest and smoke report | [Scenarios](SYNTHETIC_SCENARIOS.md), V2-03 |
+| Trace completeness | Admitted/scheduled traces with required links and terminal evidence; missing/export failures separately | Harness admission, metered model/tool spans, pa_telemetry delivery and evaluator completeness | [Instrumentation](INSTRUMENTATION.md), V2-02 |
+| Human review / saturation (Q01/Q02) | Distinct reviewable completed traces toward 60; per-batch new/changed modes and unresolved disputes; show sampling method | pa_evals review; frozen sample, append-only annotations and taxonomy/batch snapshots | [Error analysis](ERROR_ANALYSIS.md), V2-04 |
+| Evaluator quality (Q03) | TP/FN/FP/TN, TPR/TNR, class coverage, uncertainty, held-out audit status and slice counts | pa_evals calibration; authenticated human reference and frozen judge profile, no private examples in dashboards | [Calibration](EVALUATOR_CALIBRATION.md), [measurement](V2_MEASUREMENT.md), V2-05 |
+| Prevalence / monitoring (Q02/Q09 detail) | Raw flagged rate, human reference estimate and corrected estimate shown separately; weighted cohort, intervals, abstention and assumptions | pa_evals monitoring and prevalence computation; logged inclusion probabilities and calibration snapshot | [Measurement](V2_MEASUREMENT.md), [monitoring](MONITORING.md), V2-06 |
+| Multi-turn reliability (Q04 detail) | Fixed-k pass^k and pass@k, scheduled cases/repetitions, unresolved bounds, first-failure step and recovery; never count judge repeats as agent trials | pa_evals runner/reset ledger and trajectories; per-step authoritative outcomes and complete schedules | [Measurement](V2_MEASUREMENT.md), [judge trajectories](LLM_JUDGE.md), V2-05/06 |
+| CI tier coverage | Required/executed/passed/failed/missing tiers by candidate; seeded detection separately from agent performance | CI orchestration stores run manifests and pa_evals completeness; governance reads gate inputs | [CI](CI_EVALUATION.md), V2-06 |
+| Adversarial coverage | Attempted/succeeded/blocked/unresolved attacks by surface; successful attack to failing regression to retest; positive-control completion | Pinned promptfoo target adapter, harness/tool receipts and independent pa_evals graders | [Adversarial](ADVERSARIAL_EVALUATION.md), V2-07 |
+| Cost / prompt caching (Q05–Q07) | History/retrieval/schema token contribution; cold/warm cache delta on paired workload, full cost and quality constraints | Model gateway and pa_models usage; pricing/billing allocation, failed calls, cache settings and experiment snapshot | [Optimization](OPTIMIZATION_UPGRADE.md), V2-09 |
+| Cascade audit (Q04/Q06/Q07) | Route volumes, escalation and cost; failure/coverage by route including cheap-accepted bypasses and slices | Router decision records, both model gateways and evaluator probability sample with reference labels | [Optimization](OPTIMIZATION_UPGRADE.md), V2-09 |
+| Frontier / upgrade (Q07) | At least two committed configs, paired quality/cost with uncertainty, constraint status and keep/replace/retire proposal | pa_evals comparisons and upgrade dossier; commit/config/suite hashes and untouched qualification refs | [Experiments](EXPERIMENTS.md), [optimization](OPTIMIZATION_UPGRADE.md), V2-08/09 |
+
+Expected future report pairs: scenario-smoke, human-review, evaluator-calibration,
+reliability-prevalence, ci-adversarial, optimization-upgrade and monitoring-exercise
+(each JSON/Markdown). Names describe planned outputs, not existing executed files.
+The v2 acceptance index links their immutable snapshots. Human-review and judge
+cost remain separate from runtime cost; any total states its included components.
+An invalid prevalence estimate, incomplete mandatory tier or stale snapshot is
+INCONCLUSIVE/NOT_RUN as applicable, never a healthy zero. Alerts use thresholds
+and owners assigned before execution; no alert is automatically sent by this spec.

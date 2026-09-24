@@ -34,3 +34,13 @@ Keep status NOT_IMPLEMENTED until this work executes; this revision specifies it
 Verify shared-rubric rendering for typed and generative judges, categorical output
 without fabricated confidence, configuration freeze, rejected uncalibrated swaps,
 regrade lineage and disabled fallback. Compare judge profiles on identical evidence.
+
+## V2 completion requirements
+
+Implement docs/ERROR_ANALYSIS.md, docs/V2_MEASUREMENT.md and
+docs/ADVERSARIAL_EVALUATION.md. Provide the review interface, 60-trace exercise,
+open/axial coding, saturation log, binary checks, untouched judge audit where
+needed, TPR/TNR, weighted prevalence, joint uncertainty and fixed-k reliability.
+Include retrieval/grounding/local-handoff checks and human audit of cascade
+bypasses. Demonstrate invalid estimates and missingness remain inconclusive.
+Return here after Task 05 provides actual synthetic agent traces.
