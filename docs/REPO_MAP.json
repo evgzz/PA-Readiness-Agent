@@ -42,7 +42,9 @@
         "review.py",
         "experiments.py",
         "comparisons.py",
-        "monitoring.py"
+        "monitoring.py",
+        "judges.py",
+        "trajectories.py"
       ]
     },
     {
@@ -53,7 +55,8 @@
         "mock.py",
         "openai_compatible.py",
         "local_serving.py",
-        "usage.py"
+        "usage.py",
+        "jev.py"
       ]
     },
     {
@@ -73,7 +76,9 @@
       "path": "contracts",
       "python_package": "pa_contracts",
       "implementation": "IMPLEMENTED_CONTRACT_LAYER",
-      "planned_files": [],
+      "planned_files": [
+        "judge_ports.py"
+      ],
       "implemented_files": [
         "ports.py",
         "validation.py",
@@ -139,6 +144,7 @@
     "docs/EVALUATOR_CALIBRATION.md",
     "docs/EXPERIMENTS.md",
     "docs/MONITORING.md",
-    "docs/WORKED_EXAMPLE.md"
+    "docs/WORKED_EXAMPLE.md",
+    "docs/JEV_JUDGE.md"
   ]
 }

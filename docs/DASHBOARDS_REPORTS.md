@@ -136,3 +136,31 @@ Learning metrics do not silently become release thresholds. The selected profile
 declares mandatory criteria before execution. Unknown cost yields an incomplete
 cost total; targeted sample frequency is not an operational failure estimate.
 A negative experiment can be complete while its candidate is rejected.
+
+## Jev judge tracking
+
+Status: PLANNED. Q03/Q07 can link these detailed audit/comparison reports; the table
+does not extend today's metric payload schema or establish new release thresholds.
+A versioned report/record contract is required before these cards are populated.
+
+| Dashboard measure | How to track / denominator | How and where to instrument |
+|---|---|---|
+| Human alignment (Q03) | Confusion counts by criterion/slice; false pass = FN/(TP+FN), false fail = FP/(FP+TN) on resolved prediction/reference pairs. Show total human-labeled failures/passes and unresolved predictions in each class separately. | pa_evals.calibration joins immutable judge results to independent adjudicated labels; calibration.finalized references the persisted audit |
+| Decision coverage and abstention (Q03) | Accepted PASS/FAIL / applicable scheduled judgments; separate uncertain, invalid, missing, unaccepted and unadjudicated counts. Show total scheduled and valid raw answers. | pa_evals.judges persists mapping reason and calibration reference; pa_evals.completeness reconciles the frozen judgment schedule |
+| Probability calibration (Q03 detail) | Noul Brier score and preregistered reliability bins on valid labeled probabilities, including threshold abstentions; expose sample size and excluded/unlabeled counts | pa_evals.calibration uses raw p and human failure label; persist method/bin version and case-family uncertainty |
+| Fixed-trace repeatability (Q03 detail) | Within-case score variance and verdict disagreement across declared repetitions; unique cases, families and repeats shown separately | pa_evals.runner replays fixed evidence/question digests; pa_evals.calibration groups by case, criterion and judge version |
+| Trajectory quality | Prefix assertion outcomes, correction/recovery outcomes and full-trajectory verdict; incomplete traces and unresolved judgments visible | pa_evals.trajectories captures causal prefixes, state/evidence revisions and completeness; pa_evals.judges links each judgment to its window |
+| Judge latency and errors | p50/p95 logical judgment latency including retries, per-attempt duration and error counts; report timeouts and incomplete requests separately | pa_models.jev records attempt timing/errors; evaluation gateway measures total duration and retry budget |
+| Judge spend | Total known evaluation spend including failed/retried calls, unknown-cost count and known spend / completed judgments; incomplete cost totals labeled | pa_models.jev retains provider usage; evaluation gateway joins versioned pricing once per request/attempt; batched questions do not duplicate charges |
+| Jev/challenger comparison (Q07) | Paired unique-case alignment, coverage, repeatability and overhead; missing pairs explicit | pa_evals.comparisons consumes preregistered experiment and frozen result snapshots; experiment.finalized links the comparison |
+
+These judge overhead measures remain separate from runtime Q05 latency and Q06
+cost per success. Filters bind candidate/eval/model/rubric/context/threshold versions
+and evidence class. Do not plot confidence as measured accuracy. Case IDs belong
+in evidence links, not unbounded metric labels. No data displays NOT_RUN, never 0.
+
+Add reports/<snapshot>/jev-judge-report.json and .md when implemented: selection,
+calibration disposition, unique case/repetition counts, uncertainty, errors,
+missingness, model/version limits, private evidence links and reviewer action.
+Langfuse receives permitted projections; optional LangSmith comparisons require
+an approved export profile. Neither platform computes release authority.

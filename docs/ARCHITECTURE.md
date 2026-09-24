@@ -78,3 +78,9 @@ ports and writes evaluator-private records. Governance receives authorized
 summaries and owns alert triage/findings; apps/ wires scheduling and integrations.
 Runtime and optimizer identities cannot read qualification feedback. This adds
 no new runtime loop, vendor dependency, or autonomous promotion mechanism.
+
+## Planned semantic judge
+The [Jev adapter](JEV_JUDGE.md) belongs to the independent evaluation plane.
+apps/ injects its provider-neutral JudgePort; pa_evals owns rubrics and aggregation,
+pa_models owns provider translation, and a separate evaluation gateway meters
+calls. No judge dependency, label or credential enters the agent-facing runtime.

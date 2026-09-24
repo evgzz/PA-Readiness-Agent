@@ -109,3 +109,10 @@ use [calibration](EVALUATOR_CALIBRATION.md) before relying on semantic judges.
 [monitoring](MONITORING.md) defines the synthetic feedback exercise.
 [V1 acceptance](V1_GAP_FIXES.md) and Q01–Q09 are mandatory for the applicable
 improvement/monitoring demonstration profiles. All remain NOT_IMPLEMENTED.
+
+## Jev and multi-turn semantic grading
+[Jev judge specification](JEV_JUDGE.md) defines the proposed JudgePort, J01–J07
+rubrics, evidence-at-decision-time prefixes, full trajectories, response validation,
+calibration and acceptance checks. Use deterministic facts plus accepted semantic
+assertions; do not replace a trial verdict with one averaged quality score.
+Status: specified, not implemented or calibrated.

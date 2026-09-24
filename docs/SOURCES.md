@@ -35,3 +35,17 @@ public page and expanded syllabus inspected 2026-09-24. Used for the L1–L9 top
 mapping and advertised monitoring outcome in docs/V1_GAP_FIXES.md. The PA procedures,
 metric definitions and acceptance gates are independent project design choices;
 no private course content, course completion or endorsement is claimed.
+
+## Jev judge sources
+Inspected 2026-09-24. Capability facts are separated from the PA-specific design
+in docs/JEV_JUDGE.md; no vendor experiment is imported as repository evidence.
+
+| Source | Use |
+|---|---|
+| [LangChain: Jev-as-a-Judge](https://www.langchain.com/blog/jev-agent-evals-langsmith) | Supplied article; fixed-run comparison with a small unique-case corpus |
+| [Reproduction repository](https://github.com/danielgshea/jev-as-a-judge) | Experiment structure and provenance; no code or results imported |
+| [TypeSafe state](https://docs.typesafe.ai/concepts/state) | Structured text context for independent questions |
+| [Primitives](https://docs.typesafe.ai/primitives) and [confidence](https://docs.typesafe.ai/confidence) | Typed decisions and uncertainty semantics |
+| [API](https://docs.typesafe.ai/api) and [Python SDK](https://docs.typesafe.ai/sdk/python) | Proposed transport boundary and response fields |
+| [Models](https://docs.typesafe.ai/models) | Versioned candidate, moving aliases, input limits; reverify before integration |
+| [Jev 1.13 limitations](https://docs.typesafe.ai/model-jaggedness/jev-1.13) | Targeted failure slices and keeping exact computations in code |

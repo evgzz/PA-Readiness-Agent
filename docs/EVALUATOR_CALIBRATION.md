@@ -64,3 +64,12 @@ Proposed module: evals/src/pa_evals/calibration.py. Emit rubric.reviewed after t
 authenticated rubric review, and calibration.finalized after the audit result is
 persisted. Both are EVALUATOR_PRIVATE. Q03 publishes permitted aggregate reliability
 and calibration status; it does not expose private audit examples or answer keys.
+
+## Jev profile
+Use [Jev requirements](JEV_JUDGE.md) for typed question semantics and verdict
+mapping. Audit Choice probabilities and confidence thresholds separately; Noul
+has no separate confidence field. Probability calibration, selective coverage and
+fixed-trace repeatability complement class-specific errors. Keep raw shadow
+predictions out of qualified trial verdicts until acceptance. A new model, rubric,
+threshold, context projection or material service behavior requires a fresh audit.
+The template in recipes/jev-judge.template.json is disabled and has null limits.

@@ -31,5 +31,10 @@
   "transport_authenticator": "NOT_CONFIGURED",
   "workflow_record_validation": "IMPLEMENTED",
   "metric_record_validation": "IMPLEMENTED",
-  "task_00": "COMPLETE_FOR_CONTRACT_LAYER"
+  "task_00": "COMPLETE_FOR_CONTRACT_LAYER",
+  "jev_judge_specification": "SPECIFIED",
+  "jev_judge_adapter": "NOT_IMPLEMENTED",
+  "jev_judge_provider": "NOT_CONFIGURED",
+  "jev_judge_calibration": "NOT_RUN",
+  "trajectory_evaluator": "NOT_IMPLEMENTED"
 }

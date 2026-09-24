@@ -45,7 +45,8 @@ def main() -> int:
         "contracts/schemas/eval-result.schema.json",
         "docs/HARNESS.md", "docs/EVALUATIONS.md", "docs/INSTRUMENTATION.md",
         "docs/DASHBOARDS_REPORTS.md", "docs/REVISION_0_2.md", "docs/SOURCES.md",
-        "docs/adrs/README.md", "contracts/schemas/event-envelope.schema.json",
+        "docs/adrs/README.md", "docs/JEV_JUDGE.md", "recipes/jev-judge.template.json",
+        "contracts/schemas/event-envelope.schema.json",
         "contracts/metric-definitions.json", "contracts/event-catalog.json",
         "program/safety-plan.md", "program/eval-catalog.json", "program/coverage-matrix.csv",
         "program/findings.csv", "program/dependencies.csv", "governance/exceptions.csv",
@@ -171,7 +172,7 @@ def main() -> int:
     check(status["specification_revision"] == "1.0", "Expected specification v1.0")
     check(status["production_monitoring"] == "NOT_SCOPED", "V1 does not enable production monitoring")
     adr_files = sorted((ROOT / "docs/adrs").glob("[0-9][0-9][0-9]-*.md"))
-    check(len(adr_files) == 23, "Expected twenty-three ADRs")
+    check(len(adr_files) == 24, "Expected twenty-four ADRs")
     for number, adr in enumerate(adr_files, start=1):
         check(adr.name.startswith(f"{number:03d}-"), f"ADR ordering error: {adr.name}")
         check("Status: PROPOSED" in adr.read_text(encoding="utf-8"), f"Unexpected ADR status: {adr.name}")

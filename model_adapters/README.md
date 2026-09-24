@@ -15,3 +15,9 @@ Acceptance:
 - Exact model/server/tokenizer/template settings and native billing semantics are recorded.
 
 Follow AGENTS.md here and the root build sequence.
+
+## Jev evaluation adapter plan
+Planned jev.py translates TypeSafe typed questions and responses behind JudgePort;
+apps/ injects it into the evaluation plane, separate from runtime model calls.
+See docs/JEV_JUDGE.md. The disabled recipe has no selected SDK version or budget.
+The adapter, usage integration, credential preflight and live calls are pending.

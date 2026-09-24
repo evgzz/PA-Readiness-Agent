@@ -139,3 +139,25 @@ attempt including errors, tokens, cache category and provider receipt; tool reco
 capture metered usage. Pricing is versioned separately. Missing provider usage is
 explicitly unknown, not a zero token/cost event. Eval/judge calls and review effort
 have separate cost categories so runtime efficiency remains interpretable.
+
+## Jev capture plan
+The [Jev specification](JEV_JUDGE.md) adds planned private judge request, attempt,
+result and trajectory-projection records. pa_evals.trajectories persists the frozen
+prefix/trajectory digest; pa_models.jev captures each provider attempt and usage;
+pa_evals.judges persists raw typed outputs and normalized assertions;
+pa_evals.calibration persists human alignment and repeatability results.
+
+Correlate run/trial/trajectory/turn/step, judge request/repetition/attempt and
+criterion IDs in controlled records. Capture requested/returned model, SDK,
+rubric/threshold/context versions, evidence digest, response disposition, monotonic
+latency, tokens and versioned cost/unknown usage. Use EVALUATOR_PRIVATE, including
+provider failures: operational model-call events are not a safe default for judges.
+
+These detailed records are future contracts, not accepted event payloads today.
+Task 04 must add/version their schemas and port; Task 06 must register producers,
+channels and payload references before ingress/export. Existing trial.graded,
+calibration.finalized and experiment.finalized events link compatible persisted
+results only through fields allowed by their current schema. Do not add unknown
+attributes or publish unregistered judge events. Raw traces/labels stay private;
+reporting receives authorized aggregate projections. Never export credentials or
+provider response bodies to general telemetry.

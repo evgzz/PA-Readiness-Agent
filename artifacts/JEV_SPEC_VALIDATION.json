@@ -1,0 +1,23 @@
+{
+  "date": "2026-09-24",
+  "scope": "JEV_SPECIFICATION_ONLY",
+  "baseline_commit": "3a8193173d1210efa782dee5fae11e97429f66c7",
+  "commands": [
+    {
+      "command": "python3 scripts/check_scaffold.py",
+      "status": "PASS",
+      "checks": 377
+    },
+    {
+      "command": "python3 scripts/run_contract_tests.py",
+      "status": "PASS",
+      "test_methods": 25
+    }
+  ],
+  "new_runtime_dependencies": [],
+  "live_jev_calls": "NOT_RUN",
+  "jev_calibration": "NOT_RUN",
+  "trajectory_evaluator": "NOT_IMPLEMENTED",
+  "provider_configuration": "NOT_CONFIGURED",
+  "limitations": "Documentation/configuration template update; existing contract tests do not validate a working Jev integration."
+}

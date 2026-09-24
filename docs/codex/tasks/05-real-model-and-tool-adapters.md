@@ -18,3 +18,10 @@ evidence classes separate. Never invent test counts, model pins, owners or dates
 Collect the actual real-agent synthetic baseline needed by V1-A. Retain failed
 requests, usage gaps and complete trace links. Return observed development traces
 to Task 04 for human error analysis; do not delay review until a dashboard exists.
+
+## Jev provider integration
+Add the separately metered evaluation-plane adapter specified in docs/JEV_JUDGE.md.
+Pin a compatible typesafe-sdk version, verify the explicit model and response,
+bound retries and budgets, and retain every attempt's usage/error evidence.
+Missing configuration must make zero network calls. Live synthetic integration
+proves transport only; return to Task 04 for independent human calibration.

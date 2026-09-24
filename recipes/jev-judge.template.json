@@ -1,0 +1,108 @@
+{
+  "template_version": "1.0",
+  "status": "SPECIFIED_NOT_IMPLEMENTED",
+  "enabled": false,
+  "entrypoint": null,
+  "judge_id": "jev",
+  "judge_kind": "TYPED_DECISION_MODEL",
+  "provider": "typesafe",
+  "model_candidate": "jev-1.13.0",
+  "transport": {
+    "package": "typesafe-sdk",
+    "version": null,
+    "endpoint": "https://api.typesafe.ai/v1/systemone",
+    "credential_env": "TYPESAFE_API_KEY"
+  },
+  "data_profile": "SYNTHETIC_ONLY",
+  "approved_egress_profile": null,
+  "qualification_export_enabled": false,
+  "langsmith_export_enabled": false,
+  "mode": "SHADOW_CALIBRATION",
+  "calibration_status": "NOT_RUN",
+  "rubric_version": null,
+  "reference_partition_digest": null,
+  "calibration_record_ref": null,
+  "criteria": {
+    "J01": {
+      "primitive": "choice",
+      "options": [
+        "SUPPORTED",
+        "CONTRADICTED",
+        "INSUFFICIENT"
+      ],
+      "scope": "CLAIM_PREFIX"
+    },
+    "J02": {
+      "primitive": "noul",
+      "yes_means": "FAILURE",
+      "scope": "ANSWER_PREFIX"
+    },
+    "J03": {
+      "primitive": "choice",
+      "options": [
+        "RELEVANT",
+        "IRRELEVANT",
+        "INSUFFICIENT"
+      ],
+      "scope": "CLARIFICATION_PREFIX"
+    },
+    "J04": {
+      "primitive": "choice",
+      "options": [
+        "INCORPORATED",
+        "IGNORED",
+        "INSUFFICIENT"
+      ],
+      "scope": "CORRECTION_TRANSITION"
+    },
+    "J05": {
+      "primitive": "choice",
+      "options": [
+        "ADEQUATE",
+        "INADEQUATE",
+        "INSUFFICIENT"
+      ],
+      "scope": "RECOVERY_TRANSITION"
+    },
+    "J06": {
+      "primitive": "score",
+      "levels": [
+        "unusable",
+        "ambiguous",
+        "actionable"
+      ],
+      "scope": "FINAL_PACKET",
+      "diagnostic_only": true
+    },
+    "J07": {
+      "primitive": "choice",
+      "options": [
+        "CONSISTENT",
+        "CONTRADICTORY",
+        "INSUFFICIENT"
+      ],
+      "scope": "COMPLETE_TRAJECTORY"
+    }
+  },
+  "thresholds_by_criterion": null,
+  "calibration_acceptance_criteria": null,
+  "context_policy": {
+    "version": null,
+    "max_request_tokens": null,
+    "max_state_plus_question_tokens": null,
+    "silent_truncation_allowed": false
+  },
+  "budgets": {
+    "max_requests": null,
+    "max_attempts_per_request": null,
+    "timeout_seconds": null,
+    "max_total_input_tokens": null,
+    "max_cost_usd": null
+  },
+  "repetition_schedule": null,
+  "pricing_snapshot_ref": null,
+  "owner": null,
+  "missing_configuration_behavior": "NOT_CONFIGURED_NO_NETWORK",
+  "unaccepted_judge_verdict": "UNRESOLVED",
+  "silent_fallback_allowed": false
+}
