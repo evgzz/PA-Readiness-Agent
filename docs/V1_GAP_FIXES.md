@@ -1,4 +1,4 @@
-# V1 implementation requirements and course alignment
+# V1 implementation requirements and acceptance
 
 Inherited specification baseline: 1.0 | 2026-09-24 | DRAFT_FOR_IMPLEMENTATION
 
@@ -10,13 +10,12 @@ governance design. It closes gaps in specification coverage; completion requires
 the evidence below. No real-agent result or production capability is claimed.
 The operating scope remains fictional, English-text, bounded and read-only.
 
-## 1. Source and precedence
+## 1. Purpose and precedence
 
-This revision responds to the review of the [Parlance Labs course](https://maven.com/parlance-labs/evals)
-and its expanded public syllabus, inspected on 2026-09-24. Lesson mapping is an
-independent assessment, not course certification. The detailed procedures and
-threshold decisions below are PA project requirements, not quotations or endorsed
-course assignments. Private course materials were not reviewed.
+This revision specifies the PA evaluation lifecycle: a measurable baseline,
+human error analysis, validated evaluators, regression gates, controlled
+improvement and monitoring. The procedures and acceptance criteria below are
+project requirements; completion requires recorded implementation evidence.
 
 SPEC.md is the system contract. This document defines v1 completion requirements;
 the linked procedures define their operation. Metric formulas are authoritative
@@ -26,17 +25,17 @@ historical. Unselected owners, budgets and thresholds remain null.
 
 ## 2. Gap closure and acceptance matrix
 
-| ID / course area | V1 requirement | Completion evidence | Owner role / dependency |
+| ID / capability area | V1 requirement | Completion evidence | Owner role / dependency |
 |---|---|---|---|
-| V1-01 / L1 agent construction | Execute one selected real model through the bounded harness and exactly one runtime adapter. | Pinned configuration, authorized case, actual tool/model receipts, delivered assessment and reconstructable trace; distinguish mocks from model execution. | Runtime owner / Tasks 00–05 |
-| V1-02 / L2 evaluability | Reconstruct failures from admission through tool results, policy decisions, validation and final outcome. | Causal trace links and complete required ledger; a missing terminal record visibly prevents complete evidence. | Harness and telemetry owners / Tasks 03, 06 |
-| V1-03 / L3 scenario coverage | Expand the three public interface examples into reviewed scenarios. Define a scenario matrix, provenance, reference outcomes and family-level splits. | Versioned manifest with counts by slice, label review, positive/negative/ambiguous cases and split-leakage check. Dataset size must follow required coverage and precision, not an arbitrary target. | Evaluation and domain owners / Tasks 01, 04 |
-| V1-04 / L4 human error analysis | Review selected development traces, annotate observable failures, refine a taxonomy and prioritize action. | Frozen selection manifest, reviewer annotations, adjudication log, taxonomy version and prioritized findings linked to traces. | Evaluation and domain owners / Task 04 |
-| V1-05 / L5 trusted evaluators | Convert observed failures into deterministic assertions or anchored semantic rubrics; validate automation against independent human reference decisions. | Failure-to-grader mapping, product/domain-owner rubric review, separate calibration audit, class-specific errors and accepted applicability limits. | Evaluation owner / Task 04 |
-| V1-06 / L6 regression automation | Run deterministic checks on each change and real-model regression on the declared CI tier. Fail closed when a required tier is missing. | CI artifact showing a seeded regression detected, permitted positive controls preserved and missing evidence reported separately. | Engineering owner / Task 06 |
-| V1-07 / L7 adversarial evaluation | Exercise injection, cross-case access, prohibited operations and excessive autonomy with positive controls. | Actual attack attempts, boundary decisions and independent effect evidence. A scripted attack proves only the scripted control path. | Safety and evaluation owners / Tasks 04–06 |
-| V1-08 / L8 quality improvement | Complete a preregistered development experiment driven by a reviewed failure hypothesis. | Baseline and candidate manifests, controlled changes, paired trial schedule, uncertainty, regressions, decision and unsuccessful experiments retained. | Experiment owner / Task 07 |
-| V1-09 / L9 efficiency | Compare quality, latency and fully accounted cost on the same declared workload under fixed safety constraints. | Q04–Q07 scorecard, pricing assumptions, failed-call costs, unknown-cost counts and non-inferiority criteria fixed before execution. | Experiment owner / Task 07 |
+| V1-01 / agent construction | Execute one selected real model through the bounded harness and exactly one runtime adapter. | Pinned configuration, authorized case, actual tool/model receipts, delivered assessment and reconstructable trace; distinguish mocks from model execution. | Runtime owner / Tasks 00–05 |
+| V1-02 / evaluability | Reconstruct failures from admission through tool results, policy decisions, validation and final outcome. | Causal trace links and complete required ledger; a missing terminal record visibly prevents complete evidence. | Harness and telemetry owners / Tasks 03, 06 |
+| V1-03 / scenario coverage | Expand the three public interface examples into reviewed scenarios. Define a scenario matrix, provenance, reference outcomes and family-level splits. | Versioned manifest with counts by slice, label review, positive/negative/ambiguous cases and split-leakage check. Dataset size must follow required coverage and precision, not an arbitrary target. | Evaluation and domain owners / Tasks 01, 04 |
+| V1-04 / human error analysis | Review selected development traces, annotate observable failures, refine a taxonomy and prioritize action. | Frozen selection manifest, reviewer annotations, adjudication log, taxonomy version and prioritized findings linked to traces. | Evaluation and domain owners / Task 04 |
+| V1-05 / trusted evaluators | Convert observed failures into deterministic assertions or anchored semantic rubrics; validate automation against independent human reference decisions. | Failure-to-grader mapping, product/domain-owner rubric review, separate calibration audit, class-specific errors and accepted applicability limits. | Evaluation owner / Task 04 |
+| V1-06 / regression automation | Run deterministic checks on each change and real-model regression on the declared CI tier. Fail closed when a required tier is missing. | CI artifact showing a seeded regression detected, permitted positive controls preserved and missing evidence reported separately. | Engineering owner / Task 06 |
+| V1-07 / adversarial evaluation | Exercise injection, cross-case access, prohibited operations and excessive autonomy with positive controls. | Actual attack attempts, boundary decisions and independent effect evidence. A scripted attack proves only the scripted control path. | Safety and evaluation owners / Tasks 04–06 |
+| V1-08 / quality improvement | Complete a preregistered development experiment driven by a reviewed failure hypothesis. | Baseline and candidate manifests, controlled changes, paired trial schedule, uncertainty, regressions, decision and unsuccessful experiments retained. | Experiment owner / Task 07 |
+| V1-09 / efficiency | Compare quality, latency and fully accounted cost on the same declared workload under fixed safety constraints. | Q04–Q07 scorecard, pricing assumptions, failed-call costs, unknown-cost counts and non-inferiority criteria fixed before execution. | Experiment owner / Task 07 |
 | V1-10 / operational feedback | Define monitoring windows, sampling, comparable cohorts, triage and promotion of approved failures into development data. | For v1: simulated monitoring exercise with drift and missing-data conditions. Production integration stays NOT_SCOPED until separately authorized and qualified. | Operations and evaluation owners / Tasks 06–07 |
 
 All ten requirements are PLANNED. A completed specification does not satisfy any

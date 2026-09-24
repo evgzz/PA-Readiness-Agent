@@ -4,7 +4,9 @@ Status: PROPOSED | Date: 2026-09-24 | Implementation evidence: NOT_RUN
 Accountable decision owner: UNASSIGNED.
 
 ## Context
-The course baseline uses Langfuse and the project needs trace review plus linked scores.
+The project needs trace review, linked evaluation scores, controlled export and
+self-hosting options. Langfuse is a proposed candidate subject to the acceptance
+checks below; no platform selection is treated as implemented.
 
 ## Proposed decision
 Adopt Langfuse provisionally for trace inspection, subject to deployment/version evaluation. Use native dashboards and supported APIs where sufficient.

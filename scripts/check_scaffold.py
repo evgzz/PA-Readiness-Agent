@@ -35,7 +35,7 @@ def main() -> int:
     required = [
         "README.md", "SPEC.md", "AGENTS.md", ".gitignore", ".env.example",
         ".github/workflows/scaffold.yml", "docs/ARCHITECTURE.md",
-        "docs/OPEN_ASSETS.md", "docs/NVIDIA_MAPPING.md", "docs/COURSE_MIGRATION.md",
+        "docs/OPEN_ASSETS.md", "docs/NVIDIA_MAPPING.md", "docs/LEGACY_MIGRATION.md",
         "docs/BUILD_STATUS.json", "docs/REPO_MAP.json", "docs/codex/KICKOFF.md",
         "docs/codex/BUILD_SEQUENCE.md", "models/registry.json", "tools/catalog.json",
         "tools/standards-pins.template.json", "data/manifests/heldout.template.json",

@@ -26,4 +26,4 @@ Implement docs/SYNTHETIC_SCENARIOS.md: deterministic fictional facts, controlled
 generator instructions and provenance, reviewed coverage matrix and smoke report.
 Group families before split/augmentation; enforce hidden-fact isolation, ambiguous
 cases, negative/positive controls and reset receipts. Counts follow PA coverage
-and precision, not the commerce course's example workload sizes.
+and precision. Document the sample-size rationale before acceptance.

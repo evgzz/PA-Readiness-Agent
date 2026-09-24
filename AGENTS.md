@@ -77,7 +77,7 @@ provenance separate. Do not choose/publish a license on the owner's behalf.
 ## Verification/reporting
 Run python3 scripts/check_scaffold.py for structural changes. Add actual build,
 unit, integration, regression, and real-adapter checks as implemented. Counts from
-the earlier course artifacts cannot be reused as this repo's executed results.
+earlier external artifacts cannot be reused as this repo's executed results.
 Final change reports: changed behavior, evidence, remaining gaps, and next build
 task. No credential values, protected records, or raw private traces in Git/logs.
 
@@ -95,3 +95,8 @@ monitoring procedures. Q01–Q09 supplement M01–M06. Do not substitute targete
 review incidence for population failure rates, mock traces for real-agent runs,
 or development comparisons for independent qualification. Preserve negative
 results and all missingness. V1 monitoring is synthetic simulation only.
+
+## Documentation framing
+Describe PA product requirements, technical rationale, implementation status and
+acceptance evidence directly. Preserve technical citations and distinguish
+project design decisions from verified external capabilities or executed results.

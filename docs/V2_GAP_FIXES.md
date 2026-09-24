@@ -1,17 +1,16 @@
-# V2 scope, course alignment and acceptance
+# V2 scope, requirements and acceptance
 
 Specification 2.0 | 2026-09-24 | DRAFT_FOR_IMPLEMENTATION.
-V2 closes the identified L1–L9 specification gaps. It does not claim completed
-coursework, working agents, measured improvements or production readiness.
+V2 closes identified specification gaps in the PA evaluation lifecycle.
+It does not claim working agents, measured improvements or production readiness.
 
 ## Authority and compatibility
 
 SPEC.md and this v2 addendum are normative. V1 procedures remain applicable where
 not explicitly amended here. This addendum prevails over conflicting v1 planning
-text; metric changes require versioned implementation before use. The supplied
-Hamel Husain/Shreya Shankar syllabus is the detailed alignment baseline; the
-[public course page](https://maven.com/parlance-labs/evals) supplies context. PA
-acceptance rules are project adaptations, not course certification or endorsement.
+text; metric changes require versioned implementation before use. The requirements
+below define the PA implementation and evidence needed for acceptance. External
+technical sources are documented separately in the source register.
 
 Task 00 implemented existing contracts, record validation and authenticated-ingress
 checks. Transport authentication, durable wiring, runtime, agent, evaluations and
@@ -21,19 +20,19 @@ New fields/measures below are draft contracts until implemented under Task 00's
 v2 extension. Null owners, statistical limits and provider pins block execution
 or acceptance as applicable; they are not defaults or permission to pass.
 
-## Operating scope and learning objective
+## Operating scope and evaluation workflow
 
 One fictional PA case per trial; English text; bounded multi-turn retrieval,
 clarification, validation, local review packet and escalation. Product outcomes
 remain READY / NOT_READY / UNKNOWN. Real PHI, payer submission, clinical writes,
 external messaging, autonomous delegation and production traffic remain excluded.
 A local running endpoint for synthetic evaluation is in scope; a production
-release is a separate decision. No commerce or analyst agent is required.
+release is a separate decision.
 
-| Gulf | Workflow | PA evidence that closes it |
+| Evaluation gap | Workflow | Required PA evidence |
 |---|---|---|
-| Comprehension | Analyze | Read complete traces, identify the first observable failure and distinguish observation from suspected cause |
-| Specification | Measure | Turn reviewed intended behavior and binary failure definitions into validated assertions, references and calibrated judges |
+| Understanding observed behavior | Analyze | Read complete traces, identify the first observable failure and distinguish observation from suspected cause |
+| Defining measurable requirements | Measure | Turn reviewed intended behavior and binary failure definitions into validated assertions, references and calibrated judges |
 | Generalization | Improve, then independently test | Select changes on development evidence, freeze the candidate, and evaluate an untouched family-separated qualification set |
 
 Application operation tiers are independent of incident severity S0–S3:
@@ -44,26 +43,25 @@ R2/R3 remain disabled. Missing tier, scope or authorization yields denial. The
 agent cannot declare its own tier; policy and adapters enforce it. These tiers
 are project permissions, not legal AI Act classifications.
 
-## L1–L9 requirements and corresponding specifications
+## Requirements and corresponding specifications
 
-| ID / lesson | Required v2 fix | Completion evidence | Corresponding specifications / task |
+| Requirement ID | Required v2 fix | Completion evidence | Corresponding specifications / task |
 |---|---|---|---|
-| V2-01 / L1 | Working bounded agent, explicit operation tiers and Three Gulfs loop | Pinned real-model synthetic run, typed output, code-enforced permissions and permitted positive controls | [System](../SPEC.md), [harness](HARNESS.md); Tasks 02, 03, 05 |
-| V2-02 / L2 | Nested spans, model/tool calls, denials, prompt identities and reconstructable trace | A complete trace from admission to terminal outcome; missing-span case; tested Langfuse projection | [Instrumentation](INSTRUMENTATION.md), [reports](DASHBOARDS_REPORTS.md); Tasks 03, 05, 06 |
-| V2-03 / L3 | Fictional authoritative world, scenario generator and reviewed smoke report | Frozen facts, generator provenance, family splits, reviewed labels, reset receipts and scenario counts | [Synthetic scenarios](SYNTHETIC_SCENARIOS.md); Task 01 |
-| V2-04 / L4 | Review UI, open/axial coding and saturation record | At least 60 distinct reviewable real-agent synthetic development traces; binary codebook, overlap/adjudication and prioritized failures | [Error analysis](ERROR_ANALYSIS.md); Task 04 |
-| V2-05 / L5 | One binary evaluator per observed failure mode; TPR/TNR and defensible prevalence | Independent references, class/slice counts, untouched audit, uncertainty, retrieval/grounding/handoff checks | [Calibration](EVALUATOR_CALIBRATION.md), [measurement](V2_MEASUREMENT.md), [judge options](LLM_JUDGE.md); Task 04 |
-| V2-06 / L6 | Cost-tiered agent CI, pass^k/pass@k and sampled monitoring exercise | Seeded regression blocks CI, fixed-k reset/replay, complete run accounting, corrected-prevalence report with limitations | [CI](CI_EVALUATION.md), [measurement](V2_MEASUREMENT.md), [monitoring](MONITORING.md); Tasks 04, 06 |
-| V2-07 / L7 | Attack-surface mapping, live synthetic red team and governance crosswalk | Pinned promptfoo adapter, actual endpoint attempts, independently checked effects, attack-to-regression lineage and governance record | [Adversarial evaluation](ADVERSARIAL_EVALUATION.md); Tasks 04–06 |
-| V2-08 / L8 | Manual fix loop and comparable multi-configuration frontier | Observed top failure, declared intervention, paired comparison, retained losing/inconclusive configs and frozen selection | [Experiments](EXPERIMENTS.md), [optimization](OPTIMIZATION_UPGRADE.md); Task 07 |
-| V2-09 / L9 | Token/cost attribution, prompt caching, audited cascade and upgrade drill | Measured caching change, cascade audit including bypasses, full-suite comparison of at least two committed frontier configs and decision | [Optimization](OPTIMIZATION_UPGRADE.md), [reports](DASHBOARDS_REPORTS.md); Task 07 |
+| V2-01 | Working bounded agent, explicit operation tiers and analyze/measure/improve workflow | Pinned real-model synthetic run, typed output, code-enforced permissions and permitted positive controls | [System](../SPEC.md), [harness](HARNESS.md); Tasks 02, 03, 05 |
+| V2-02 | Nested spans, model/tool calls, denials, prompt identities and reconstructable trace | A complete trace from admission to terminal outcome; missing-span case; tested Langfuse projection | [Instrumentation](INSTRUMENTATION.md), [reports](DASHBOARDS_REPORTS.md); Tasks 03, 05, 06 |
+| V2-03 | Fictional authoritative world, scenario generator and reviewed smoke report | Frozen facts, generator provenance, family splits, reviewed labels, reset receipts and scenario counts | [Synthetic scenarios](SYNTHETIC_SCENARIOS.md); Task 01 |
+| V2-04 | Review UI, open/axial coding and saturation record | At least 60 distinct reviewable real-agent synthetic development traces; binary codebook, overlap/adjudication and prioritized failures | [Error analysis](ERROR_ANALYSIS.md); Task 04 |
+| V2-05 | One binary evaluator per observed failure mode; TPR/TNR and defensible prevalence | Independent references, class/slice counts, untouched audit, uncertainty, retrieval/grounding/handoff checks | [Calibration](EVALUATOR_CALIBRATION.md), [measurement](V2_MEASUREMENT.md), [judge options](LLM_JUDGE.md); Task 04 |
+| V2-06 | Cost-tiered agent CI, pass^k/pass@k and sampled monitoring exercise | Seeded regression blocks CI, fixed-k reset/replay, complete run accounting, corrected-prevalence report with limitations | [CI](CI_EVALUATION.md), [measurement](V2_MEASUREMENT.md), [monitoring](MONITORING.md); Tasks 04, 06 |
+| V2-07 | Attack-surface mapping, live synthetic red team and governance crosswalk | Pinned promptfoo adapter, actual endpoint attempts, independently checked effects, attack-to-regression lineage and governance record | [Adversarial evaluation](ADVERSARIAL_EVALUATION.md); Tasks 04–06 |
+| V2-08 | Manual fix loop and comparable multi-configuration frontier | Observed top failure, declared intervention, paired comparison, retained losing/inconclusive configs and frozen selection | [Experiments](EXPERIMENTS.md), [optimization](OPTIMIZATION_UPGRADE.md); Task 07 |
+| V2-09 | Token/cost attribution, prompt caching, audited cascade and upgrade drill | Measured caching change, cascade audit including bypasses, full-suite comparison of at least two committed frontier configs and decision | [Optimization](OPTIMIZATION_UPGRADE.md), [reports](DASHBOARDS_REPORTS.md); Task 07 |
 
-All runtime evidence in this matrix is NOT_RUN. Sixty traces is an exercise floor,
+All runtime evidence in this matrix is NOT_RUN. Sixty traces is a review floor,
 not a precision guarantee. Aim for 5–8 human-derived binary modes if supported;
-retain fewer/more with a documented explanation, never manufacture failures. The
-course's roughly 500 support/150 analyst scenarios are not PA coverage targets;
-PA counts follow the risk matrix and declared precision. No qualification labels
-enter the review/tuning loop.
+retain fewer/more with a documented explanation, never manufacture failures.
+Scenario counts follow the PA risk matrix and declared precision. No qualification
+labels enter the review/tuning loop.
 
 ## Acceptance gates
 

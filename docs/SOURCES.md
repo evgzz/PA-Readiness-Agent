@@ -26,15 +26,8 @@ compatibility require a separate integration review.
 
 The supplied NVIDIA JD (JR2024325) supplies the program responsibility mapping.
 The original PA scaffold supplies the retained three example cases, draft ports,
-and initial source layout. The prior five-module discussions supply design intent,
-not imported execution evidence. See `COURSE_MIGRATION.md`.
-
-## V1 course alignment source
-[Parlance Labs: AI Evals for Engineers & PMs](https://maven.com/parlance-labs/evals),
-public page and expanded syllabus inspected 2026-09-24. Used for the L1–L9 topic
-mapping and advertised monitoring outcome in docs/V1_GAP_FIXES.md. The PA procedures,
-metric definitions and acceptance gates are independent project design choices;
-no private course content, course completion or endorsement is claimed.
+and initial source layout. Earlier design discussions supply design intent,
+not imported execution evidence. See [legacy migration](LEGACY_MIGRATION.md).
 
 ## Jev judge sources
 Inspected 2026-09-24. Capability facts are separated from the PA-specific design
@@ -67,14 +60,12 @@ Routing API-only closed models to their supported service, profile freeze, swap
 calibration and no silent fallback are PA design requirements, not claims that HF
 hosts every proprietary model. Exact model/SDK/engine selections remain unset.
 
-## V2 alignment and governance sources
+## V2 security and governance sources
 
-The detailed L1–L9 syllabus supplied by the user is the alignment baseline,
-including the 60-trace coding exercise and caching/cascade/upgrade homework.
-PA-specific counts, adaptation, formulas and acceptance rules are project design
-decisions; they are not attributed as quotations from unavailable course material.
-The public course page supports the advertised evaluation lifecycle. Official
-resources below were retrieved 2026-09-24; pin tool versions before integration.
+PA-specific counts, measurement methods and acceptance rules are project design
+decisions. The official resources below support the stated security, governance
+and integration references. They were retrieved 2026-09-24; pin tool versions
+before integration.
 
 | Source | Narrow use |
 |---|---|

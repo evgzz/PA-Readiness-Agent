@@ -4,7 +4,9 @@ Status: PROPOSED | Date: 2026-09-24 | Implementation evidence: NOT_RUN
 Accountable decision owner: UNASSIGNED.
 
 ## Context
-The original scaffold described a custom loop while the course baseline selected an SDK.
+The scaffold described both a custom loop and a proposed SDK integration without
+clearly assigning orchestration ownership. The system needs one selected loop
+with consistent authorization and metering boundaries.
 
 ## Proposed decision
 Select one RuntimePort implementation per run: deterministic mock first; OpenAI Agents SDK adapter for a selected real profile. Harness gateways retain policy and model/tool metering.

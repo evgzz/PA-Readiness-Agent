@@ -40,8 +40,8 @@ a real-agent baseline is a separately labeled evidence class.
 
 Counts are fixed in the plan before acceptance. Sixty reviewable traces for V2-04
 requires enough distinct scheduled trials, but does not establish scenario breadth
-or statistical power. Do not expand to an analyst agent solely to match course
-numbers. Missing required slices or unknown label validity prevent coverage claims.
+or statistical power. Additional agent roles require separate product scope
+and acceptance criteria. Missing required slices or unknown label validity prevent coverage claims.
 
 Planned capture: pa_tools.synthetic owns world/reset receipts; pa_evals.splits owns
 family assignment; pa_evals.runner owns schedule and terminal completeness. Task 01

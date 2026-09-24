@@ -4,7 +4,7 @@ Version 2.0 | 2026-09-24 | DRAFT_FOR_IMPLEMENTATION
 
 This specification consolidates the agent, harness, evaluation, instrumentation,
 program-governance, and reporting requirements. It revises a scaffold; it does not
-assert that these capabilities have been implemented. All ADRs remain PROPOSED. V2 makes course-aligned human review, measurement,
+assert that these capabilities have been implemented. All ADRs remain PROPOSED. V2 makes human review, measurement,
 agent CI, adversarial evaluation, cost experiments and upgrade evidence explicit.
 The implemented contracts layer does not establish execution of these workflows.
 
@@ -211,8 +211,8 @@ safety gates and do not replace the independent qualification requirement.
 
 ## 11. V2 gap fixes and acceptance
 
-[V2 requirements and course alignment](docs/V2_GAP_FIXES.md) is a normative
-addendum to this specification. It maps each lesson to the corresponding specs,
+[V2 requirements and acceptance mapping](docs/V2_GAP_FIXES.md) is a normative
+addendum to this specification. It maps each requirement to the corresponding specs,
 completion evidence and build tasks. Apply it with the existing A/H/E/I/G rules.
 
 | Requirement | V2 completion condition | Corresponding specs |

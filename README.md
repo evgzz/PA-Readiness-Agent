@@ -119,14 +119,14 @@ Tools: documented interfaces, validators, and reproduction recipes.
 Publication rights and licenses are reviewed per asset; this revision grants no
 new license and bundles no model weights. See [open assets](docs/OPEN_ASSETS.md).
 
-Do not copy prior course-module counts into this repository's results. Read
-[migration](docs/COURSE_MIGRATION.md) before porting code. Keep protected evidence
+Do not copy legacy verification counts into this repository's results. Read
+[migration](docs/LEGACY_MIGRATION.md) before porting code. Keep protected evidence
 and secrets outside Git. See [status](docs/BUILD_STATUS.json),
 [v2 revision notes](docs/REVISION_2_0.md), and [Git handoff](docs/GIT_HANDOFF.md).
 
 ## V2 learning workflow
 
-Read the [v2 course-to-spec mapping](docs/V2_GAP_FIXES.md), inherited
+Read the [v2 requirement-to-spec mapping](docs/V2_GAP_FIXES.md), inherited
 [v1 requirements](docs/V1_GAP_FIXES.md), and the
 [worked example](docs/WORKED_EXAMPLE.md). The example is an execution contract,
 not a completed case study. Its missing evidence is explicit.
@@ -159,7 +159,7 @@ for APIs, migration rules, executed checks and deferred integrations. Task 01
 (synthetic tools, requirements and reviewed case families) is next.
 
 V2 adds explicit [scenario coverage](docs/SYNTHETIC_SCENARIOS.md), a 60-trace
-review exercise with saturation records, [reliability and prevalence methods](docs/V2_MEASUREMENT.md),
+review baseline with saturation records, [reliability and prevalence methods](docs/V2_MEASUREMENT.md),
 [agent CI tiers](docs/CI_EVALUATION.md), [adversarial evaluation](docs/ADVERSARIAL_EVALUATION.md),
 and [caching, cascade and upgrade evidence](docs/OPTIMIZATION_UPGRADE.md).
 The [dashboard table](docs/DASHBOARDS_REPORTS.md#v2-tracking-and-instrumentation)

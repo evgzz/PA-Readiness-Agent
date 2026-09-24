@@ -1,0 +1,34 @@
+{
+  "status": "PASS_DOCUMENTATION_ONLY",
+  "validated_at": "2026-09-24T22:51:34.890481+00:00",
+  "baseline_commit": "91cc9e904f9227c606b053c34675e41032495114",
+  "scope": "CURRENT_REPOSITORY_DOCUMENTATION",
+  "reference_scan": {
+    "status": "PASS",
+    "matching_files": 0,
+    "files_scanned": 238,
+    "historical_commits_included": false
+  },
+  "structure_checks": {
+    "command": "python3 scripts/check_scaffold.py",
+    "status": "PASS",
+    "checks": 399,
+    "python_files_parsed": 21,
+    "public_interface_examples": 3
+  },
+  "document_validation": {
+    "status": "PASS",
+    "relative_markdown_links_checked": 229,
+    "draft_template_consistency": "PASS",
+    "errors": []
+  },
+  "manual_review": [
+    "Project requirements and acceptance criteria preserved",
+    "Technical sources retained",
+    "Migration document renamed and references updated",
+    "Historical execution counts preserved; no new agent results asserted"
+  ],
+  "runtime_changes": false,
+  "runtime_qualification": "NOT_RUN",
+  "ci_for_this_commit": "CHECK_GITHUB_ACTIONS_BY_COMMIT_SHA"
+}

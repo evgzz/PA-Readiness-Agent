@@ -1,9 +1,9 @@
-# Revision 2.0 — course-aligned evidence requirements
+# Revision 2.0 — PA evaluation evidence requirements
 
 Date: 2026-09-24 | Status: DRAFT_FOR_IMPLEMENTATION / CONTRACTS_READY.
 
-V2 adds explicit L1–L9 fixes and corresponding-spec links: Three Gulfs and operation
-tiers; a fictional world/generation protocol; nested trace requirements; human
+V2 adds explicit evaluation requirements and corresponding-spec links: the
+analyze/measure/improve workflow and operation tiers; a fictional world/generation protocol; nested trace requirements; human
 open/axial coding and a 60-trace review floor; binary evaluators and TPR/TNR;
 weighted/judge-corrected prevalence with uncertainty; pass^k/pass@k; CI tiers;
 OWASP-linked red-team regressions and NIST/legal-applicability records; a manual fix

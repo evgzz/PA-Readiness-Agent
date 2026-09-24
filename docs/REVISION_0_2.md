@@ -13,8 +13,8 @@ Date: 2026-09-24. Supersedes the documentation in the original repository scaffo
 | Vendor choices sounded implemented | Twenty PROPOSED ADRs; no installed/locked vendor stack |
 | Default SDK telemetry destination unspecified | Explicit exporter/egress acceptance before integration |
 
-Existing three public cases and their draft labels are retained. Prior course
-modules remain external source/reference artifacts. No historical test counts are
+Existing three public cases and their draft labels are retained. Legacy
+implementations remain external source/reference artifacts. No historical test counts are
 imported. Core runtime/eval package skeletons are retained; new governance,
 telemetry, and runtime-adapter skeletons are added. The static checker is extended
 to require the revision documents and selected registry invariants.
