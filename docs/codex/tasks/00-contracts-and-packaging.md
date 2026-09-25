@@ -36,3 +36,11 @@ upgrade records. Specify required values and validators before execution; keep
 the draft v2 learning/acceptance templates disabled. Do not change active M/Q
 formulas or accept unknown event fields implicitly. See docs/V2_MEASUREMENT.md
 and docs/INSTRUMENTATION.md.
+
+## Plan 1.1 implementation slice
+
+Add validated candidate-kind, execution-mode, comparison/replay and qualification-profile records only when the consuming phase needs them. Planning templates are not active contracts; reject unknown/stale applicability before gate use.
+
+Corresponding specs: [comparison](../../ARCHITECTURE_COMPARISON.md),
+[qualification profiles](../../QUALIFICATION_PROFILES.md),
+[delivery plan](../../PHASED_DELIVERY_PLAN.md). Status remains unchanged; these are planned additions.

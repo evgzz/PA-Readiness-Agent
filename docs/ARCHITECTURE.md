@@ -1,6 +1,6 @@
 # Architecture and trust boundaries
 
-Specification version 2.0. Task 00 contracts and ingress validation are implemented. Agent
+Specification version 2.1. Task 00 contracts and ingress validation are implemented. Agent
 execution and all runtime integrations below remain planned.
 
 ```mermaid
@@ -95,3 +95,13 @@ add evidence gates without adding a second runtime loop or evaluator authority
 to the agent. Reporting consumes frozen aggregates. Prompt caching and agent
 cascades are metered runtime options selected by preregistered experiments;
 judge routing remains an independent evaluation configuration.
+
+## Candidate comparison and qualification profiles
+
+[Specification 2.1](REVISION_2_1.md) adds rules-only A, fixed extraction workflow B
+and bounded agent C behind the same authority/tool boundaries. One initial model
+serves B/C. Candidate kind and execution mode distinguish actual predicates, mocks,
+replay and live model execution; extraction requires independent grounding checks.
+See [comparison protocol](ARCHITECTURE_COMPARISON.md) and
+[qualification profiles](QUALIFICATION_PROFILES.md). These are planned interfaces;
+validated extensions are required before emission or release-gate consumption.

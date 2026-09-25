@@ -207,3 +207,22 @@ cost remain separate from runtime cost; any total states its included components
 An invalid prevalence estimate, incomplete mandatory tier or stale snapshot is
 INCONCLUSIVE/NOT_RUN as applicable, never a healthy zero. Alerts use thresholds
 and owners assigned before execution; no alert is automatically sent by this spec.
+
+## Plan 1.1 comparison and qualification reporting
+
+Status: PLANNED. These are proposed record extensions and report views; existing
+metric IDs/versions are unchanged. Implement validated capture before rendering.
+Reports consume immutable evaluation/governance snapshots and never decide gates.
+
+| View / question | How to track | How and where to instrument | Corresponding specs / phase |
+|---|---|---|---|
+| Which architecture meets the task? | A/B/C quality, safety, coverage, abstention, trajectory failures, latency and cost on paired cases, with uncertainty and incomplete trials. | Composition root records candidate/config and port mode; harness/model/tool gateways record receipts; evaluator joins case/family pairs and source snapshots. Include preparation labor. | [Comparison](ARCHITECTURE_COMPARISON.md), [Experiments](EXPERIMENTS.md); P3/P5 |
+| Do invariants and replay boundaries hold? | Scheduled/passed/failed/unresolved/missing controls; seeded-defect detection; replay match/miss/denial and live/replay split. | Evaluation controller records relation/fixture/request/state digests; harness records authorization; replay adapter emits provenance and explicit mismatch without fallback. | [Comparison](ARCHITECTURE_COMPARISON.md), [CI](CI_EVALUATION.md); P2 |
+| Which component caused the failure? | Paired diagnostic result plus full-system fix retest; display oracle-assisted diagnostics separately. | Evaluation runner links component intervention and fixture to finding, configuration and unassisted retest. | [Comparison](ARCHITECTURE_COMPARISON.md), [Error analysis](ERROR_ANALYSIS.md); P5 |
+| Does assistance help reviewers? | Final decision quality and time together, missed blockers, unsupported claims, corrections, participant/case counts and uncertainty. | Controlled review UI records anonymized assignment, timing and edits; independent adjudicator labels final work. Missing study displays NOT_RUN and no utility claim. | [Comparison](ARCHITECTURE_COMPARISON.md); P5, claim-dependent |
+| What exactly is qualified? | Frozen profile and candidate, feature applicability, required/deferred/unknown evidence, outcome and separate authorization. Show full V2-A–D completion alongside, never infer it from scoped GO. | Governance resolves validated profile dependencies against candidate-bound artifacts; reports render the persisted snapshot and source links. | [Profiles](QUALIFICATION_PROFILES.md), [phase status](PHASE_STATUS.json); P6A/P7 |
+
+Keep private labels and participant identities outside public exports. Capture
+original/replay execution and known/unknown costs separately; use scoped denominators
+and source freshness. P6A implements and reconciles these views; early local JSON and
+Markdown in P1–P5 provide the evidence without waiting for the dashboard application.

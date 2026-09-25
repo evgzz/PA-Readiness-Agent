@@ -41,3 +41,9 @@ contract extensions. Record entry, exit and DoD evidence before phase completion
 preserve partial task status. Do not require all future adapters or infrastructure
 before running the first synthetic workflow. This planning revision implements no
 new agent command and does not enable the disabled recipes.
+
+For specification 2.1 / plan 1.1 also read docs/ARCHITECTURE_COMPARISON.md,
+docs/QUALIFICATION_PROFILES.md and docs/REVISION_2_1.md. Start with actual rules-only
+candidate A and separate mock controls. Compare B/C with one initial model later.
+Keep full-program evidence distinct from scoped P7 and implement profile validation
+before use. No newly documented candidate, profile or experiment is implemented yet.

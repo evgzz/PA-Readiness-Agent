@@ -44,3 +44,11 @@ needed, TPR/TNR, weighted prevalence, joint uncertainty and fixed-k reliability.
 Include retrieval/grounding/local-handoff checks and human audit of cascade
 bypasses. Demonstrate invalid estimates and missingness remain inconclusive.
 Return here after Task 05 provides actual synthetic agent traces.
+
+## Plan 1.1 implementation slice
+
+Add property/defect controls, paired A/B/C comparison, component diagnosis and claim-dependent human utility evaluation. Only actual B/C traces count toward the 60-trace floor; retain independent qualification isolation.
+
+Corresponding specs: [comparison](../../ARCHITECTURE_COMPARISON.md),
+[qualification profiles](../../QUALIFICATION_PROFILES.md),
+[delivery plan](../../PHASED_DELIVERY_PLAN.md). Status remains unchanged; these are planned additions.

@@ -36,3 +36,10 @@ Negative experiments and unsuccessful attacks must be retained. No automatic
 deployment, provider fallback or PHI use
 is introduced. Accept only after v2 schema checks and V2-A–D artifacts execute;
 release still needs V2-Q and separate authenticated authorization.
+
+## Specification 2.1 dependency amendment
+
+[ADR 026](026-candidate-comparison-and-qualification-profiles.md) makes the dependency
+explicit: this ADR's full V2-A–D evidence requirement remains unchanged for program
+completion. Scoped candidate qualification may follow P5/P6A/P6E plus all used-feature
+requirements under a frozen profile; it cannot claim full-program completion.

@@ -47,3 +47,14 @@ P1 builds the smallest path across Tasks 01–04 with only the required Task 00
 extensions. P2 adds failure controls/CI; P3 adds one real model; P4 adds human
 measurement; P5 measures one fix and adversarial regressions; P6 completes
 reporting/cost/monitoring increments; P7 performs independent qualification.
+
+## Plan 1.1 dependency amendment
+
+P1 builds actual rules-only A plus separate mock controls. P2 adds properties/replay.
+P3 compares A/B/C using one initial model; P4 calibrates measurement; P5 diagnoses,
+fixes and remeasures selection, with human utility evidence before productivity
+claims. After P5, P6A/P6E plus all feature-triggered evidence can precede scoped P7;
+full-program completion still requires all P6. Read
+[comparison](../ARCHITECTURE_COMPARISON.md) and
+[qualification profiles](../QUALIFICATION_PROFILES.md). Task completion statuses
+remain unchanged; profile/record extensions must be validated before use.

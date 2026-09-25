@@ -1,6 +1,6 @@
 # PA Readiness — v2 system specification
 
-Version 2.0 | 2026-09-24 | DRAFT_FOR_IMPLEMENTATION
+Version 2.1 | 2026-09-25 | DRAFT_FOR_IMPLEMENTATION
 
 This specification consolidates the agent, harness, evaluation, instrumentation,
 program-governance, and reporting requirements. It revises a scaffold; it does not
@@ -233,7 +233,7 @@ adoption still requires passing its preregistered quality and safety constraints
 See [acceptance dossier](docs/v2-acceptance.template.json) and the disabled
 [learning plan](recipes/v2-learning-plan.template.json).
 
-This is specification version 2.0, not a runtime schema or package-major release.
+This is specification version 2.1, not a runtime schema or package-major release.
 Existing event schemas and M01–M06/Q01–Q09 definitions retain their versions. Task 00
 must implement validated extensions before new fields can become execution records.
 Jev remains one judge option; HF dedicated endpoints host supported deployable
@@ -244,9 +244,29 @@ profile requires calibration; no silent fallback or default judge is enabled.
 
 The [phased delivery plan](docs/PHASED_DELIVERY_PLAN.md) sequences implementation
 through small executable increments with explicit entry, exit and DoD criteria.
-It implements this specification without waiving v2 acceptance. The
+It implements this specification, including the explicit section 13 dependency amendment. The
 [phase tracker](docs/PHASE_STATUS.json) records delivery status separately from
 component implementation and the full v2 evidence index. P0 records only the
 completed original contract layer; P1–P7 remain planned. Implement validated
 contract extensions before the increment that first uses them. Independent
 qualification, candidate adoption and release authorization remain separate.
+
+## 13. Architecture comparison and scoped qualification amendment
+
+Specification 2.1 adopts the [A/B/C comparison protocol](docs/ARCHITECTURE_COMPARISON.md)
+and [qualification profiles](docs/QUALIFICATION_PROFILES.md). Plan 1.1 adds actual
+rules-only execution, a fixed extraction workflow, early property/replay controls,
+component diagnosis and human utility evidence before productivity claims. B/C use
+one initial model/provider; no winner or default architecture is predetermined.
+
+This explicitly supersedes plan 1.0's unconditional parent-P6 prerequisite for P7:
+SCOPED_CANDIDATE requires P0–P5, P6A/P6E and every feature-triggered requirement;
+FULL_V2_PROGRAM requires all P6 and V2-A–D. Used caching/routing/replacements retain
+their required experiments. Unknown applicability blocks GO. Unused experiments
+remain pending and cannot be called full-program completion. Mandatory safety,
+quality, calibration, isolation and independent qualification are preserved.
+
+Candidate/profile record extensions and dependency resolution must be implemented
+and validated before activation. Existing schemas, metric definitions and package
+versions do not change. See [revision record](docs/REVISION_2_1.md) and
+[ADR 026](docs/adrs/026-candidate-comparison-and-qualification-profiles.md).

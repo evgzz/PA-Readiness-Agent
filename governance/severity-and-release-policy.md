@@ -70,3 +70,13 @@ policy, mandatory evidence or risk state require reevaluation. A prior signature
 is not portable to a different configuration. The dashboard shows HOLD for an
 inconclusive gate or pending approval; BLOCKED for NO_GO; AUTHORIZED only when
 the separately checked authorization is valid.
+
+## Planned qualification-profile integration — specification 2.1
+
+[Qualification profiles](../docs/QUALIFICATION_PROFILES.md) amend the planning
+prerequisites for P7, not the current release-policy schema or gate algorithm.
+Before activating them, implement validated candidate/profile identities, frozen
+mandatory-criterion resolution and feature applicability with evidence. A known
+mandatory failure retains NO_GO precedence; UNKNOWN or missing mandatory evidence
+cannot yield GO. SCOPED_CANDIDATE does not imply FULL_V2_PROGRAM completion.
+Planning templates cannot authorize execution or be passed as active policy records.

@@ -162,6 +162,10 @@
     "docs/OPTIMIZATION_UPGRADE.md",
     "docs/REVISION_2_0.md",
     "docs/PHASED_DELIVERY_PLAN.md",
-    "docs/PHASE_STATUS.json"
+    "docs/PHASE_STATUS.json",
+    "docs/ARCHITECTURE_COMPARISON.md",
+    "docs/QUALIFICATION_PROFILES.md",
+    "docs/qualification-profile.template.json",
+    "docs/REVISION_2_1.md"
   ]
 }

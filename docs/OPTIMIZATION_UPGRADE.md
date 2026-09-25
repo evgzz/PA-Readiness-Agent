@@ -98,3 +98,13 @@ honest experiment report. Do not retune on the same audit and reuse it as untouc
 A release notification may trigger a planned drill when automation is later built;
 this specification creates no scheduled job. The v2 demonstration performs one
 explicit drill. Execution requires assigned owners, models, budgets and data.
+
+## Scoped qualification timing in specification 2.1
+
+All exercises above remain mandatory for full-program completion. Under
+[qualification profiles](QUALIFICATION_PROFILES.md), a candidate may enter P7 before
+experiments for verified unused features. Used prompt caching, routing/cascades or
+model/serving replacement trigger their evidence requirements even without cost
+claims. UNKNOWN feature state blocks qualification. P6D needs P5 and the applicable
+P6B/P6C evidence for compared configurations; unused experiments do not block a
+model-only comparison. Deferred exercises remain pending, never complete by omission.

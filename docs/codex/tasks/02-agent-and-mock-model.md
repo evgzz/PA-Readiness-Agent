@@ -20,3 +20,11 @@ correction/recovery scenarios. Agent consumes only permitted current observation
 do not put expected labels, full world facts or evaluator controls in its context.
 Distinguish attempted and delivered answers and decisions at each prefix. The
 mock model supplies explicit controls, not real-agent review evidence.
+
+## Plan 1.1 implementation slice
+
+Build actual predicate-driven rules-only A separately from the scripted mock. Later B uses prescribed extraction plus checked readiness; C proposes bounded tool use. Neither schemas nor citation existence prove extraction support.
+
+Corresponding specs: [comparison](../../ARCHITECTURE_COMPARISON.md),
+[qualification profiles](../../QUALIFICATION_PROFILES.md),
+[delivery plan](../../PHASED_DELIVERY_PLAN.md). Status remains unchanged; these are planned additions.

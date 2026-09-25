@@ -38,7 +38,9 @@ def main() -> int:
         "docs/OPEN_ASSETS.md", "docs/NVIDIA_MAPPING.md", "docs/LEGACY_MIGRATION.md",
         "docs/BUILD_STATUS.json", "docs/REPO_MAP.json", "docs/codex/KICKOFF.md",
         "docs/codex/BUILD_SEQUENCE.md", "docs/PHASED_DELIVERY_PLAN.md",
-        "docs/PHASE_STATUS.json", "models/registry.json", "tools/catalog.json",
+        "docs/PHASE_STATUS.json", "docs/ARCHITECTURE_COMPARISON.md",
+        "docs/QUALIFICATION_PROFILES.md", "docs/qualification-profile.template.json",
+        "docs/REVISION_2_1.md", "models/registry.json", "tools/catalog.json",
         "tools/standards-pins.template.json", "data/manifests/heldout.template.json",
         "contracts/src/pa_contracts/ports.py", "recipes/mock-readonly.json",
         "contracts/schemas/tool-proposal.schema.json",
@@ -175,10 +177,10 @@ def main() -> int:
     check(set(v1_envelope["properties"]["event_type"]["enum"]) == event_ids, "V1 event schema/catalog mismatch")
     snapshot = read_json("contracts/metric-snapshot.template.json")
     check({m["metric_id"] for m in snapshot["learning_metrics"]} == {m["metric_id"] for m in learning_metrics}, "Learning snapshot/registry mismatch")
-    check(status["specification_revision"] == "2.0", "Expected specification v2.0")
+    check(status["specification_revision"] == "2.1", "Expected specification v2.1")
     check(status["production_monitoring"] == "NOT_SCOPED", "V2 does not enable production monitoring")
     adr_files = sorted((ROOT / "docs/adrs").glob("[0-9][0-9][0-9]-*.md"))
-    check(len(adr_files) == 25, "Expected twenty-five ADRs")
+    check(len(adr_files) == 26, "Expected twenty-six ADRs")
     for number, adr in enumerate(adr_files, start=1):
         check(adr.name.startswith(f"{number:03d}-"), f"ADR ordering error: {adr.name}")
         check("Status: PROPOSED" in adr.read_text(encoding="utf-8"), f"Unexpected ADR status: {adr.name}")

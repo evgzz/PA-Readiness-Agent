@@ -5,7 +5,7 @@ Repository: [evgzz/PA-Readiness-Agent](https://github.com/evgzz/PA-Readiness-Age
 A reproducible foundation for assessing prior-authorization packet readiness and
 managing the safety evidence for each application release.
 
-**Specification version: 2.0 — 2026-09-24. Status: CONTRACTS_READY.**
+**Specification version: 2.1 — 2026-09-25. Status: CONTRACTS_READY.**
 This revision supplies specifications, proposed ADRs, contracts, templates, and
 Codex build instructions. Agent execution, harness enforcement, evaluation,
 telemetry export, dashboards, and release gates remain **NOT_IMPLEMENTED**.
@@ -55,7 +55,7 @@ The three retained public cases are interface examples, not a qualified dataset.
 | `recipes/` | Explicit run profiles and configuration templates |
 | `apps/reporting/` | Dashboard/report specification; no running application |
 | `releases/` | Candidate evidence index and gate/authorization templates |
-| `docs/adrs/` | Twenty-five proposed architecture decisions and alternatives |
+| `docs/adrs/` | Twenty-six proposed architecture decisions and alternatives |
 | `docs/codex/` | Eight implementation tasks with v2 completion requirements |
 | `scripts/`, `.github/workflows/` | Static scaffold validation |
 | `artifacts/` | Reviewed static-check evidence; no live performance claims |
@@ -168,8 +168,8 @@ includes how to track each measure and where to instrument it.
 Task 00's completed contract work remains valid. New v2 record/metric extensions
 are pending and must be validated before use. V2-A–D and independent V2-Q evidence
 are NOT_RUN; [acceptance template](docs/v2-acceptance.template.json) records that
-distinction. [Static validation](artifacts/V2_SPEC_VALIDATION.json) verifies the
-specification revision and existing contract checks, not agent performance.
+distinction. [Historical v2.0 validation](artifacts/V2_SPEC_VALIDATION.json) records the
+earlier specification and contract checks, not agent performance.
 
 ## Phased implementation
 
@@ -179,3 +179,12 @@ exit gates, definitions of done, required evidence and task/spec mappings.
 PLANNED. P1 is next: one bounded local command for the three reviewed synthetic
 cases, scoped tool execution, trace evidence and an independent scorecard.
 Phase completion does not establish full v2 acceptance or release authorization.
+
+Plan 1.1 adds a genuine rules-only baseline, a fixed LLM-extraction workflow and a
+bounded-agent comparison, plus early property/replay controls and component/utility
+experiments. [Specification 2.1 changes](docs/REVISION_2_1.md) and
+[qualification profiles](docs/QUALIFICATION_PROFILES.md) distinguish scoped candidate
+assessment from full-program completion. P7 needs P5/P6A/P6E plus all feature-triggered
+evidence; the full program still requires every P6 experiment. This revision changes
+planning documents, not runtime capability. [Plan validation](artifacts/PLAN_REVISION_VALIDATION.json)
+records structural evidence only.

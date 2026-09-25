@@ -136,3 +136,13 @@ requirements and applicability denominators. Preserve whole-trajectory failures
 and decision-time prefix views in [judge evaluation](LLM_JUDGE.md). A final success
 cannot cancel an earlier mandatory failure. The [v2 acceptance dossier](v2-acceptance.template.json)
 links each required artifact to its candidate, suite and source snapshot.
+
+## Specification 2.1 comparison coverage
+
+Use [architecture comparison](ARCHITECTURE_COMPARISON.md) for candidate A/B/C,
+reviewed property relations, recorded tool replay and isolated component diagnosis.
+Preserve trajectory/family grouping and independent truth for each; never count
+replay, scripted mocks or deterministic A toward the 60-real-trace review floor.
+[Qualification profiles](QUALIFICATION_PROFILES.md) govern which experiments must
+precede a candidate's independent assessment. Existing mandatory semantic criteria
+still need accepted evaluators; rules-only selection does not imply no semantic risk.

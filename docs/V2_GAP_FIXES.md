@@ -104,3 +104,14 @@ remaining artifacts must exist before claiming V2-A; P6 completes the V2-A–D
 demonstration index. P7 qualification and authorization remain separate.
 Current [phase status](PHASE_STATUS.json) records only P0 original contracts as
 complete; no runtime gate is satisfied by this plan.
+
+## Specification 2.1 amendment
+
+The requirements above remain the full-program acceptance standard.
+[Qualification profiles](QUALIFICATION_PROFILES.md) explicitly amend only the
+unconditional dependency on all P6 experiments before P7: scoped qualification needs
+P0–P5, P6A/P6E, candidate-applicable V2-A/B/C and manual-fix evidence, plus every
+used-feature requirement. Unused optimization experiments stay pending and V2-D/full
+acceptance stay incomplete. The full-program profile still requires V2-A–D.
+[Architecture comparison](ARCHITECTURE_COMPARISON.md) adds A/B/C, property/replay,
+component and utility procedures. No execution or acceptance is claimed.

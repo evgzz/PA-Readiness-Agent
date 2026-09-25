@@ -32,3 +32,11 @@ and full-suite upgrade drill across two or more committed configs. Preserve
 negative results, bypass failures and missing costs. V2-A–D supersede the v1
 demonstration checklist with stricter evidence; V2-Q remains independent and
 cannot authorize release automatically. Render JSON/Markdown from common snapshots.
+
+## Plan 1.1 implementation slice
+
+Render A/B/C, properties/replay, component/utility evidence and separate scoped qualification/full-program status. Complete P6A/P6E early; unused optimization experiments remain planned until full-program execution.
+
+Corresponding specs: [comparison](../../ARCHITECTURE_COMPARISON.md),
+[qualification profiles](../../QUALIFICATION_PROFILES.md),
+[delivery plan](../../PHASED_DELIVERY_PLAN.md). Status remains unchanged; these are planned additions.

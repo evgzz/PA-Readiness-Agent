@@ -107,3 +107,16 @@ code enforcement. Try a manual loop before considering GEPA or a bounded automat
 optimizer, which remain deferred scope. Preserve safety constraints and hold-out
 isolation; weights training is not required for v2. Candidate selection and any
 later deployment continue to require distinct decisions.
+
+## Plan 1.1 comparison sequence
+
+[Architecture comparison](ARCHITECTURE_COMPARISON.md) requires actual rules-only A,
+fixed extraction workflow B and bounded agent C; one model serves B/C initially.
+P3 establishes feasibility, P4 accepts evaluators and P5 remeasures retained options
+and diagnoses/fixes an observed component failure. Keep all losing/inconclusive
+results and account for input eligibility and preparation labor. A human-only versus
+assisted study is required before productivity claims; absent participants require
+an explicit deferred-claim record, not simulated human evidence.
+
+The full-program experiments above remain mandatory. Only the timing of scoped
+qualification changes under [qualification profiles](QUALIFICATION_PROFILES.md).

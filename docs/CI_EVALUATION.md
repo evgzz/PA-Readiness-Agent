@@ -8,7 +8,7 @@ It does not execute or qualify the PA agent. No new workflow is enabled by this 
 | T0 deterministic | Each change; no model calls | Contracts, scope rules, objective assertions, math/completeness and known positive/negative controls | REFERENCE_CONTROL |
 | T1 mocked integration | Relevant pull requests; bounded local world | Full loop wiring, reset, permissions, trace completeness, errors and attack control fixtures | SCRIPTED_DEMO or REFERENCE_CONTROL, explicitly assigned |
 | T2 real-agent regression | Trusted changes on a frozen synthetic development suite; pinned budget | Model/tool behavior, calibrated semantic criteria, fixed-k reliability and successful-attack regressions | REAL_AGENT_SYNTHETIC |
-| T3 qualification | Frozen candidate and untouched family-separated suite under independent controller | All mandatory quality/safety/coverage criteria plus required adjudication | REAL_AGENT_SYNTHETIC; qualification is a separate status |
+| T3 qualification | Frozen candidate/profile and untouched family-separated suite under independent controller | All profile-mandatory quality/safety/coverage and feature criteria plus adjudication | B/C: REAL_AGENT_SYNTHETIC. Actual A: REFERENCE_CONTROL with RULES_ONLY identity; qualification remains a separate status. |
 
 Preregister which tiers are mandatory for each change type. Prompt/model/tool/
 permission/harness changes need the applicable agent tiers, not just T0. A skipped,
@@ -49,3 +49,18 @@ Production monitoring stays NOT_SCOPED. A future operational profile additionall
 needs deployment/data scope, accountable operators, access/retention, alert and
 incident policies, measured integration and separate authorization. A healthy
 exporter or unchanged proxy metric cannot establish correct behavior.
+
+## Plan 1.1 additions
+
+P2 adds reviewed metamorphic/property checks and exact-request tool replay with
+explicit misses and zero live fallback; [comparison protocol](ARCHITECTURE_COMPARISON.md)
+defines semantics and evidence limits. P3/P5 compare actual A/B/C implementations.
+T2 real-agent runs remain mandatory for B/C development evidence in P0–P5; A's
+actual deterministic behavior receives the equivalent applicable end-to-end
+regression coverage without inventing model calls. A scripted answer mock cannot
+stand in for A or for live evidence. Replay cannot replace mandatory real integration.
+
+T3 prerequisites come from [qualification profiles](QUALIFICATION_PROFILES.md):
+P5/P6A/P6E plus every feature-triggered requirement; all P6 for the full-program
+profile. Implement validated profile/candidate/tier binding before gate computation.
+Required live tiers do not silently fall back when credentials are missing.

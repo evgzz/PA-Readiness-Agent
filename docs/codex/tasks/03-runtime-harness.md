@@ -20,3 +20,11 @@ Capture nested spans, rendered prompt/tool hashes, denials and complete terminal
 evidence before admitted traffic. Reset all scenario/action/cache state according
 to the declared trial policy. Exercise future approval expiry/replay/concurrency
 only in a simulator; preserve receipts and uncertainty without enabling effects.
+
+## Plan 1.1 implementation slice
+
+Keep the same authority gateways for A/B/C. Add explicit recorded-tool replay with exact request/scope/state identity, authorization recheck and no live fallback on miss; preserve one loop per run.
+
+Corresponding specs: [comparison](../../ARCHITECTURE_COMPARISON.md),
+[qualification profiles](../../QUALIFICATION_PROFILES.md),
+[delivery plan](../../PHASED_DELIVERY_PLAN.md). Status remains unchanged; these are planned additions.

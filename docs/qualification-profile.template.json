@@ -1,0 +1,79 @@
+{
+  "specification_revision": "2.1",
+  "status": "DRAFT_DISABLED",
+  "enabled": false,
+  "entrypoint": null,
+  "record_schema_status": "NOT_IMPLEMENTED",
+  "scope": "SYNTHETIC_READ_ONLY",
+  "external_effects_allowed": false,
+  "auto_deploy": false,
+  "profile_id": null,
+  "profile_version": null,
+  "profile_kind": null,
+  "allowed_profile_kinds": [
+    "SCOPED_CANDIDATE",
+    "FULL_V2_PROGRAM"
+  ],
+  "candidate_kind": null,
+  "candidate_config_digest": null,
+  "profile_digest": null,
+  "workload_manifest": null,
+  "suite_manifest": null,
+  "evaluator_manifest": null,
+  "freeze_record": null,
+  "thresholds_and_precision_plan": null,
+  "required_tiers": null,
+  "required_criteria": null,
+  "base_dependencies": [
+    "P0",
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5",
+    "P6A",
+    "P6E"
+  ],
+  "features": {
+    "prompt_caching": {
+      "state": "UNKNOWN",
+      "evidence_refs": [],
+      "reviewer": null
+    },
+    "router_or_cascade": {
+      "state": "UNKNOWN",
+      "evidence_refs": [],
+      "reviewer": null
+    },
+    "model_or_serving_replacement": {
+      "state": "UNKNOWN",
+      "evidence_refs": [],
+      "reviewer": null
+    },
+    "semantic_judgment": {
+      "state": "UNKNOWN",
+      "evidence_refs": [],
+      "reviewer": null
+    },
+    "human_productivity_claim": {
+      "state": "UNKNOWN",
+      "evidence_refs": [],
+      "reviewer": null
+    }
+  },
+  "conditional_dependencies": {
+    "prompt_caching": "P6B",
+    "router_or_cascade": "P6C",
+    "model_or_serving_replacement": "P6D",
+    "semantic_judgment": "P4",
+    "human_productivity_claim": "P5"
+  },
+  "deferred_experiments": [],
+  "deferred_claims": [],
+  "reviewer": null,
+  "qualification_execution": "NOT_RUN",
+  "qualification_outcome": null,
+  "full_v2_acceptance": "NOT_RUN",
+  "authorization_ref": null,
+  "instructions": "Planning metadata only. Implement validated contracts and freeze complete candidate-bound applicability before execution; UNKNOWN never means ABSENT."
+}

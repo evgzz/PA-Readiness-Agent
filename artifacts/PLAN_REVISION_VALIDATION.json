@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "date": "2026-09-25",
+  "scope": "DOCUMENTATION_AND_STATIC_CHECKS_ONLY",
+  "baseline_commit": "2ebf01ad6de3e331117d9405e002cffc190c199a",
+  "specification_revision": "2.1",
+  "plan_revision": "1.1",
+  "phase_execution": "NOT_RUN",
+  "runtime_qualification": "NOT_RUN",
+  "validation": {
+    "scaffold": {
+      "status": "PASS",
+      "scope": "STRUCTURE_AND_IMPORT_CHECKS_ONLY",
+      "checks": 411,
+      "python_files_parsed": 21,
+      "public_interface_examples": 3,
+      "runtime_qualification": "NOT_RUN",
+      "errors": []
+    },
+    "document_links_and_disabled_templates": {
+      "status": "PASS",
+      "relative_markdown_links_checked": 356,
+      "draft_template_consistency": "PASS",
+      "errors": []
+    },
+    "phase_status_consistency": {
+      "status": "PASS",
+      "phases": 8,
+      "subphases": 5,
+      "phase_specific_criteria": 94,
+      "new_criteria": 15,
+      "common_dod_criteria": 8,
+      "historical_P0_preserved": true,
+      "pending_criteria_unassessed": true,
+      "conditional_dependency_graph": "ACYCLIC",
+      "profile_template": "DISABLED_WITH_UNKNOWN_APPLICABILITY",
+      "no_runtime_contract_changes": true
+    },
+    "current_text_reference_scan": {
+      "status": "PASS",
+      "matches": 0
+    }
+  },
+  "limitations": [
+    "Documentation and static checks do not execute A/B/C candidates, replay, human studies or qualification.",
+    "P0 remains complete only for original contracts; P1-P7 remain planned.",
+    "All new runtime/profile records require versioned validated implementation before use.",
+    "CI results are separate and must be verified against the committed revision."
+  ]
+}

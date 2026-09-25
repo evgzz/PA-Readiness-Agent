@@ -1,5 +1,5 @@
 {
-  "specification_revision": "2.0",
+  "specification_revision": "2.1",
   "status": "SPECIFIED_NOT_EXECUTED",
   "record_schema_status": "NOT_IMPLEMENTED",
   "candidate_digest": null,
@@ -107,5 +107,7 @@
   "limitations": [
     "The completed Task 00 contract layer does not satisfy runtime evidence gates.",
     "Demonstration completion is separate from qualification and deployment authorization."
-  ]
+  ],
+  "completion_profile": "FULL_V2_PROGRAM",
+  "qualification_profile_ref": null
 }

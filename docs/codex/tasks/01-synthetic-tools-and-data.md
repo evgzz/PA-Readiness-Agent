@@ -27,3 +27,11 @@ generator instructions and provenance, reviewed coverage matrix and smoke report
 Group families before split/augmentation; enforce hidden-fact isolation, ambiguous
 cases, negative/positive controls and reset receipts. Counts follow PA coverage
 and precision. Document the sample-size rationale before acceptance.
+
+## Plan 1.1 implementation slice
+
+Supply equivalent authorized source evidence for rules-only A and B/C. Track source eligibility and manual preparation; implement reviewed property transformations and synthetic replay fixtures without evaluator labels.
+
+Corresponding specs: [comparison](../../ARCHITECTURE_COMPARISON.md),
+[qualification profiles](../../QUALIFICATION_PROFILES.md),
+[delivery plan](../../PHASED_DELIVERY_PLAN.md). Status remains unchanged; these are planned additions.

@@ -1,5 +1,5 @@
 {
-  "specification_revision": "2.0",
+  "specification_revision": "2.1",
   "status": "DRAFT_DISABLED",
   "enabled": false,
   "entrypoint": null,
@@ -49,5 +49,7 @@
   "quality_and_safety_limits": null,
   "cost_budget": null,
   "monitoring_alert_policy": null,
-  "instructions": "Template only. Assign, version, validate and preregister required fields before execution. No qualification labels enter tuning."
+  "instructions": "Template only. Assign, version, validate and preregister required fields before execution. No qualification labels enter tuning.",
+  "completion_profile": "FULL_V2_PROGRAM",
+  "qualification_profile_ref": null
 }

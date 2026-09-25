@@ -8,7 +8,7 @@
   "heldout_qualification": "NOT_RUN",
   "deployment": "NOT_RUN",
   "publication": "NOT_REQUESTED",
-  "specification_revision": "2.0",
+  "specification_revision": "2.1",
   "runtime_adapters": "NOT_IMPLEMENTED",
   "instrumentation": "NOT_IMPLEMENTED",
   "dashboards": "NOT_IMPLEMENTED",
@@ -57,5 +57,9 @@
   "upgrade_drill": "NOT_RUN",
   "phased_delivery_plan": "SPECIFIED",
   "phase_status_path": "docs/PHASE_STATUS.json",
-  "next_delivery_phase": "P1"
+  "next_delivery_phase": "P1",
+  "delivery_plan_revision": "1.1",
+  "architecture_comparison": "NOT_RUN",
+  "qualification_profiles": "SPECIFIED_NOT_IMPLEMENTED",
+  "human_utility_study": "NOT_RUN"
 }

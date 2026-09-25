@@ -30,3 +30,11 @@ endpoint and turn confirmed successes into reproductions/failing regressions,
 then mitigation/retest. Preserve no-success outcomes honestly. Demonstrate code
 checks on all admitted synthetic traffic and sampled frozen judges, correction
 limits, alert triage and missing-data controls; production remains NOT_SCOPED.
+
+## Plan 1.1 implementation slice
+
+Implement frozen candidate/profile dependency resolution before P7: core P5/P6A/P6E plus feature-triggered evidence, all P6 for full program. UNKNOWN features and missing mandatory controls cannot produce GO.
+
+Corresponding specs: [comparison](../../ARCHITECTURE_COMPARISON.md),
+[qualification profiles](../../QUALIFICATION_PROFILES.md),
+[delivery plan](../../PHASED_DELIVERY_PLAN.md). Status remains unchanged; these are planned additions.

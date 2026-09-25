@@ -41,3 +41,11 @@ freeze, no silent fallback and recalibration on swaps. Provide an isolated runni
 synthetic endpoint for promptfoo, with pinned request/response/identity adapters.
 Meter native usage, caching and router calls; verify provider capabilities before
 the preregistered caching/cascade experiment. No external effects are enabled.
+
+## Plan 1.1 implementation slice
+
+Start B/C with one pinned model/provider and common tools/permissions; separate actual live execution from replay. Capture B extraction risks, multi-turn trajectories, all attempts and unknown usage/cost.
+
+Corresponding specs: [comparison](../../ARCHITECTURE_COMPARISON.md),
+[qualification profiles](../../QUALIFICATION_PROFILES.md),
+[delivery plan](../../PHASED_DELIVERY_PLAN.md). Status remains unchanged; these are planned additions.
